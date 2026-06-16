@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wedge-1
 
-## Getting Started
+A modular Next.js application designed for rapid product experimentation. The codebase is self-describing and AI-navigable via `agents.md` files at every level.
 
-First, run the development server:
+## Quickstart
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command          | Description                        |
+|------------------|------------------------------------|
+| `npm run dev`    | Start development server           |
+| `npm run build`  | Production build                   |
+| `npm run start`  | Serve production build             |
+| `npm run lint`   | Run ESLint                         |
+| `npm run format` | Format all files with Prettier     |
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/            → Routes and pages (Next.js App Router)
+components/ui/  → shadcn/ui primitives (Button, Card)
+components/custom/ → Project-specific reusable components
+lib/constants/  → Semantic design tokens (spacing, layout)
+lib/utils.ts    → Tailwind class merging helper (cn)
+styles/         → Global CSS and Tailwind theme
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## AI Navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every major directory contains an `agents.md` file that explains what lives there, how to extend it, and what conventions to follow. Start with the root [`agents.md`](agents.md) for the full orientation.
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router)
+- TypeScript (strict mode)
+- Tailwind CSS v4
+- shadcn/ui
+- ESLint + Prettier
