@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "@/styles/globals.css";
 
-const geistSans = Geist({
+const roboto = Roboto({
   variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Wedge-1",
-  description: "A modular platform for rapid product experimentation.",
+  title: "Weston Uribe",
+  description:
+    "Product owner and UX/UI designer focused on product strategy, rapid prototyping, and polished user experiences.",
 };
 
 export default function RootLayout({
@@ -23,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html lang="en" className={`dark ${roboto.variable}`}>
+      <body className="overflow-x-clip antialiased">
+        {children}
+      </body>
     </html>
   );
 }

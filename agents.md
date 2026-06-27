@@ -24,6 +24,8 @@ Wedge-1 is a modular Next.js application designed for rapid product experimentat
 
 4. **Static Tailwind classes only.** Tailwind purges unused classes at build time via static analysis. Never construct class names dynamically (e.g., `` `p-${value}` ``). Instead, use the `cn()` utility from `lib/utils` to conditionally join complete, static class strings.
 
+5. **Mobile-first responsiveness.** Layouts default to mobile, then layer tablet (`md:`) and desktop (`lg:`) overrides through tokens in `lib/constants/breakpoints.ts` and responsive spacing in `lib/constants/spacing.ts`. Do not scatter breakpoint-specific class strings across components when a shared token fits.
+
 ## Coding Rules
 
 - Use TypeScript strictly — no `any`, no `@ts-ignore` without justification.
@@ -37,28 +39,28 @@ Wedge-1 is a modular Next.js application designed for rapid product experimentat
 ```
 app/                → Routes, layouts, and pages (Next.js App Router)
   layout.tsx        → Root HTML shell, fonts, global wrapper
-  page.tsx          → Landing page (route: /)
+  page.tsx          → Weston Uribe portfolio landing page (route: /)
   agents.md         → Routing conventions and page patterns
 
 components/         → All React components
   ui/               → shadcn/ui primitives (auto-generated, do not hand-edit)
   custom/           → Project-specific reusable components
-  agents.md         → Component organization guide
+    portfolio/      → Portfolio landing page sections
 
 lib/                → Shared utilities and constants
   utils.ts          → cn() helper (Tailwind class merging)
-  constants/        → Semantic design tokens (spacing, layout)
-    index.ts        → Barrel export
-    spacing.ts      → Spacing tokens
-    layout.ts       → Layout / container tokens
-  agents.md         → Utility and constants conventions
+  constants/        → Semantic design tokens (spacing, layout, breakpoints)
+  portfolio/        → Portfolio landing page copy and structured content
 
 styles/             → Global CSS
   globals.css       → Tailwind imports, CSS variables, theme config
   agents.md         → Styling conventions
 
+public/
+  logos/            → Official SVG logos for portfolio marquee (see agents.md)
+  agents.md         → Asset naming and swap instructions
+
 agents.md           → This file (root orientation)
-README.md           → Human quickstart and architecture overview
 ```
 
 ## How to Add a New Feature

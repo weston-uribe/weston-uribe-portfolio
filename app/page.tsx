@@ -1,22 +1,24 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { LAYOUT, SPACING } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { AboutSection } from "@/components/custom/portfolio/about-section";
+import { ContactSection } from "@/components/custom/portfolio/contact-section";
+import { HeroSection } from "@/components/custom/portfolio/hero-section";
+import { LogoMarquee } from "@/components/custom/portfolio/logo-marquee";
+import { PortfolioFooter } from "@/components/custom/portfolio/portfolio-footer";
+import { PortfolioNav } from "@/components/custom/portfolio/portfolio-nav";
+import { WorkSection } from "@/components/custom/portfolio/work-section";
+import { SPACING } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <main className={cn(LAYOUT.pageCenter, SPACING.pagePadding)}>
-      <Card className={cn(LAYOUT.container)}>
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold tracking-tight">Wedge-1</CardTitle>
-        </CardHeader>
-        <CardContent className={cn(SPACING.stackGap, "flex flex-col")}>
-          <p className="text-muted-foreground">Insert product here.</p>
-          <div>
-            <Button>Get Started</Button>
-          </div>
-        </CardContent>
-      </Card>
-    </main>
+    <>
+      <PortfolioNav />
+      <main className={SPACING.pageAnchorScrollBuffer}>
+        <HeroSection />
+        <LogoMarquee />
+        <AboutSection />
+        <WorkSection />
+        <ContactSection />
+      </main>
+      <PortfolioFooter />
+    </>
   );
 }

@@ -13,10 +13,11 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 
 ## Current Structure
 
-| File          | Route | Purpose                              |
-|---------------|-------|--------------------------------------|
-| `layout.tsx`  | —     | Root HTML shell, fonts, global CSS   |
-| `page.tsx`    | `/`   | Landing page                         |
+| File                  | Route       | Purpose                              |
+|-----------------------|-------------|--------------------------------------|
+| `layout.tsx`          | —           | Root HTML shell, fonts, global CSS   |
+| `page.tsx`            | `/`         | Weston Uribe portfolio landing page    |
+| `work/ukg/page.tsx`   | `/work/ukg` | UKG case study placeholder           |
 
 ## Layout Responsibilities
 
@@ -28,7 +29,14 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 
 - Pages are React Server Components by default. Add `"use client"` only when the page needs client-side interactivity.
 - Import shared layout tokens from `@/lib/constants` rather than hardcoding spacing.
+- Compose sections with `LAYOUT.pageShell` for aligned horizontal inset (nav + all sections share this shell).
+- Use `SPACING.sectionPaddingY` for vertical section rhythm and `RESPONSIVE` tokens for breakpoint behavior.
 - Use shadcn components from `@/components/ui` and project components from `@/components/custom`.
+- The root layout sets `overflow-x-clip` on `<body>` to prevent decorative elements from causing horizontal scroll.
+
+## Portfolio landing page (`page.tsx`)
+
+Section order: `PortfolioNav` → `HeroSection` → `LogoMarquee` → `AboutSection` → `WorkSection` → `ContactSection` → `PortfolioFooter`. The logo marquee is full-bleed (no `pageShell`) and uses CSS animation defined in `styles/globals.css`.
 
 ## How to Add a New Route
 

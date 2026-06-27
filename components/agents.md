@@ -24,7 +24,22 @@ Reusable components built specifically for Wedge-1. These compose shadcn primiti
 - Every component in `custom/` should be reusable across at least two contexts. If it is truly page-specific, co-locate it with the page instead.
 - Use `cn()` from `@/lib/utils` for conditional class merging.
 - Import design tokens from `@/lib/constants` rather than hardcoding spacing or layout values.
+- Import responsive patterns from `RESPONSIVE` in `@/lib/constants` — do not inline breakpoint class strings when a token exists.
 - Keep components focused: one responsibility per file.
+
+## Responsive conventions
+
+All UI is **mobile-first**:
+
+1. Default styles target phones (`< 768px`).
+2. Use `md:` for tablet layout shifts (768px+).
+3. Use `lg:` for desktop layout shifts (1024px+).
+
+Portfolio sections demonstrate the pattern: `LAYOUT.pageShell` for nav/hero alignment, full-bleed CSS marquee (`LogoMarquee` server component) between Hero and About, horizontal scroll carousel on Work (`WorkCarousel` client component), grid only where appropriate.
+
+**Portfolio components** (`custom/portfolio/`): `hero-section`, `logo-marquee`, `about-section`, `about-decorative-shapes`, `work-section`, `work-carousel`, `work-card`, `contact-section`, `portfolio-nav`, `portfolio-footer`.
+
+When adding a component that changes layout across breakpoints, add or extend a token in `lib/constants/breakpoints.ts` first.
 
 ## When to Create a New Component
 
