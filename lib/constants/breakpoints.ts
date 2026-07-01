@@ -73,4 +73,113 @@ export const RESPONSIVE = {
   marqueeYcBadge: "flex items-center gap-1 font-sans leading-none",
   marqueeTrack: "logo-marquee-track flex w-max items-center",
   marqueeGroup: "logo-marquee-group flex shrink-0 items-center",
+  caseStudyHeroHeading:
+    "max-w-4xl text-3xl leading-[1.12] font-semibold tracking-tight text-pretty text-portfolio-hero-heading sm:text-4xl md:text-[2.75rem] lg:text-5xl",
+  caseStudyHeroSubhead:
+    "max-w-3xl text-base text-foreground/80 text-pretty lg:text-lg lg:leading-relaxed",
+  caseStudyMetaRow: "text-sm text-muted-foreground sm:text-base",
+  caseStudyMetaGrid: "grid gap-3 pt-2 sm:grid-cols-3",
+  caseStudyMetaCard:
+    "rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+  caseStudyMetaLabel:
+    "text-xs font-medium tracking-wide text-muted-foreground uppercase",
+  caseStudyMetaValue: "mt-1.5 text-sm text-foreground/90 sm:text-base",
+  caseStudyProse:
+    "text-base leading-relaxed text-foreground/85 lg:text-lg lg:leading-relaxed",
+  caseStudyProseNarrow: "max-w-3xl",
+  caseStudyProseColumn: "mx-auto w-full max-w-3xl",
+  caseStudyChip:
+    "rounded-full px-2.5 py-0.5 text-sm font-medium backdrop-blur-sm sm:text-base",
+  caseStudyAnnotationGrid: "grid gap-4 md:grid-cols-2",
+  caseStudyScreenshotFrame:
+    "overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/[0.06]",
+  caseStudyScreenshotShell: "mx-auto w-full max-w-4xl",
+  caseStudyScreenshotImage: "block h-auto w-full object-contain object-top",
+  caseStudyScreenshotPlaceholder:
+    "flex min-h-[16rem] flex-col items-center justify-center gap-3 bg-white/[0.02] p-8 sm:min-h-[20rem] md:min-h-[24rem]",
+  caseStudyAnnotationCard:
+    "rounded-2xl bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+  caseStudyInsightCard:
+    "rounded-3xl bg-gradient-to-br from-portfolio-kg-teal/10 via-white/[0.03] to-white/[0.02] p-6 ring-1 ring-portfolio-kg-teal/20 sm:p-8",
+  caseStudyFramingCard:
+    "rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 ring-1 ring-white/[0.06] sm:p-6",
+  caseStudyPhaseBand:
+    "border-t border-white/[0.06] bg-white/[0.02] py-10 sm:py-12 md:py-14 lg:py-16",
+  caseStudySectionSurfaceDark:
+    "border-t border-white/[0.06] bg-background py-10 sm:py-12 md:py-14 lg:py-16",
+  caseStudySectionSurfaceMuted:
+    "border-t border-white/[0.06] bg-white/[0.02] py-10 sm:py-12 md:py-14 lg:py-16",
+  caseStudyPhaseBandFuture:
+    "border-t border-dashed border-portfolio-kg-teal/25 bg-gradient-to-b from-portfolio-kg-teal/10 via-white/[0.02] to-transparent py-10 sm:py-12 md:py-14 lg:py-16",
+  caseStudyPhaseHeader: "flex flex-col gap-1",
+  caseStudyPhaseNumber:
+    "text-xs font-semibold tracking-[0.2em] text-portfolio-kg-teal uppercase",
+  caseStudyPhaseTitle: "text-lg font-medium text-foreground/90 sm:text-xl",
+  caseStudyPhaseContent: "flex flex-col gap-8 sm:gap-10 md:gap-12",
+  caseStudyComingSoonCard:
+    "rounded-3xl border border-dashed border-portfolio-kg-teal/30 bg-gradient-to-br from-portfolio-kg-teal/10 via-white/[0.03] to-white/[0.02] p-6 ring-1 ring-portfolio-kg-teal/15 sm:p-8",
+  caseStudyComingSoonBadge:
+    "inline-flex w-fit rounded-full border border-portfolio-kg-teal/30 bg-portfolio-kg-teal/15 px-2.5 py-0.5 text-xs font-medium tracking-wide text-portfolio-kg-teal uppercase",
+  caseStudyTransitionDivider:
+    "border-t border-dashed border-white/[0.12] pt-10 sm:pt-12",
+  caseStudyNextTeaser:
+    "rounded-2xl border border-dashed border-white/[0.1] bg-white/[0.02] px-5 py-4 text-center sm:px-6 sm:py-5",
+  caseStudyPrototypeFrame:
+    "overflow-hidden rounded-3xl bg-card ring-1 ring-white/[0.08]",
+  caseStudyPrototypeShell:
+    "relative flex min-h-[32rem] min-w-0 overflow-hidden",
+  caseStudyPrototypeContentColumn:
+    "relative flex min-h-0 min-w-0 flex-1 flex-col",
+  caseStudyPrototypeHeader:
+    "border-b border-white/[0.08] px-4 py-4 sm:px-6 sm:py-5",
+  caseStudyPrototypeSidebar:
+    "group/sidebar flex shrink-0 flex-col self-stretch border-white/[0.08] bg-white/[0.02] transition-[width] duration-200 ease-out border-r",
+  caseStudyPrototypeSidebarBrand:
+    "flex shrink-0 items-center justify-center gap-2 px-2 py-2 lg:justify-between lg:px-3 lg:py-3",
+  caseStudyPrototypeSidebarBrandExpanded:
+    "border-b border-white/[0.08]",
+  caseStudyPrototypeSidebarExpanded: "w-full lg:w-48",
+  caseStudyPrototypeSidebarExpandedWidth: "w-48",
+  caseStudyPrototypeSidebarCollapsedWidth: "w-12",
+  caseStudyPrototypeSidebarCollapsed:
+    "flex w-12 overflow-visible",
+  caseStudyPrototypeSidebarMobileOpen:
+    "w-12 lg:w-48 lg:static",
+  caseStudyPrototypeSidebarNav:
+    "flex flex-1 flex-col gap-1 overflow-y-auto p-2 lg:py-3 lg:pr-2 lg:pl-1",
+  caseStudyPrototypeSidebarItemExpanded:
+    "flex w-full items-center gap-3 px-3 py-2.5 text-left text-sm font-medium transition-colors lg:mx-2 lg:w-auto lg:rounded-lg",
+  caseStudyPrototypeSidebarItemCollapsed:
+    "mx-auto flex size-9 shrink-0 items-center justify-center rounded-lg p-0 text-sm font-medium transition-colors",
+  caseStudyPrototypeSidebarItemActive:
+    "bg-chart-4/15 text-chart-4 ring-1 ring-chart-4/30",
+  caseStudyPrototypeSidebarItemInactive:
+    "text-muted-foreground hover:bg-white/[0.04] hover:text-foreground",
+  caseStudyPrototypeInteractive: "cursor-pointer",
+  caseStudyPrototypeSidebarLabelVisible: "truncate",
+  caseStudyPrototypeMain:
+    "flex min-w-0 flex-1 flex-col gap-6 p-4 sm:p-6 lg:min-h-0",
+  caseStudyPrototypeFilterBackdrop:
+    "absolute inset-0 z-30 bg-black/20 supports-backdrop-filter:backdrop-blur-[1px]",
+  caseStudyPrototypeFilterPanel:
+    "absolute inset-y-0 right-0 z-40 flex w-full max-w-md flex-col border-l border-white/[0.08] bg-card shadow-xl",
+  caseStudyPrototypeFilterSelect:
+    "h-10 w-full rounded-lg border border-white/[0.1] bg-background py-2 pl-3 pr-3 text-sm text-foreground",
+  caseStudyPrototypePersonaGrid: "grid gap-4 md:grid-cols-2 lg:grid-cols-3",
+  caseStudyPrototypePersonaCard:
+    "flex flex-col gap-3 rounded-2xl bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+  caseStudyPrototypeMetricsRow:
+    "grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6",
+  caseStudyPrototypeMetricItem: "flex flex-col gap-1",
+  caseStudyPrototypeMetricLabel:
+    "text-xs font-medium tracking-wide text-muted-foreground uppercase",
+  caseStudyPrototypeMetricValue: "text-lg font-semibold text-foreground",
+  caseStudyPrototypeThemeRow:
+    "flex items-center gap-3 text-sm",
+  caseStudyPrototypeThemeBar: "h-2 rounded-full bg-chart-4/70",
+  caseStudyPrototypeTableWrap: "min-w-0 overflow-x-auto rounded-xl ring-1 ring-white/[0.06]",
+  caseStudyPrototypeDashboardHeader:
+    "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
+  caseStudyPrototypeEmptyState:
+    "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/[0.12] bg-white/[0.02] px-6 py-12 text-center",
 } as const;

@@ -17,7 +17,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 |-----------------------|-------------|--------------------------------------|
 | `layout.tsx`          | —           | Root HTML shell, fonts, global CSS   |
 | `page.tsx`            | `/`         | Weston Uribe portfolio landing page    |
-| `work/ukg/page.tsx`   | `/work/ukg` | UKG case study placeholder           |
+| `work/ukg/layout.tsx` | —           | UKMe VoC case study metadata         |
+| `work/ukg/page.tsx`   | `/work/ukg` | UKMe Voice of Customer case study (setup / before state) |
 
 ## Layout Responsibilities
 
@@ -37,6 +38,14 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 ## Portfolio landing page (`page.tsx`)
 
 Section order: `PortfolioNav` → `HeroSection` → `LogoMarquee` → `AboutSection` → `WorkSection` → `ContactSection` → `PortfolioFooter`. The logo marquee is full-bleed (no `pageShell`) and uses CSS animation defined in `styles/globals.css`.
+
+## Case study page (`work/ukg/page.tsx`)
+
+Scroll-driven narrative for the UKMe Voice of Customer dashboard. Uses the **same** `PortfolioNav` and `PortfolioFooter` as the landing page — do not create route-specific nav or footer components. Section order: `PortfolioNav` → `<main>` (`CaseStudyHero` → `CaseStudyFramingNote` → `CaseStudyPhaseSection` 01 Context → `CaseStudyPhaseSection` 02 Research and discovery → `CaseStudyPhaseSection` 03 Design and implementation → `CaseStudyPrototypeSection` → Results prose → `CaseStudyPhaseSection` 04 Future direction with `CaseStudyComingSoonSection`) → `PortfolioFooter`. Copy lives in `lib/portfolio/case-studies/ukme-voc.ts`. Synthetic feedback data and analytics helpers live in sibling modules under `lib/portfolio/case-studies/`. Page metadata is exported from `work/ukg/layout.tsx`.
+
+## Shared portfolio chrome
+
+All portfolio routes (landing, case studies, future work pages) must compose `PortfolioNav` and `PortfolioFooter` from `@/components/custom/portfolio/`. Nav links use root-absolute paths (`/`, `/#about`, `/#work`, `/#contact`) so they work from any route.
 
 ## How to Add a New Route
 

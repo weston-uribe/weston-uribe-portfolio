@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { HERO, WESTON_PROFILE } from "@/lib/portfolio/content";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Work", href: "/#work" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export function PortfolioNav() {
@@ -20,8 +21,8 @@ export function PortfolioNav() {
           "flex h-full min-h-[var(--portfolio-nav-height)] items-center justify-between gap-4"
         )}
       >
-        <a
-          href="#"
+        <Link
+          href="/"
           className={cn(
             RESPONSIVE.uiText,
             SPACING.elementGap,
@@ -36,12 +37,12 @@ export function PortfolioNav() {
             className={RESPONSIVE.navAvatar}
           />
           {HERO.name}
-        </a>
+        </Link>
         <nav aria-label="Primary">
           <ul className="flex items-center justify-end gap-6 sm:gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className={cn(
                     RESPONSIVE.uiText,
@@ -49,7 +50,7 @@ export function PortfolioNav() {
                   )}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -6,6 +6,10 @@ export type WorkItem = {
   tags: string[];
   status: "active" | "coming-soon";
   href?: string;
+  previewImage?: {
+    assetPath: string;
+    alt: string;
+  };
 };
 
 export type LogoAffiliation = {
@@ -127,6 +131,11 @@ export const ABOUT_PARAGRAPHS = [
   "I'm strongest when I can combine strategy, storytelling, and rapid prototyping. I like mapping how people, workflows, and technology fit together, then turning that understanding into software that feels clear, polished, and easy to use.",
 ] as const;
 
+export const UKME_VOC_WORK_CARD_IMAGE = {
+  assetPath: "/images/ukme-voc-work-card.png",
+  alt: "UKMe Voice of Customer dashboard prototype showing persona insight cards",
+} as const;
+
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
@@ -136,13 +145,14 @@ export const WORK_SECTION = {
 export const WORK_ITEMS: WorkItem[] = [
   {
     id: "ukg",
-    contextLabel: "UKG",
-    title: "AI Voice of Customer Dashboard",
+    contextLabel: "UKMe",
+    title: "AI-Powered Voice of Customer Dashboard",
     description:
       "Internal tool that uses AI to turn multi-channel customer feedback into actionable roadmap decisions",
-    tags: ["Product Design"],
+    tags: ["Product Design", "UX/UI", "AI"],
     status: "active",
     href: "/work/ukg",
+    previewImage: UKME_VOC_WORK_CARD_IMAGE,
   },
   {
     id: "luca",

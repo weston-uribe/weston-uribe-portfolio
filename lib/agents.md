@@ -14,6 +14,7 @@ Shared logic, helper functions, and design system constants live here. Nothing i
 | `constants/layout.ts`    | Semantic layout tokens (containers, pageShell)        |
 | `constants/breakpoints.ts` | Breakpoint docs + responsive layout/typography tokens |
 | `portfolio/content.ts`   | Portfolio landing page copy, work items, `LOGO_AFFILIATIONS`, and `buildMarqueeGroupItems()` for the marquee |
+| `portfolio/case-studies/` | Case-study-specific copy and structured content (one module per project, e.g. `ukme-voc.ts`) |
 
 ## Constants System
 
@@ -41,7 +42,7 @@ Large phones may use `sm:` (`640px`) for minor typography or padding tweaks insi
 - **`LAYOUT.pageShell`** — shared horizontal inset + max width for nav and every section (keeps left edges aligned)
 - **`SPACING.sectionPaddingY`** — vertical section rhythm
 - **`SPACING.marqueeSectionY`** / **`SPACING.marqueeItemGap`** — logo marquee vertical padding and horizontal item spacing
-- **`RESPONSIVE.*`** — grid, typography, carousel, marquee, and CTA patterns that change by breakpoint
+- **`RESPONSIVE.*`** — grid, typography, carousel, marquee, CTA, and case-study layout patterns that change by breakpoint
 
 Add new responsive patterns to `constants/breakpoints.ts` rather than duplicating `md:` / `lg:` strings in components.
 
@@ -64,3 +65,10 @@ Add new responsive patterns to `constants/breakpoints.ts` rather than duplicatin
 - **`LOGO_AFFILIATIONS`** — canonical 5-logo order (UCLA → Freedom Robotics → Cambridge → UKG → UC Irvine)
 - **`MARQUEE_GROUP_REPEATS`** — how many times that sequence repeats inside each animated half (default `4`, keeps each group wider than the viewport)
 - **`buildMarqueeGroupItems()`** — returns the expanded flat list used by both duplicated marquee groups
+
+## Case study content
+
+- One file per case study under `portfolio/case-studies/` (e.g. `ukme-voc.ts`)
+- Export typed sections: meta, hero, framing note, prose sections, insight block, before-state assets/annotations, transition teaser, prototype section copy, constrained-redesign transition
+- **UKMe VoC prototype data** (synthetic, static): `ukme-voc-feedback.ts`, `ukme-voc-taxonomy.ts`, `ukme-voc-types.ts`, `ukme-voc-persona-insights.ts`, `ukme-voc-analytics.ts`, `ukme-voc-filter-utils.ts` — pure TypeScript, no API calls
+- Asset paths reference files under `public/images/`; components handle missing assets with placeholders at build time
