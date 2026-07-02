@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useSyncExternalStore } from "react";
 
 import { VocDashboardHeader } from "@/components/custom/portfolio/voc-dashboard/voc-dashboard-header";
 import { VocEmptyState } from "@/components/custom/portfolio/voc-dashboard/voc-empty-state";
@@ -30,6 +30,20 @@ import type {
 
 const TABLE_PAGE_SIZE = 5;
 
+function subscribeToLgUp(onStoreChange: () => void) {
+  const mediaQuery = window.matchMedia("(min-width: 1024px)");
+  mediaQuery.addEventListener("change", onStoreChange);
+  return () => mediaQuery.removeEventListener("change", onStoreChange);
+}
+
+function getLgUpSnapshot() {
+  return window.matchMedia("(min-width: 1024px)").matches;
+}
+
+function getLgUpServerSnapshot() {
+  return false;
+}
+
 export function VocDashboardPrototype() {
   const [selectedSource, setSelectedSource] = useState<FeedbackSource>("In-app");
   const [appliedFilters, setAppliedFilters] = useState<VocFilterState>(
@@ -39,7 +53,15 @@ export function VocDashboardPrototype() {
     createDefaultFilters(),
   );
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [sourcePanelOpen, setSourcePanelOpen] = useState(true);
+  const isLgUp = useSyncExternalStore(
+    subscribeToLgUp,
+    getLgUpSnapshot,
+    getLgUpServerSnapshot,
+  );
+  const [sourcePanelPinned, setSourcePanelPinned] = useState<boolean | null>(
+    null,
+  );
+  const sourcePanelOpen = sourcePanelPinned ?? isLgUp;
   const [tablePage, setTablePage] = useState(1);
 
   const filteredRecords = useMemo(
@@ -129,8 +151,8 @@ export function VocDashboardPrototype() {
   }, []);
 
   const handleToggleSourcePanel = useCallback(() => {
-    setSourcePanelOpen((open) => !open);
-  }, []);
+    setSourcePanelPinned((current) => !(current ?? isLgUp));
+  }, [isLgUp]);
 
   const isEmpty = filteredRecords.length === 0;
 

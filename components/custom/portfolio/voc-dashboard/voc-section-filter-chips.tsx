@@ -27,14 +27,17 @@ export function VocSectionFilterChips({
       {chips.map((chip) => (
         <Badge
           key={chip.id}
-          variant="secondary"
-          className="h-6 gap-1 rounded-full px-2 py-0.5 text-xs"
+          variant="outline"
+          className={cn(
+            "h-6 gap-1 rounded-full px-2 py-0.5 text-xs",
+            RESPONSIVE.caseStudyPrototypeFilterChipActive,
+          )}
         >
           <span>{chip.label}</span>
           <button
             type="button"
             className={cn(
-              "rounded-full p-0.5 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
+              "rounded-full p-0.5 hover:bg-chart-4/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
               RESPONSIVE.caseStudyPrototypeInteractive,
             )}
             aria-label={`Remove filter ${chip.label}`}

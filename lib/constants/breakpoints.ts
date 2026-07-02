@@ -135,9 +135,11 @@ export const RESPONSIVE = {
   caseStudyPrototypeSidebar:
     "group/sidebar flex shrink-0 flex-col self-stretch border-white/[0.08] bg-white/[0.02] transition-[width] duration-200 ease-out border-r",
   caseStudyPrototypeSidebarBrand:
-    "flex shrink-0 items-center justify-center gap-2 px-2 py-2 lg:justify-between lg:px-3 lg:py-3",
+    "flex shrink-0 items-center justify-center gap-2 py-2 lg:py-3",
+  caseStudyPrototypeSidebarBrandCollapsed:
+    "px-2 lg:px-3",
   caseStudyPrototypeSidebarBrandExpanded:
-    "border-b border-white/[0.08]",
+    "justify-between border-b border-white/[0.08] pl-4 pr-2 lg:px-3",
   caseStudyPrototypeSidebarExpanded: "w-full lg:w-48",
   caseStudyPrototypeSidebarExpandedWidth: "w-48",
   caseStudyPrototypeSidebarCollapsedWidth: "w-12",
@@ -147,10 +149,12 @@ export const RESPONSIVE = {
     "w-12 lg:w-48 lg:static",
   caseStudyPrototypeSidebarNav:
     "flex flex-1 flex-col gap-1 overflow-y-auto p-2 lg:py-3 lg:pr-2 lg:pl-1",
+  caseStudyPrototypeSidebarNavCollapsed:
+    "flex flex-1 flex-col gap-1 overflow-y-auto px-1.5 py-2 lg:px-0",
   caseStudyPrototypeSidebarItemExpanded:
-    "flex w-full items-center gap-3 px-3 py-2.5 text-left text-sm font-medium transition-colors lg:mx-2 lg:w-auto lg:rounded-lg",
+    "mx-2 flex w-auto items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors",
   caseStudyPrototypeSidebarItemCollapsed:
-    "mx-auto flex size-9 shrink-0 items-center justify-center rounded-lg p-0 text-sm font-medium transition-colors",
+    "flex size-9 w-full shrink-0 items-center justify-center rounded-lg p-0 text-sm font-medium transition-colors",
   caseStudyPrototypeSidebarItemActive:
     "bg-chart-4/15 text-chart-4 ring-1 ring-chart-4/30",
   caseStudyPrototypeSidebarItemInactive:
@@ -162,7 +166,9 @@ export const RESPONSIVE = {
   caseStudyPrototypeFilterBackdrop:
     "absolute inset-0 z-30 bg-black/20 supports-backdrop-filter:backdrop-blur-[1px]",
   caseStudyPrototypeFilterPanel:
-    "absolute inset-y-0 right-0 z-40 flex w-full max-w-md flex-col border-l border-white/[0.08] bg-card shadow-xl",
+    "absolute inset-y-0 right-0 z-40 flex w-[66vw] min-w-[12rem] max-w-md flex-col border-l border-white/[0.08] bg-card shadow-xl lg:w-full",
+  caseStudyPrototypeFilterChipActive:
+    "border border-chart-4/30 bg-chart-4/15 text-chart-4 ring-0",
   caseStudyPrototypeFilterSelect:
     "h-10 w-full rounded-lg border border-white/[0.1] bg-background py-2 pl-3 pr-3 text-sm text-foreground",
   caseStudyPrototypePersonaGrid: "grid gap-4 md:grid-cols-2 lg:grid-cols-3",

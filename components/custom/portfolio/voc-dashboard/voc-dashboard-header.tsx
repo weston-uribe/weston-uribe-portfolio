@@ -22,7 +22,10 @@ export function VocDashboardHeader({
       <Button
         type="button"
         variant="outline"
-        className={cn("shrink-0", RESPONSIVE.caseStudyPrototypeInteractive)}
+        className={cn(
+          "w-fit self-end sm:self-auto",
+          RESPONSIVE.caseStudyPrototypeInteractive,
+        )}
         aria-expanded={drawerOpen}
         aria-controls="voc-filter-drawer"
         onClick={onOpenFilters}

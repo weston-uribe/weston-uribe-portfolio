@@ -107,27 +107,21 @@ export const UKME_VOC_RESEARCH_SECTION: CaseStudyProseSection = {
   title: "Research and discovery",
   paragraphs: [
     "I interviewed more than 50 internal product managers to understand how they used customer feedback and what would make the dashboard useful.",
-    "Those conversations also helped build awareness with likely early adopters who could validate the tool, find issues, and shape future requests.",
-    "The repeated theme was actionability. PMs did not want more raw feedback. They wanted feedback they could interpret and bring into roadmap planning.",
+    "The clearest theme was actionability. PMs did not want more raw feedback. They wanted clear signals they could bring into roadmap planning.",
   ],
-  bulletsIntro: "PMs needed to answer:",
   bullets: [
     "What problem keeps showing up?",
-    "Which personas are affected?",
-    "Are high-ARR accounts involved?",
-    "How many customers support the pattern?",
-    "Which theme or sub-theme does it map to?",
-    "What raw feedback supports the summary?",
+    "Which personas and accounts are affected?",
+    "What feedback supports the pattern?",
   ],
 };
 
 export const UKME_VOC_DISCOVERY = {
   title: "What I discovered",
   paragraphs: [
-    "The AI tagging itself was useful. The internal Pendo team had created a theme and sub-theme taxonomy, and AI classified feedback against it. PMs generally trusted those tags.",
-    "The bigger issue was the product experience around the tags. The dashboard did not make it easy to connect feedback themes, personas, account value, and raw comments into a clear product signal.",
-    "I also found two structural constraints. Feedback sources used different product names, which made cross-source synthesis difficult. The dashboard also relied on batch-generated summaries, so it could not answer every PM question on demand.",
-    "The shipped version needed to be practical: improve decision-making inside the current architecture without pretending to solve the long-term AI and software architecture problem.",
+    "The AI tagging was not the main problem. The internal Pendo team had created a theme and sub-theme taxonomy, and AI classified feedback against it. PMs generally trusted those tags.",
+    "The bigger issue was the product experience around the tags. The dashboard did not connect themes, personas, account value, and raw comments into a clear product signal.",
+    "I also found two constraints: product naming differed across sources, and summaries were batch-generated. That meant the shipped version needed to improve decision-making inside the current architecture without pretending to solve the long-term AI architecture problem.",
   ],
 } as const;
 
@@ -179,16 +173,8 @@ export const UKME_VOC_DESIGN_SECTIONS: readonly CaseStudyProseSection[] = [
     title: "Design strategy",
     paragraphs: [
       "The redesign shifted the experience from feedback visibility to roadmap evidence.",
-      "Instead of leading with rows and dense text, I designed the page around a clearer hierarchy: source, filters, persona-based insights, business context, and raw feedback evidence.",
-    ],
-    bulletsIntro: "Key design choices:",
-    bullets: [
-      "Preserve source-specific navigation because product taxonomy was not unified across channels.",
-      "Move filters into a modern right-side drawer.",
-      "Support practical filters like date range, ARR tier, and source-specific product.",
-      "Surface the top three end-user personas in the filtered dataset.",
-      "Pair each persona summary with business context like feedback volume, ARR, satisfaction, and account impact.",
-      "Keep the raw table so PMs could validate the summary against source comments.",
+      "I kept the source-by-source structure, moved filters into a right-side drawer, surfaced the top three personas in the filtered dataset, and paired each persona summary with business context like feedback volume, ARR, satisfaction, and account impact.",
+      "The raw feedback table stayed in place so PMs could validate the summaries against the source comments.",
     ],
   },
   {

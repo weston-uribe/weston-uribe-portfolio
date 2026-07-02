@@ -69,7 +69,9 @@ export function CaseStudySectionBand({
           : RESPONSIVE.caseStudySectionSurfaceMuted,
       )}
     >
-      {children}
+      <div className={cn(LAYOUT.pageShell, SPACING.stackGap, "flex flex-col")}>
+        {children}
+      </div>
     </section>
   );
 }

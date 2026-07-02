@@ -70,7 +70,9 @@ export function VocSourceSidebar({
       <div
         className={cn(
           RESPONSIVE.caseStudyPrototypeSidebarBrand,
-          isVisuallyExpanded && RESPONSIVE.caseStudyPrototypeSidebarBrandExpanded,
+          isVisuallyExpanded
+            ? RESPONSIVE.caseStudyPrototypeSidebarBrandExpanded
+            : RESPONSIVE.caseStudyPrototypeSidebarBrandCollapsed,
         )}
       >
         {isVisuallyExpanded ? (
@@ -117,7 +119,11 @@ export function VocSourceSidebar({
 
       <nav
         aria-label="Feedback sources"
-        className={RESPONSIVE.caseStudyPrototypeSidebarNav}
+        className={cn(
+          isVisuallyExpanded
+            ? RESPONSIVE.caseStudyPrototypeSidebarNav
+            : RESPONSIVE.caseStudyPrototypeSidebarNavCollapsed,
+        )}
       >
         {FEEDBACK_SOURCES.map((source) => {
           const Icon = SOURCE_ICONS[source];
