@@ -1,8 +1,10 @@
+import { CaseStudyAtAGlance } from "@/components/custom/portfolio/case-study/case-study-at-a-glance";
 import { CaseStudyBeforeDashboard } from "@/components/custom/portfolio/case-study/case-study-before-dashboard";
 import { CaseStudyComingSoonSection } from "@/components/custom/portfolio/case-study/case-study-coming-soon-section";
 import { CaseStudyConstrainedTransition } from "@/components/custom/portfolio/case-study/case-study-constrained-transition";
 import { CaseStudyFramingNote } from "@/components/custom/portfolio/case-study/case-study-framing-note";
 import { CaseStudyHero } from "@/components/custom/portfolio/case-study/case-study-hero";
+import { CaseStudyInDepthTransition } from "@/components/custom/portfolio/case-study/case-study-in-depth-transition";
 import { CaseStudyInsightSection } from "@/components/custom/portfolio/case-study/case-study-insight-section";
 import {
   CaseStudyPhaseSection,
@@ -30,10 +32,12 @@ export default function UkgWorkPage() {
       <main className={cn(SPACING.pageAnchorScrollBuffer)}>
         <CaseStudyHero />
         <CaseStudyFramingNote />
+        <CaseStudyAtAGlance />
 
         <CaseStudyPhaseSection
           phase={UKME_VOC_PHASES.context}
           tone="muted"
+          lead={<CaseStudyInDepthTransition />}
         >
           {UKME_VOC_OPENING_SECTIONS.map((section) => (
             <CaseStudyProseSection

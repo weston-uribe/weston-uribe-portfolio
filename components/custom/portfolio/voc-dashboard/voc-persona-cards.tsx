@@ -105,7 +105,7 @@ export function VocPersonaCards({ source, personas }: VocPersonaCardsProps) {
   if (personas.length === 0) {
     return (
       <section aria-label="Top persona insights">
-        <h4 className="mb-4 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+        <h4 className={cn("mb-4", RESPONSIVE.caseStudyPrototypeSectionLabel)}>
           Top personas by feedback volume
         </h4>
         <EmptyPersonaCard />
@@ -115,7 +115,7 @@ export function VocPersonaCards({ source, personas }: VocPersonaCardsProps) {
 
   return (
     <section aria-label="Top persona insights">
-      <h4 className="mb-4 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+      <h4 className={cn("mb-4", RESPONSIVE.caseStudyPrototypeSectionLabel)}>
         Top personas by feedback volume
       </h4>
       <div className={RESPONSIVE.caseStudyPrototypePersonaGrid}>

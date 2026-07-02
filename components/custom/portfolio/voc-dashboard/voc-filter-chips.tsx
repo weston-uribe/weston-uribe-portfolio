@@ -42,7 +42,7 @@ export function VocFilterChips({
             <button
               type="button"
               className={cn(
-                "rounded-full p-0.5 hover:bg-chart-4/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
+                "rounded-full p-0.5 hover:bg-portfolio-kg-teal/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
                 RESPONSIVE.caseStudyPrototypeInteractive,
               )}
               aria-label={`Remove filter ${chip.label}`}

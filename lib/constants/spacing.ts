@@ -16,6 +16,11 @@ export const SPACING = {
   sectionJoinPaddingY: "py-8 sm:py-10 md:py-12 lg:py-14",
   sectionJoinPaddingTop: "pt-8 sm:pt-10 md:pt-12 lg:pt-14",
   sectionJoinPaddingBottom: "pb-8 sm:pb-10 md:pb-12 lg:pb-14",
+  /** Tighter rhythm around the case study framing note between hero and TLDR */
+  caseStudyFramingNotePaddingY: "pt-2 sm:pt-3 pb-8 sm:pb-10",
+  /** TLDR section vertical padding with reduced top gap after framing note */
+  caseStudyAtAGlanceSectionY:
+    "pb-8 sm:pb-10 md:pb-12 lg:pb-14",
   heroSectionPaddingY: "py-10 sm:py-12 md:py-14 lg:py-16",
   sectionGap: "gap-8 lg:gap-10",
   stackGap: "gap-6 lg:gap-8",

@@ -4,28 +4,11 @@ import { cn } from "@/lib/utils";
 
 export function CaseStudyFramingNote() {
   return (
-    <section className={cn(SPACING.sectionJoinPaddingBottom)}>
+    <section className={cn(SPACING.caseStudyFramingNotePaddingY)}>
       <div className={LAYOUT.pageShell}>
-        <div
-          className={cn(
-            RESPONSIVE.caseStudyFramingCard,
-            RESPONSIVE.caseStudyProseColumn,
-            SPACING.stackGap,
-            "flex flex-col",
-          )}
-        >
-          {UKME_VOC_FRAMING.paragraphs.map((paragraph) => (
-            <p
-              key={paragraph.slice(0, 32)}
-              className={cn(
-                RESPONSIVE.caseStudyProse,
-                "not-italic sm:text-base",
-              )}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <p className={cn(RESPONSIVE.caseStudyFramingNote, "w-full")}>
+          {UKME_VOC_FRAMING.text}
+        </p>
       </div>
     </section>
   );

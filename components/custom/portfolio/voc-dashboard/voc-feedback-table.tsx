@@ -57,7 +57,7 @@ export function VocFeedbackTable({
 }: VocFeedbackTableProps) {
   return (
     <section aria-label="Raw feedback table">
-      <h4 className="mb-4 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+      <h4 className={cn("mb-4", RESPONSIVE.caseStudyPrototypeSectionLabel)}>
         Raw feedback evidence
       </h4>
 

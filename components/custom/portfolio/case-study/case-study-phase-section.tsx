@@ -8,6 +8,7 @@ type CaseStudyPhaseSectionProps = {
   phase: CaseStudyPhase;
   tone?: CaseStudySurfaceTone;
   variant?: "default" | "future";
+  lead?: React.ReactNode;
   children: React.ReactNode;
 };
 
@@ -28,6 +29,7 @@ export function CaseStudyPhaseSection({
   phase,
   tone = "muted",
   variant = "default",
+  lead,
   children,
 }: CaseStudyPhaseSectionProps) {
   return (
@@ -36,6 +38,7 @@ export function CaseStudyPhaseSection({
       className={cn(getPhaseSurfaceClass(tone, variant))}
     >
       <div className={cn(LAYOUT.pageShell, SPACING.stackGap, "flex flex-col")}>
+        {lead}
         <div
           className={cn(
             RESPONSIVE.caseStudyProseColumn,

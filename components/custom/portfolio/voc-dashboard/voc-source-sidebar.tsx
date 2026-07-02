@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { UKMeLogo } from "@/components/custom/portfolio/voc-dashboard/ukme-logo";
 import { FEEDBACK_SOURCES } from "@/lib/portfolio/case-studies/ukme-voc-taxonomy";
 import type { FeedbackSource } from "@/lib/portfolio/case-studies/ukme-voc-types";
 import { RESPONSIVE } from "@/lib/constants";
@@ -77,14 +78,15 @@ export function VocSourceSidebar({
       >
         {isVisuallyExpanded ? (
           <>
-            <span className="min-w-0 truncate text-sm font-semibold text-foreground">
-              UKMe
-            </span>
+            <UKMeLogo showWordmark />
             <Button
               type="button"
               variant="ghost"
               size="icon-sm"
-              className={cn("shrink-0", RESPONSIVE.caseStudyPrototypeInteractive)}
+              className={cn(
+                RESPONSIVE.caseStudyPrototypeSidebarToggle,
+                RESPONSIVE.caseStudyPrototypeInteractive,
+              )}
               aria-label={
                 isPinned
                   ? "Collapse feedback sources panel"
@@ -102,18 +104,19 @@ export function VocSourceSidebar({
             </Button>
           </>
         ) : (
-          <Button
+          <button
             type="button"
-            variant="ghost"
-            size="icon-sm"
-            className={cn("mx-auto shrink-0", RESPONSIVE.caseStudyPrototypeInteractive)}
+            className={cn(
+              "mx-auto shrink-0",
+              RESPONSIVE.caseStudyPrototypeInteractive,
+            )}
             aria-label="Expand feedback sources panel"
             aria-expanded={isVisuallyExpanded}
             aria-controls={id}
             onClick={onTogglePanel}
           >
-            <PanelLeftOpen aria-hidden="true" />
-          </Button>
+            <UKMeLogo showWordmark={false} />
+          </button>
         )}
       </div>
 

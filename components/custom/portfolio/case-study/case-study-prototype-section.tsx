@@ -1,8 +1,7 @@
+import { CaseStudyVocDashboardEmbed } from "@/components/custom/portfolio/case-study/case-study-voc-dashboard-embed";
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { UKME_VOC_PROTOTYPE } from "@/lib/portfolio/case-studies/ukme-voc";
 import { cn } from "@/lib/utils";
-
-import { VocDashboardPrototype } from "@/components/custom/portfolio/voc-dashboard/voc-dashboard-prototype";
 
 export function CaseStudyPrototypeSection({
   embedded = false,
@@ -44,9 +43,7 @@ export function CaseStudyPrototypeSection({
           ))}
         </div>
 
-        <div className={RESPONSIVE.caseStudyPrototypeFrame}>
-          <VocDashboardPrototype />
-        </div>
+        <CaseStudyVocDashboardEmbed />
       </div>
     </section>
   );

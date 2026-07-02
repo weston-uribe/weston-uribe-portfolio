@@ -17,6 +17,16 @@ export type CaseStudyPhase = {
   title: string;
 };
 
+export type CaseStudyAtAGlanceStoryBlock = {
+  id: string;
+  title: string;
+  body: string;
+};
+
+export type CaseStudyAtAGlanceComparePanel = {
+  label: string;
+};
+
 export const UKME_VOC_META = {
   title: "AI-Powered Voice of Customer Dashboard",
   pageTitle: "AI-Powered Voice of Customer Dashboard · Weston Uribe",
@@ -32,22 +42,70 @@ export const UKME_VOC_META = {
 export const UKME_VOC_HERO = {
   title: "AI-Powered Voice of Customer Dashboard",
   subtitle:
-    "Turning fragmented customer feedback into clearer roadmap evidence for product managers.",
-  tags: [
-    "AI Decision Support",
-    "Voice of Customer",
-    "Product Strategy",
-    "Enterprise UX",
-    "HCM SaaS",
-    "Roadmap Planning",
-  ],
+    "Turning fragmented customer feedback into clearer roadmap evidence for product managers",
+  illustration: {
+    assetPath: "/images/ukme-voc-hero-illustration.png",
+    assetWidth: 945,
+    assetHeight: 486,
+    alt: "Illustration of AI synthesizing customer feedback into roadmap insights for product managers.",
+  },
+} as const;
+
+export const UKME_VOC_BRAND = {
+  logo: {
+    assetPath: "/images/ukme-logo.png",
+    assetWidth: 812,
+    assetHeight: 236,
+    alt: "UKMe",
+  },
+  logoMark: {
+    assetPath: "/images/ukme-logo-mark.png",
+    assetWidth: 292,
+    assetHeight: 236,
+    alt: "UKMe",
+  },
 } as const;
 
 export const UKME_VOC_FRAMING = {
-  paragraphs: [
-    "This case study is a fictionalized and extended version of work from my UKG internship. UKMe stands in for a large HCM SaaS company. All company names, customer details, and feedback examples are synthetic.",
-    "The shipped redesign reflects the work I delivered during the internship. The future section shows how I would extend the product today with a more AI-native architecture.",
-  ],
+  text: "This case study is a fictionalized version of the work I did during my UKG internship.",
+} as const;
+
+export const UKME_VOC_AT_A_GLANCE = {
+  title: "Case study at a glance",
+  storyBlocks: [
+    {
+      id: "walked-into",
+      title: "What I walked into",
+      body: "UKG had already centralized multi-channel customer feedback and used AI to generate tags and summaries. But the experience still felt like a static report: source-specific tabs, limited filters, dense summaries, and raw feedback tables.",
+    },
+    {
+      id: "what-i-found",
+      title: "What I found",
+      body: "Product managers did not need more raw feedback. They needed roadmap evidence: who was affected, how often the issue appeared, whether high-value accounts were involved, and what source comments supported the pattern.",
+    },
+    {
+      id: "what-i-changed",
+      title: "What I changed",
+      body: "I redesigned the experience around cleaner navigation, a right-side filter workflow, persona-based AI insight cards, business context, and a raw feedback table for validation.",
+    },
+    {
+      id: "result",
+      title: "Result",
+      body: "The redesigned dashboard shipped during my internship, and dashboard usage, measured by views, increased 340% over five weeks.",
+    },
+  ] satisfies readonly CaseStudyAtAGlanceStoryBlock[],
+  before: {
+    label: "Before",
+  } satisfies CaseStudyAtAGlanceComparePanel,
+  after: {
+    label: "After",
+  } satisfies CaseStudyAtAGlanceComparePanel,
+} as const;
+
+export const UKME_VOC_IN_DEPTH = {
+  title: "In-Depth Case Study",
+  subtitle:
+    "The full story behind the research, redesign, delivery, and results.",
 } as const;
 
 export const UKME_VOC_PHASES = {
@@ -213,8 +271,6 @@ export const UKME_VOC_PROTOTYPE = {
     "It preserves source-specific navigation, adds a cleaner filter workflow, surfaces persona-based AI insight cards, and keeps the raw feedback table available for validation.",
     "This is a static portfolio prototype. It does not include live AI, backend logic, or API calls.",
   ],
-  jumpLinkLabel: "Jump to interactive prototype",
-  jumpLinkHref: "#interactive-prototype",
 } as const;
 
 export const UKME_VOC_RESULTS: CaseStudyProseSection = {
