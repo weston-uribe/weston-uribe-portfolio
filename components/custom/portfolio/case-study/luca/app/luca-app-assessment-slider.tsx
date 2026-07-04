@@ -79,6 +79,8 @@ export function LucaAppAssessmentSlider({
   className,
 }: LucaAppAssessmentSliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const isDraggingRef = useRef(false);
+  const [activePointerType, setActivePointerType] = useState("mouse");
   const [previewValue, setPreviewValue] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [trackWidth, setTrackWidth] = useState(0);
@@ -113,10 +115,10 @@ export function LucaAppAssessmentSlider({
   }, []);
 
   const clearPreview = useCallback(() => {
-    if (!isDragging) {
+    if (!isDraggingRef.current) {
       setPreviewValue(null);
     }
-  }, [isDragging]);
+  }, []);
 
   const commitValue = useCallback(
     (clientX: number) => {
@@ -126,15 +128,32 @@ export function LucaAppAssessmentSlider({
       }
 
       onChange(valueFromPointer(clientX, track.getBoundingClientRect()));
-      setPreviewValue(null);
-      setIsDragging(false);
     },
     [onChange],
   );
 
+  const endDrag = useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      if (isDraggingRef.current) {
+        commitValue(event.clientX);
+      }
+
+      if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+        event.currentTarget.releasePointerCapture(event.pointerId);
+      }
+
+      isDraggingRef.current = false;
+      setIsDragging(false);
+      setPreviewValue(null);
+    },
+    [commitValue],
+  );
+
   const handlePointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
+      setActivePointerType(event.pointerType);
       event.currentTarget.setPointerCapture(event.pointerId);
+      isDraggingRef.current = true;
       setIsDragging(true);
       updatePreview(event.clientX);
     },
@@ -143,23 +162,11 @@ export function LucaAppAssessmentSlider({
 
   const handlePointerMove = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
-      if (isDragging || event.pointerType === "mouse") {
+      if (isDraggingRef.current || event.pointerType === "mouse") {
         updatePreview(event.clientX);
       }
     },
-    [isDragging, updatePreview],
-  );
-
-  const handlePointerUp = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
-      if (isDragging) {
-        commitValue(event.clientX);
-      }
-
-      setIsDragging(false);
-      setPreviewValue(null);
-    },
-    [commitValue, isDragging],
+    [updatePreview],
   );
 
   const handleKeyDown = useCallback(
@@ -174,9 +181,11 @@ export function LucaAppAssessmentSlider({
   );
 
   const committedValue = value;
+  const isTouchDragging = isDragging && activePointerType !== "mouse";
   const showGhost =
     previewValue !== null &&
     (committedValue === null || previewValue !== committedValue);
+  const showGhostPreview = !isTouchDragging && showGhost;
 
   const ghostStartPercent =
     committedValue === null ? 0 : valueToPercent(committedValue);
@@ -189,7 +198,7 @@ export function LucaAppAssessmentSlider({
   let ghostFillLeft = ghostLeftPercent;
   let ghostFillWidth = ghostWidthPercent;
 
-  if (showGhost && previewValue !== null) {
+  if (showGhostPreview && previewValue !== null) {
     if (committedValue === null) {
       ghostFillLeft = 0;
       ghostFillWidth = Math.max(0, ghostEndPercent - thumbInset);
@@ -202,48 +211,67 @@ export function LucaAppAssessmentSlider({
     }
   }
 
-  const activeWidthPercent =
+  const committedWidthPercent =
     committedValue === null ? 0 : valueToPercent(committedValue);
+  const touchDragWidthPercent =
+    isTouchDragging && previewValue !== null
+      ? valueToPercent(previewValue)
+      : 0;
+
+  const ariaValue =
+    isTouchDragging && previewValue !== null
+      ? previewValue
+      : committedValue;
 
   return (
-    <div className={cn("relative h-7 w-full", className)}>
+    <div
+      id={id}
+      role="slider"
+      tabIndex={0}
+      aria-labelledby={ariaLabelledBy}
+      aria-describedby={ariaDescribedBy}
+      aria-valuemin={SLIDER_MIN}
+      aria-valuemax={SLIDER_MAX}
+      aria-valuenow={ariaValue ?? undefined}
+      aria-valuetext={
+        ariaValue === null ? "Not selected" : String(ariaValue)
+      }
+      className={cn(
+        RESPONSIVE.caseStudyLucaAppSliderInteraction,
+        isDragging && RESPONSIVE.caseStudyLucaAppSliderInteractionDragging,
+        RESPONSIVE.caseStudyPrototypeInteractive,
+        className,
+      )}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={endDrag}
+      onPointerLeave={clearPreview}
+      onPointerCancel={endDrag}
+      onKeyDown={handleKeyDown}
+    >
       <div
-        id={id}
         ref={trackRef}
-        role="slider"
-        tabIndex={0}
-        aria-labelledby={ariaLabelledBy}
-        aria-describedby={ariaDescribedBy}
-        aria-valuemin={SLIDER_MIN}
-        aria-valuemax={SLIDER_MAX}
-        aria-valuenow={committedValue ?? undefined}
-        aria-valuetext={
-          committedValue === null ? "Not selected" : String(committedValue)
-        }
+        aria-hidden="true"
         className={cn(
-          "absolute top-1/2 box-border h-2 w-full -translate-y-1/2 rounded-full",
+          "pointer-events-none absolute top-1/2 box-border h-2 w-full -translate-y-1/2 rounded-full",
           RESPONSIVE.caseStudyLucaAppSliderTrack,
-          RESPONSIVE.caseStudyPrototypeInteractive,
         )}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerLeave={clearPreview}
-        onPointerCancel={handlePointerUp}
-        onKeyDown={handleKeyDown}
       >
         <div className="absolute inset-0 overflow-hidden rounded-full">
-          {committedValue !== null ? (
+          {isTouchDragging && previewValue !== null ? (
             <div
-              aria-hidden="true"
               className={RESPONSIVE.caseStudyLucaAppSliderRange}
-              style={{ width: `${activeWidthPercent}%` }}
+              style={{ width: `${touchDragWidthPercent}%` }}
+            />
+          ) : committedValue !== null ? (
+            <div
+              className={RESPONSIVE.caseStudyLucaAppSliderRange}
+              style={{ width: `${committedWidthPercent}%` }}
             />
           ) : null}
 
-          {showGhost && previewValue !== null && ghostFillWidth > 0 ? (
+          {showGhostPreview && previewValue !== null && ghostFillWidth > 0 ? (
             <div
-              aria-hidden="true"
               className={RESPONSIVE.caseStudyLucaAppSliderRangeGhost}
               style={{
                 left: `${ghostFillLeft}%`,
@@ -254,11 +282,13 @@ export function LucaAppAssessmentSlider({
         </div>
       </div>
 
-      {committedValue !== null ? (
+      {isTouchDragging && previewValue !== null ? (
+        <SliderThumb value={previewValue} variant="active" />
+      ) : committedValue !== null ? (
         <SliderThumb value={committedValue} variant="active" />
       ) : null}
 
-      {showGhost && previewValue !== null ? (
+      {showGhostPreview && previewValue !== null ? (
         <SliderThumb value={previewValue} variant="ghost" />
       ) : null}
     </div>

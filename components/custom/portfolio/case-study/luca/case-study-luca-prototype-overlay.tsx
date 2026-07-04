@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
@@ -74,7 +75,11 @@ export function CaseStudyLucaPrototypeOverlay({
           className={RESPONSIVE.caseStudyLucaPrototypeOverlayExit}
           onClick={onClose}
         >
-          ← Back to case study
+          <ArrowLeft
+            className={RESPONSIVE.caseStudyLucaPrototypeOverlayExitIcon}
+            aria-hidden="true"
+          />
+          Back to the case study
         </button>
       </header>
       <div className={RESPONSIVE.caseStudyLucaPrototypeOverlayStage}>

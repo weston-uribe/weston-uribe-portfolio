@@ -235,13 +235,14 @@ export const RESPONSIVE = {
   caseStudyLucaPrototypeOverlayHeader:
     "flex shrink-0 items-center px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2",
   caseStudyLucaPrototypeOverlayExit:
-    "inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-foreground transition-colors hover:text-foreground/80 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+    "inline-flex min-h-11 items-center gap-1 rounded-md px-2 text-sm font-medium text-foreground transition-colors hover:text-foreground/80 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+  caseStudyLucaPrototypeOverlayExitIcon: "size-4 shrink-0",
   caseStudyLucaPrototypeOverlayStage:
     "flex min-h-0 flex-1 items-center justify-center overflow-hidden px-3 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]",
   caseStudyPhoneFrame:
     "relative w-full max-w-64 overflow-visible rounded-3xl border border-portfolio-phone-shell-border bg-zinc-950 p-2 sm:max-w-72 md:max-w-80",
   caseStudyPhoneFrameOverlay:
-    "relative w-[min(80vw,360px,calc((100dvh-7rem)*9/19.5))] overflow-visible rounded-3xl border border-portfolio-phone-shell-border bg-zinc-950 p-2",
+    "relative w-[min(90vw,400px,calc((100dvh-6.5rem)*9/19.5))] overflow-visible rounded-3xl border border-portfolio-phone-shell-border bg-zinc-950 p-2",
   caseStudyPhonePowerButton:
     "pointer-events-none absolute top-[18%] right-0 z-40 h-9 w-1 translate-x-full rounded-r-sm bg-zinc-900 ring-1 ring-zinc-950",
   caseStudyPhoneVolumeButton:
@@ -371,6 +372,9 @@ export const RESPONSIVE = {
   caseStudyLucaAppAssessmentQuestion:
     "flex flex-col gap-2",
   caseStudyLucaAppSliderWrap: "px-2",
+  caseStudyLucaAppSliderInteraction:
+    "relative h-7 w-full touch-pan-y select-none",
+  caseStudyLucaAppSliderInteractionDragging: "touch-none",
   caseStudyLucaAppSliderEmptyTrack:
     "h-2 w-full rounded-full border border-luca-app-control-border bg-luca-app-control-surface",
   caseStudyLucaAppSliderTrack:
