@@ -34,7 +34,7 @@ export function PortfolioNav() {
             alt=""
             width={36}
             height={36}
-            className={RESPONSIVE.navAvatar}
+            className={cn(RESPONSIVE.navAvatar, RESPONSIVE.profileAvatarImage)}
           />
           {HERO.name}
         </Link>

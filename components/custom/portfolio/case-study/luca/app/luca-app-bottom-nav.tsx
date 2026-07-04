@@ -113,7 +113,10 @@ function LucaAppBottomNavItemButton({
                 alt=""
                 width={18}
                 height={18}
-                className={RESPONSIVE.caseStudyLucaAppBottomNavAvatarImage}
+                className={cn(
+                  RESPONSIVE.caseStudyLucaAppBottomNavAvatarImage,
+                  RESPONSIVE.profileAvatarImage,
+                )}
               />
             </span>
           ) : (

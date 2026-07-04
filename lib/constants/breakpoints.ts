@@ -29,7 +29,8 @@ export const RESPONSIVE = {
   heroPortraitShell:
     "relative mx-auto w-full max-w-[11rem] sm:max-w-[13rem] md:max-w-[15rem] lg:max-w-[17.5rem] xl:max-w-[20rem]",
   heroPortraitImage: "relative z-10 h-auto w-full object-contain object-bottom",
-  navAvatar: "size-9 shrink-0 rounded-full object-cover object-center",
+  profileAvatarImage: "object-cover object-[center_30%]",
+  navAvatar: "size-9 shrink-0 rounded-full",
   aboutGrid: "grid gap-10 sm:gap-12 lg:grid-cols-5 lg:items-start lg:gap-16",
   aboutIntroColumn: "flex flex-col lg:col-span-2",
   aboutBodyText: "text-lg",
@@ -407,8 +408,7 @@ export const RESPONSIVE = {
   caseStudyLucaAppBottomNavLabel: "text-[0.625rem] font-medium leading-none",
   caseStudyLucaAppBottomNavAvatar:
     "flex size-[1.125rem] shrink-0 items-center justify-center rounded-full border border-luca-app-avatar-border bg-luca-app-control-surface text-[0.625rem] font-semibold text-luca-app-accent",
-  caseStudyLucaAppBottomNavAvatarImage:
-    "size-full rounded-full object-cover object-center",
+  caseStudyLucaAppBottomNavAvatarImage: "size-full rounded-full",
   caseStudyLucaAppBottomNavAvatarWrap:
     "flex size-[1.125rem] shrink-0 items-center justify-center overflow-hidden rounded-full border border-luca-app-avatar-border",
   caseStudyLucaAppBottomNavAvatarActive: "ring-1 ring-luca-app-accent/60",

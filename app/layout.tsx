@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+
+import { PortfolioScrollRestoration } from "@/components/custom/portfolio/portfolio-scroll-restoration";
 import "@/styles/globals.css";
 
 const roboto = Roboto({
@@ -22,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${roboto.variable}`}>
       <body className="overflow-x-clip antialiased">
+        <PortfolioScrollRestoration />
         {children}
       </body>
     </html>

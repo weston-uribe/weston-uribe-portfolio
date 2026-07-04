@@ -9,6 +9,10 @@ export type WorkItem = {
   previewImage?: {
     assetPath: string;
     alt: string;
+    /** Default: cover — fills the preview frame. Use contain to show the full asset scaled down. */
+    fit?: "cover" | "contain";
+    /** Default: browser — window chrome above the image. Use plain for device screenshots. */
+    presentation?: "browser" | "plain";
   };
 };
 
@@ -136,6 +140,13 @@ export const UKME_VOC_WORK_CARD_IMAGE = {
   alt: "UKMe Voice of Customer dashboard prototype showing persona insight cards",
 } as const;
 
+export const LUCA_WORK_CARD_IMAGE = {
+  assetPath: "/images/luca/luca-work-card-v01.png",
+  alt: "Luca wellness coaching app welcome screen with garden illustration",
+  fit: "contain",
+  presentation: "plain",
+} as const;
+
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
@@ -149,7 +160,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: "AI-Powered Voice of Customer Dashboard",
     description:
       "Internal tool that uses AI to turn multi-channel customer feedback into actionable roadmap decisions",
-    tags: ["Product Design", "UX/UI", "AI"],
+    tags: ["Enterprise dashboard", "AI UX"],
     status: "active",
     href: "/work/ukg",
     previewImage: UKME_VOC_WORK_CARD_IMAGE,
@@ -157,12 +168,13 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "luca",
     contextLabel: "Luca",
-    title: "Finding the Real Constraint in Student Wellness",
+    title: "Wellness coaching for students",
     description:
-      "Founder case study: discovery, paid pilot, Bubble MVP, and marketplace partnerships.",
-    tags: ["Founder", "Product Strategy", "MVP"],
+      "Validated demand through pilots, partnerships, and fast iteration.",
+    tags: ["Founder-led", "Marketplace"],
     status: "active",
     href: "/work/luca",
+    previewImage: LUCA_WORK_CARD_IMAGE,
   },
   {
     id: "kinterra",

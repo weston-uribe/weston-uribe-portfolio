@@ -17,6 +17,10 @@ const ACTIVE_CHIP_STYLE = "bg-chart-4/20 text-chart-4/90";
 const INACTIVE_CHIP_STYLE = "bg-white/8 text-white/55";
 
 function WorkCardPreview({ image }: WorkCardPreviewProps) {
+  const fit = image.fit ?? "cover";
+  const presentation = image.presentation ?? "browser";
+  const isContain = fit === "contain";
+
   return (
     <div className="relative my-3 flex min-h-0 w-full flex-1 flex-col items-center justify-center">
       <div
@@ -28,32 +32,48 @@ function WorkCardPreview({ image }: WorkCardPreviewProps) {
           alt=""
           fill
           sizes="(max-width: 640px) 216px, 248px"
-          className="scale-110 object-cover object-top blur-2xl"
+          className={cn(
+            "blur-2xl",
+            isContain
+              ? "object-contain object-center"
+              : "scale-110 object-cover object-top",
+          )}
         />
       </div>
 
       <div className="relative w-full overflow-hidden rounded-xl bg-white/[0.02] shadow-lg shadow-black/40 ring-1 ring-white/[0.08]">
-        <div
-          aria-hidden="true"
-          className="flex h-5 items-center gap-1 border-b border-white/[0.08] px-2.5"
-        >
-          <span className="size-1.5 rounded-full bg-white/20" />
-          <span className="size-1.5 rounded-full bg-white/15" />
-          <span className="size-1.5 rounded-full bg-white/10" />
-        </div>
+        {presentation === "browser" ? (
+          <div
+            aria-hidden="true"
+            className="flex h-5 items-center gap-1 border-b border-white/[0.08] px-2.5"
+          >
+            <span className="size-1.5 rounded-full bg-white/20" />
+            <span className="size-1.5 rounded-full bg-white/15" />
+            <span className="size-1.5 rounded-full bg-white/10" />
+          </div>
+        ) : null}
 
-        <div className="relative aspect-[2/1] w-full overflow-hidden">
+        <div
+          className={cn(
+            "relative w-full overflow-hidden",
+            isContain ? "aspect-[9/19.5]" : "aspect-[2/1]",
+          )}
+        >
           <Image
             src={image.assetPath}
             alt={image.alt}
             fill
             sizes="(max-width: 640px) 216px, 248px"
-            className="object-cover object-top"
+            className={
+              isContain ? "object-contain object-center" : "object-cover object-top"
+            }
           />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-background/90 via-background/40 to-transparent"
-          />
+          {!isContain ? (
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-background/90 via-background/40 to-transparent"
+            />
+          ) : null}
         </div>
       </div>
     </div>
