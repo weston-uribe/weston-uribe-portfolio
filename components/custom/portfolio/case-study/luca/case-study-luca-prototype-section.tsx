@@ -7,16 +7,20 @@ import { cn } from "@/lib/utils";
 
 type CaseStudyLucaPrototypeSectionProps = {
   embedded?: boolean;
+  sectionId?: string;
+  rendersOverlay?: boolean;
 };
 
 export function CaseStudyLucaPrototypeSection({
   embedded = false,
+  sectionId = "interactive-prototype",
+  rendersOverlay = true,
 }: CaseStudyLucaPrototypeSectionProps) {
   const Wrapper = embedded ? "div" : "section";
 
   return (
     <Wrapper
-      id="interactive-prototype"
+      id={sectionId}
       className={cn(
         !embedded && SPACING.sectionJoinPaddingY,
         embedded && SPACING.sectionPaddingTop,
@@ -53,7 +57,7 @@ export function CaseStudyLucaPrototypeSection({
         </div>
 
         <Suspense fallback={null}>
-          <CaseStudyLucaPrototypeLauncher />
+          <CaseStudyLucaPrototypeLauncher rendersOverlay={rendersOverlay} />
         </Suspense>
       </div>
     </Wrapper>

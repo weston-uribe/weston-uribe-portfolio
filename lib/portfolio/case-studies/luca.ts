@@ -276,6 +276,12 @@ export const LUCA_PROTOTYPE = {
   ],
   disclaimer:
     "This prototype uses mock data and is still a work in progress. Any inputs are stored only temporarily in your browser session and reset on refresh. Some screens and interactions may lead to unfinished paths.",
+  previewScreenshot: {
+    assetPath: "/images/luca/luca-work-card-v01.png",
+    alt: "Luca student app prototype welcome screen preview",
+    width: 464,
+    height: 1024,
+  },
 } as const;
 
 export const LUCA_APP_LANDING = {

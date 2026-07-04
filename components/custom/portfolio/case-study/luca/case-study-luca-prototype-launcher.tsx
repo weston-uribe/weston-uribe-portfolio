@@ -7,6 +7,7 @@ import { CaseStudyLucaPhonePrototype } from "@/components/custom/portfolio/case-
 import { CaseStudyLucaPrototypeOverlay } from "@/components/custom/portfolio/case-study/luca/case-study-luca-prototype-overlay";
 import { Button } from "@/components/ui/button";
 import { RESPONSIVE } from "@/lib/constants";
+import { LUCA_PROTOTYPE } from "@/lib/portfolio/case-studies/luca";
 
 function subscribeToMdUp(onStoreChange: () => void) {
   const mediaQuery = window.matchMedia("(min-width: 768px)");
@@ -22,7 +23,11 @@ function getMdUpServerSnapshot() {
   return false;
 }
 
-export function CaseStudyLucaPrototypeLauncher() {
+export function CaseStudyLucaPrototypeLauncher({
+  rendersOverlay = true,
+}: {
+  rendersOverlay?: boolean;
+}) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -66,6 +71,22 @@ export function CaseStudyLucaPrototypeLauncher() {
         <Button ref={launchButtonRef} type="button" onClick={openOverlay}>
           Launch prototype
         </Button>
+        <button
+          type="button"
+          className={RESPONSIVE.caseStudyLucaPrototypePreviewButton}
+          onClick={openOverlay}
+          aria-label="Launch Luca prototype from preview screenshot"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element -- phone-native PNG preview dimensions */}
+          <img
+            src={LUCA_PROTOTYPE.previewScreenshot.assetPath}
+            alt={LUCA_PROTOTYPE.previewScreenshot.alt}
+            width={LUCA_PROTOTYPE.previewScreenshot.width}
+            height={LUCA_PROTOTYPE.previewScreenshot.height}
+            decoding="async"
+            className={RESPONSIVE.caseStudyLucaPrototypePreviewImage}
+          />
+        </button>
       </div>
 
       <div className={RESPONSIVE.caseStudyPhonePrototypeInlineWrap}>
@@ -74,7 +95,7 @@ export function CaseStudyLucaPrototypeLauncher() {
         </div>
       </div>
 
-      {showOverlay ? (
+      {rendersOverlay && showOverlay ? (
         <CaseStudyLucaPrototypeOverlay onClose={closeOverlay} />
       ) : null}
     </>

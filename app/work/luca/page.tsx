@@ -3,6 +3,7 @@ import { CaseStudyLucaFeatureGrid } from "@/components/custom/portfolio/case-stu
 import { CaseStudyLucaHero } from "@/components/custom/portfolio/case-study/luca/case-study-luca-hero";
 import { CaseStudyLucaInDepthTransition } from "@/components/custom/portfolio/case-study/luca/case-study-luca-in-depth-transition";
 import { CaseStudyLucaOutcomes } from "@/components/custom/portfolio/case-study/luca/case-study-luca-outcomes";
+import { CaseStudyLucaPrototypeSection } from "@/components/custom/portfolio/case-study/luca/case-study-luca-prototype-section";
 import { CaseStudyLucaTrustCards } from "@/components/custom/portfolio/case-study/luca/case-study-luca-trust-cards";
 import { CaseStudyPhaseSection } from "@/components/custom/portfolio/case-study/case-study-phase-section";
 import { CaseStudyProseSection } from "@/components/custom/portfolio/case-study/case-study-prose-section";
@@ -74,6 +75,11 @@ export default function LucaWorkPage() {
         <CaseStudyPhaseSection phase={LUCA_PHASES.lessons} tone="dark">
           <CaseStudyProseSection section={LUCA_SECTIONS.lessons} embedded />
         </CaseStudyPhaseSection>
+
+        <CaseStudyLucaPrototypeSection
+          sectionId="interactive-prototype-end"
+          rendersOverlay={false}
+        />
       </main>
       <PortfolioFooter />
     </>
