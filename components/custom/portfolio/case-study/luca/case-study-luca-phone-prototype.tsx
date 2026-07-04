@@ -228,7 +228,11 @@ function PhoneNavBar({
   );
 }
 
-export function CaseStudyLucaPhonePrototype() {
+export function CaseStudyLucaPhonePrototype({
+  variant = "embedded",
+}: {
+  variant?: "embedded" | "overlay";
+}) {
   const shouldReduceMotion = useReducedMotion();
   const [screen, setScreen] = useState<LucaPhoneScreen>("home");
   const [appRoute, setAppRoute] = useState<LucaAppRoute>("onboarding");
@@ -353,8 +357,13 @@ export function CaseStudyLucaPhonePrototype() {
     setScreen((current) => (current === "launching" ? "splash" : current));
   }, []);
 
+  const frameClass =
+    variant === "overlay"
+      ? RESPONSIVE.caseStudyPhoneFrameOverlay
+      : RESPONSIVE.caseStudyPhoneFrame;
+
   return (
-    <div className={RESPONSIVE.caseStudyPhoneFrame}>
+    <div className={frameClass}>
       <span
         aria-hidden="true"
         className={RESPONSIVE.caseStudyPhonePowerButton}

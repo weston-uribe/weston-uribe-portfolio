@@ -1,4 +1,6 @@
-import { CaseStudyLucaPhonePrototype } from "@/components/custom/portfolio/case-study/luca/case-study-luca-phone-prototype";
+import { Suspense } from "react";
+
+import { CaseStudyLucaPrototypeLauncher } from "@/components/custom/portfolio/case-study/luca/case-study-luca-prototype-launcher";
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { LUCA_PROTOTYPE } from "@/lib/portfolio/case-studies/luca";
 import { cn } from "@/lib/utils";
@@ -50,9 +52,9 @@ export function CaseStudyLucaPrototypeSection({
           </p>
         </div>
 
-        <div className={RESPONSIVE.caseStudyPhonePrototypeWrap}>
-          <CaseStudyLucaPhonePrototype />
-        </div>
+        <Suspense fallback={null}>
+          <CaseStudyLucaPrototypeLauncher />
+        </Suspense>
       </div>
     </Wrapper>
   );
