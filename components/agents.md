@@ -43,6 +43,8 @@ Portfolio sections demonstrate the pattern: `LAYOUT.pageShell` for nav/hero alig
 
 **VoC dashboard prototype** (`custom/portfolio/voc-dashboard/`): `voc-dashboard-prototype` (client root), `voc-dashboard-header`, `voc-source-sidebar`, `voc-filter-drawer`, `voc-filter-chips`, `voc-section-filter-chips`, `voc-filter-multi-select-field`, `voc-date-range-picker`, `voc-persona-cards`, `voc-metrics-row`, `voc-feedback-table`, `voc-feedback-text-cell`, `voc-table-pagination`, `voc-empty-state`.
 
+**Luca case study** (`custom/portfolio/case-study/luca/`): narrative sections (`case-study-luca-hero`, `case-study-luca-outcomes`, etc.) and the interactive phone prototype (`case-study-luca-phone-prototype`). In-phone app UI lives in `luca/app/` — use manifest IDs from `luca-assets.ts` for raster art; copy from `luca-app.ts`. Wallpaper texture via `LucaAppWallpaper` + manifest `decor-paper-speckle-tile-v01`. Text over wallpaper uses `LucaAppTextClearZone` for speckle-free cream masks. Current app components: `luca-art-asset`, `luca-app-wallpaper`, `luca-app-text-clear-zone`, `luca-app-user-avatar`, `luca-app-primary-action`, `luca-app-onboarding-hero-art`, `luca-app-onboarding-welcome-screen`.
+
 ### Shared nav and footer
 
 - **`portfolio-nav`** and **`portfolio-footer`** are the site-wide portfolio chrome. Every portfolio route (landing page, case studies, future work pages) must use these exact components — never duplicate or fork route-specific nav/footer variants.

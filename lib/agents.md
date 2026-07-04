@@ -14,7 +14,7 @@ Shared logic, helper functions, and design system constants live here. Nothing i
 | `constants/layout.ts`    | Semantic layout tokens (containers, pageShell)        |
 | `constants/breakpoints.ts` | Breakpoint docs + responsive layout/typography tokens |
 | `portfolio/content.ts`   | Portfolio landing page copy, work items, `LOGO_AFFILIATIONS`, and `buildMarqueeGroupItems()` for the marquee |
-| `portfolio/case-studies/` | Case-study-specific copy and structured content (one module per project, e.g. `ukme-voc.ts`) |
+| `portfolio/case-studies/` | Case-study-specific copy and structured content (one module per project, e.g. `ukme-voc.ts`, `luca.ts`) |
 
 ## Constants System
 
@@ -72,3 +72,4 @@ Add new responsive patterns to `constants/breakpoints.ts` rather than duplicatin
 - Export typed sections: meta, hero, framing note, prose sections, insight block, before-state assets/annotations, transition teaser, prototype section copy, constrained-redesign transition
 - **UKMe VoC prototype data** (synthetic, static): `ukme-voc-feedback.ts`, `ukme-voc-taxonomy.ts`, `ukme-voc-types.ts`, `ukme-voc-persona-insights.ts`, `ukme-voc-analytics.ts`, `ukme-voc-filter-utils.ts` — pure TypeScript, no API calls
 - Asset paths reference files under `public/images/`; components handle missing assets with placeholders at build time
+- **Luca assets:** `luca-assets.ts` (typed manifest + local asset types), `luca-screens.ts` (screen design contracts), `luca-app.ts` (in-phone prototype copy only). Luca asset types stay in `luca-assets.ts` — do not add to shared `types.ts` unless another case study adopts the same shape. Do not hardcode `/images/luca/` paths in components; use manifest IDs and `LucaArtAsset`. Case study narrative copy stays in `luca.ts`.

@@ -222,4 +222,198 @@ export const RESPONSIVE = {
     "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
   caseStudyPrototypeEmptyState:
     "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/[0.12] bg-white/[0.02] px-6 py-12 text-center",
+  caseStudyPhonePrototypeWrap: "flex justify-center overflow-visible",
+  caseStudyPhoneFrame:
+    "relative w-full max-w-64 overflow-visible rounded-3xl border border-portfolio-phone-shell-border bg-zinc-950 p-2 sm:max-w-72 md:max-w-80",
+  caseStudyPhonePowerButton:
+    "pointer-events-none absolute top-[18%] right-0 z-40 h-9 w-1 translate-x-full rounded-r-sm bg-zinc-900 ring-1 ring-zinc-950",
+  caseStudyPhoneVolumeButton:
+    "pointer-events-none absolute top-[27%] right-0 z-40 h-[4.5rem] w-1 translate-x-full rounded-r-sm bg-zinc-900 ring-1 ring-zinc-950",
+  caseStudyPhoneScreen:
+    "relative flex aspect-[9/19.5] flex-col overflow-hidden rounded-2xl",
+  caseStudyPhoneStatusBar:
+    "relative z-10 flex h-9 shrink-0 items-center justify-between bg-transparent px-5 pt-2.5 text-xs font-medium text-foreground/80 sm:px-6",
+  caseStudyPhoneHomeWallpaper:
+    "flex min-h-0 flex-1 flex-col bg-gradient-to-b from-portfolio-kg-teal/15 via-card to-card",
+  caseStudyPhoneHomeWallpaperBg:
+    "bg-gradient-to-b from-portfolio-kg-teal/15 via-card to-card",
+  caseStudyPhoneHomeIconArea:
+    "flex justify-start px-5 pb-2 pt-5",
+  caseStudyPhoneHomeContent:
+    "flex min-h-0 flex-1 flex-col justify-end gap-6 pb-6",
+  caseStudyPhoneAppBar:
+    "flex h-11 shrink-0 items-center gap-1 border-b border-white/[0.08] px-2",
+  caseStudyPhoneDock: "flex shrink-0 flex-col gap-3 px-4",
+  caseStudyPhoneGoogleSearch:
+    "flex h-10 items-center justify-between gap-3 rounded-full bg-white/[0.08] px-4 ring-1 ring-white/[0.06]",
+  caseStudyPhoneGoogleSearchActions: "flex items-center gap-3",
+  caseStudyPhoneNavBar:
+    "relative z-20 flex h-6 shrink-0 items-center justify-center pb-1",
+  caseStudyPhoneNavBarOverlay:
+    "absolute inset-x-0 bottom-0 z-30",
+  caseStudyPhoneGesturePill:
+    "block h-1 w-24 rounded-full bg-phone-gesture-pill sm:w-28",
+  caseStudyPhoneLucaIcon:
+    "size-14 shrink-0 transition-transform group-hover:scale-105",
+  caseStudyPhoneLucaIconButton:
+    "group h-auto flex-col gap-2 p-0 hover:bg-transparent dark:hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent",
+  caseStudyPhoneLucaNotification:
+    "inline-block size-4 shrink-0 rounded-full",
+  caseStudyPhoneFlyingLogo:
+    "pointer-events-none absolute inset-0 z-20 flex items-center justify-center",
+  caseStudyPhoneAppContent:
+    "relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden text-luca-app-foreground",
+  caseStudyPhoneAppScene:
+    "relative min-h-0 flex-1 overflow-hidden",
+  caseStudyPhoneStatusBarLight:
+    "relative z-10 flex h-9 shrink-0 items-center justify-between bg-transparent px-5 pt-2.5 text-xs font-medium text-luca-app-status-bar-fg sm:px-6",
+  caseStudyPhoneSignalBars: "flex h-3.5 items-end gap-0.5",
+  caseStudyPhoneSignalBar: "w-0.5 rounded-full",
+  caseStudyPhoneBatteryWrap: "inline-flex translate-y-px items-center gap-px text-current",
+  caseStudyPhoneBattery:
+    "flex h-3 w-6 shrink-0 rounded-[2px] border-[0.5px] border-current p-px",
+  caseStudyPhoneBatteryFill:
+    "h-full min-w-0 basis-[88%] rounded-[0.5px] bg-current",
+  caseStudyPhoneBatteryCap:
+    "h-0.5 w-px shrink-0 rounded-r-[0.5px] bg-current",
+  caseStudyLucaAppBackground:
+    "bg-luca-app-background text-luca-app-foreground",
+  caseStudyLucaAppSandySurface:
+    "luca-app-sandy-surface text-luca-app-foreground",
+  caseStudyLucaAppScene:
+    "relative min-h-0 flex-1 overflow-hidden",
+  caseStudyLucaAppStatusBar:
+    "relative z-10 flex h-9 shrink-0 items-center justify-between bg-transparent px-[var(--luca-app-rail-x)] pt-2.5 text-xs font-medium text-luca-app-status-bar-fg sm:px-6",
+  caseStudyLucaAppGesturePill:
+    "block h-1 w-24 rounded-full bg-luca-app-gesture-pill sm:w-28",
+  caseStudyLucaAppCaption:
+    "pointer-events-none absolute inset-x-0 bottom-10 z-10 text-center text-xs font-medium tracking-wide text-luca-app-art-overlay-fg",
+  caseStudyLucaAppCaptionPill:
+    "inline-flex rounded-full bg-luca-app-caption-surface px-4 py-1.5 text-xs font-medium tracking-wide text-luca-app-art-overlay-fg",
+  caseStudyLucaAppScreenPadding: "px-[var(--luca-app-rail-x)] py-4",
+  caseStudyLucaAppPrimaryActionWrap:
+    "px-[var(--luca-app-rail-x)] pb-2 pt-2",
+  caseStudyLucaAppPrimaryAction:
+    "h-10 w-full rounded-xl bg-luca-app-button-bg text-sm font-semibold text-luca-app-button-fg transition-all hover:scale-[1.01] hover:bg-luca-app-button-bg hover:brightness-105",
+  caseStudyLucaAppScrollContent:
+    "relative flex min-h-0 flex-1 flex-col overflow-x-hidden overflow-y-auto pb-8",
+  caseStudyLucaAppContentPadding:
+    "flex flex-col gap-4 px-[var(--luca-app-rail-x)] pb-2 pt-3",
+  caseStudyLucaAppContentPaddingTight:
+    "flex flex-col gap-4 px-[var(--luca-app-rail-x)] pt-3",
+  caseStudyLucaAppBackButtonAlign: "px-2",
+  caseStudyLucaAppTextClearZone:
+    "rounded-md bg-luca-app-background px-2 py-1",
+  caseStudyLucaAppTextClearZoneHeadline:
+    "rounded-md bg-luca-app-background px-0 py-1",
+  caseStudyLucaAppTextClearZoneInline: "w-fit max-w-full px-1.5 py-0.5",
+  caseStudyLucaAppHeadline:
+    "text-lg font-semibold leading-snug tracking-tight text-luca-app-foreground",
+  caseStudyLucaAppBody: "text-sm leading-relaxed text-luca-app-foreground/90",
+  caseStudyLucaAppSectionLabel:
+    "text-xs font-semibold uppercase tracking-wide text-luca-app-foreground/75",
+  caseStudyLucaAppSectionTitle:
+    "text-sm font-semibold leading-snug text-luca-app-foreground",
+  caseStudyLucaAppHeaderRow: "flex items-start justify-between gap-3",
+  caseStudyLucaAppSectionGap: "flex flex-col gap-1.5",
+  caseStudyLucaAppSections: "flex flex-col gap-5",
+  caseStudyLucaAppDashboardHeader:
+    "flex flex-col gap-1.5 px-[var(--luca-app-rail-x)] pt-3",
+  caseStudyLucaAppDashboardActions:
+    "flex flex-col gap-5 px-[var(--luca-app-rail-x)] pb-2 pt-8",
+  caseStudyLucaAppHeroArtZone: "relative h-40 w-full shrink-0 overflow-x-hidden",
+  caseStudyLucaAppHeroArtFigure:
+    "pointer-events-none absolute -top-3 z-0 h-36 w-44 [&_img]:pointer-events-none",
+  caseStudyLucaAppHeroFoxFigureEdge: "right-0",
+  caseStudyLucaAppHeroArtCta:
+    "absolute bottom-10 left-[var(--luca-app-rail-x)] z-10 w-40",
+  caseStudyLucaAppOpenArea: "min-h-2",
+  caseStudyLucaAppPageInsetTop: "pt-1.5",
+  caseStudyLucaAppAvatar:
+    "flex size-8 shrink-0 items-center justify-center rounded-full border border-luca-app-avatar-border bg-luca-app-control-surface text-xs font-semibold text-luca-app-accent",
+  caseStudyLucaAppArtBackground:
+    "relative min-h-0 flex-1 overflow-hidden bg-luca-app-illustration-safe-bg",
+  caseStudyLucaAppValidationError:
+    "text-sm font-normal text-luca-app-error-fg",
+  caseStudyLucaAppValidationErrorSlot:
+    "grid transition-[grid-template-rows] duration-200 ease-out",
+  caseStudyLucaAppValidationErrorSlotOpen: "grid-rows-[1fr]",
+  caseStudyLucaAppValidationErrorSlotClosed: "grid-rows-[0fr]",
+  caseStudyLucaAppValidationErrorSlotInner: "min-h-0 overflow-hidden",
+  caseStudyLucaAppBackButton:
+    "inline-flex items-center gap-1 border-0 bg-transparent p-0 text-sm font-medium text-luca-app-foreground/90 hover:text-luca-app-foreground",
+  caseStudyLucaAppBackButtonFooter:
+    "relative inline-flex min-w-20 items-center justify-center border-0 bg-transparent px-6 py-0 text-sm font-medium text-luca-app-foreground/90 hover:text-luca-app-foreground",
+  caseStudyLucaAppBackButtonFooterLabel: "text-center",
+  caseStudyLucaAppBackButtonFooterIcon:
+    "absolute top-1/2 left-[calc(50%-2.25rem)] size-4 -translate-y-1/2",
+  caseStudyLucaAppBackButtonFooterClearZone: "inline-flex",
+  caseStudyLucaAppBackButtonFooterWrap: "flex w-full justify-center pt-3",
+  caseStudyLucaAppFooterActions:
+    "mt-4 flex flex-col items-stretch gap-2 px-[var(--luca-app-rail-x)] pb-2 pt-2",
+  caseStudyLucaAppAssessmentQuestion:
+    "flex flex-col gap-2",
+  caseStudyLucaAppSliderWrap: "px-2",
+  caseStudyLucaAppSliderEmptyTrack:
+    "h-2 w-full rounded-full border border-luca-app-control-border bg-luca-app-control-surface",
+  caseStudyLucaAppSliderTrack:
+    "relative border border-luca-app-slider-track-border bg-luca-app-control-surface",
+  caseStudyLucaAppSliderRange:
+    "absolute inset-y-0 left-0 rounded-full bg-luca-app-button-bg",
+  caseStudyLucaAppSliderRangeGhost:
+    "absolute inset-y-0 rounded-full bg-luca-app-button-bg/35",
+  caseStudyLucaAppSliderThumb:
+    "flex items-center justify-center border-luca-app-button-bg bg-luca-app-button-bg text-luca-app-button-fg shadow-sm",
+  caseStudyLucaAppSliderThumbGhost:
+    "flex items-center justify-center border-0 bg-luca-app-button-bg/35 text-luca-app-button-fg/90",
+  caseStudyLucaAppSliderThumbValue:
+    "text-[0.65rem] font-semibold leading-none tabular-nums text-luca-app-button-fg",
+  caseStudyLucaAppSliderThumbValueGhost:
+    "text-luca-app-button-fg/90",
+  caseStudyLucaAppScreenShell: "flex min-h-0 flex-1 flex-col",
+  caseStudyLucaAppScrollRegion:
+    "relative flex min-h-0 flex-1 flex-col overflow-x-hidden overflow-y-auto",
+  caseStudyLucaAppPlaceholderBody:
+    "text-sm leading-relaxed text-luca-app-muted-foreground",
+  caseStudyLucaAppWellnessRadarWrap:
+    "relative mx-auto w-full max-w-none py-0.5",
+  caseStudyLucaAppWellnessRadarSection:
+    "-mx-1 px-1",
+  caseStudyLucaAppWellnessRadarLabel:
+    "fill-luca-app-foreground text-xs font-semibold",
+  caseStudyLucaAppWellnessRadarLabelValue:
+    "fill-luca-app-muted-foreground text-[0.6875rem] font-medium tabular-nums",
+  caseStudyLucaAppWellnessRadarLabelChip:
+    "fill-luca-app-background",
+  caseStudyLucaAppWellnessRadarPolygonShadow:
+    "fill-luca-app-accent/10",
+  caseStudyLucaAppWellnessRadarPolygonVellum:
+    "fill-luca-app-slider-fill/38",
+  caseStudyLucaAppWellnessRadarPolygonBody:
+    "fill-luca-app-accent/48",
+  caseStudyLucaAppWellnessRadarPolygonInner:
+    "fill-luca-app-slider-fill/18",
+  caseStudyLucaAppWellnessRadarPolygonEdgeSoft:
+    "fill-none stroke-luca-app-accent/16",
+  caseStudyLucaAppWellnessRadarPolygonEdge:
+    "fill-none stroke-luca-app-accent/62",
+  caseStudyLucaAppBottomNav:
+    "shrink-0 bg-luca-app-background px-2 pt-1",
+  caseStudyLucaAppBottomNavSafeInset: "pb-5",
+  caseStudyLucaAppBottomNavList: "grid grid-cols-5 gap-0.5",
+  caseStudyLucaAppBottomNavItem:
+    "flex cursor-pointer flex-col items-center justify-center gap-0.5 py-1",
+  caseStudyLucaAppBottomNavIcon: "size-[1.125rem] shrink-0",
+  caseStudyLucaAppBottomNavLabel: "text-[0.625rem] font-medium leading-none",
+  caseStudyLucaAppBottomNavAvatar:
+    "flex size-[1.125rem] shrink-0 items-center justify-center rounded-full border border-luca-app-avatar-border bg-luca-app-control-surface text-[0.625rem] font-semibold text-luca-app-accent",
+  caseStudyLucaAppBottomNavAvatarImage:
+    "size-full rounded-full object-cover object-center",
+  caseStudyLucaAppBottomNavAvatarWrap:
+    "flex size-[1.125rem] shrink-0 items-center justify-center overflow-hidden rounded-full border border-luca-app-avatar-border",
+  caseStudyLucaAppBottomNavAvatarActive: "ring-1 ring-luca-app-accent/60",
+  caseStudyLucaAppBottomNavItemActive: "text-luca-app-accent",
+  caseStudyLucaAppBottomNavItemInactive: "text-luca-app-foreground/80",
+  caseStudyLucaAppFooterActionsWithNav:
+    "mt-4 flex flex-col items-stretch gap-2 px-[var(--luca-app-rail-x)] pb-1 pt-2",
 } as const;

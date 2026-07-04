@@ -37,7 +37,16 @@ Tailwind v4 uses CSS-native configuration instead of a `tailwind.config.ts` file
 
 ## Portfolio brand colors
 
-- **`--portfolio-kg-teal`** (`#245757`) — KG teal accent sampled from UKG branding. Same value in `:root` and `.dark`. Mapped to Tailwind as `portfolio-kg-teal` (e.g. `bg-portfolio-kg-teal/15`, `border-portfolio-kg-teal/20`). Used for About section decorative shapes.
+- **`--portfolio-kg-teal`** (`#245757`) — KG teal accent sampled from UKG branding. Same value in `:root` and `.dark`. Mapped to Tailwind as `portfolio-kg-teal` (e.g. `bg-portfolio-kg-teal/15`, `border-portfolio-kg-teal/20`). Used for About section decorative shapes and Luca accent.
+
+## Luca app prototype tokens (scoped)
+
+Luca in-phone UI tokens simulate a light Android app inside the dark phone shell. They are **prototype-scoped**, not site-wide semantic colors.
+
+- **`--luca-app-*`** — defined in `:root`, mapped in `@theme inline` as `luca-app-*` utilities (e.g. `bg-luca-app-background`, `text-luca-app-foreground`)
+- **`.luca-app-sandy-surface`** — warm sandy base + repeating SVG speckle tile from manifest asset `decor-paper-speckle-tile-v01`. Applied via `LucaAppWallpaper` full-bleed behind status bar, content, and gesture area. CSS `background-image` url must match manifest `src`.
+- **`caseStudyLucaApp*`** — responsive class bundles in `lib/constants/breakpoints.ts` for in-app layout, typography, status bar, and gesture pill
+- Do not add Luca colors as ad-hoc `zinc-*` / `stone-*` in app prototype components when a Luca token exists
 
 ## How to Extend the Theme
 

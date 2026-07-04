@@ -40,6 +40,27 @@
   --color-card: var(--card);
   --color-portfolio-kg-teal: var(--portfolio-kg-teal);
   --color-portfolio-hero-heading: var(--portfolio-hero-heading);
+  --color-portfolio-phone-shell-border: var(--portfolio-phone-shell-border);
+  --color-luca-app-background: var(--luca-app-background);
+  --color-luca-app-foreground: var(--luca-app-foreground);
+  --color-luca-app-muted-foreground: var(--luca-app-muted-foreground);
+  --color-luca-app-surface: var(--luca-app-surface);
+  --color-luca-app-card: var(--luca-app-card);
+  --color-luca-app-caption-surface: var(--luca-app-caption-surface);
+  --color-luca-app-accent: var(--luca-app-accent);
+  --color-luca-app-button-bg: var(--luca-app-button-bg);
+  --color-luca-app-button-fg: var(--luca-app-button-fg);
+  --color-luca-app-status-bar-fg: var(--luca-app-status-bar-fg);
+  --color-luca-app-gesture-pill: var(--luca-app-gesture-pill);
+  --color-phone-gesture-pill: var(--phone-gesture-pill);
+  --color-luca-app-art-overlay-fg: var(--luca-app-art-overlay-fg);
+  --color-luca-app-illustration-safe-bg: var(--luca-app-illustration-safe-bg);
+  --color-luca-app-error-fg: var(--luca-app-error-fg);
+  --color-luca-app-control-surface: var(--luca-app-control-surface);
+  --color-luca-app-control-border: var(--luca-app-control-border);
+  --color-luca-app-avatar-border: var(--luca-app-avatar-border);
+  --color-luca-app-slider-fill: var(--luca-app-slider-fill);
+  --color-luca-app-slider-track-border: var(--luca-app-slider-track-border);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -78,6 +99,30 @@
   --logo-marquee-duration: 65s;
   --portfolio-kg-teal: #245757;
   --portfolio-hero-heading: oklch(0.22 0 0);
+  --portfolio-phone-shell-border: oklch(0.24 0 0);
+  --luca-app-background: oklch(0.865 0.038 82);
+  --luca-app-foreground: oklch(0.3 0.02 265);
+  --luca-app-muted-foreground: oklch(0.48 0.02 265);
+  --luca-app-surface: oklch(0.96 0.008 85);
+  --luca-app-card: oklch(0.99 0.005 85);
+  --luca-app-caption-surface: oklch(0.98 0.01 85 / 0.85);
+  --luca-app-accent: var(--portfolio-kg-teal);
+  --luca-app-button-bg: var(--portfolio-kg-teal);
+  --luca-app-button-fg: oklch(0.99 0 0);
+  --luca-app-status-bar-fg: var(--luca-app-foreground);
+  --luca-app-gesture-pill: oklch(0.45 0.02 265);
+  --phone-gesture-pill: oklch(0.82 0.01 265);
+  --luca-app-art-overlay-fg: oklch(0.42 0.02 265 / 0.75);
+  --luca-app-illustration-safe-bg: var(--luca-app-background);
+  --luca-app-error-fg: oklch(0.46 0.09 32);
+  --luca-app-control-surface: oklch(0.9 0.034 82);
+  --luca-app-control-border: oklch(0.885 0.033 82);
+  --luca-app-avatar-border: oklch(0.855 0.038 82);
+  --luca-app-slider-fill: oklch(0.6 0.06 175);
+  --luca-app-slider-track-border: oklch(0.82 0.034 82);
+  --luca-app-rail-x: 1.25rem;
+  --luca-app-wallpaper-tile: url("/images/luca/decor/luca-paper-speckle-tile-v01.svg");
+  --luca-app-wallpaper-tile-size: 260px;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -114,6 +159,7 @@
   --chart-5: oklch(0.424 0.199 265.638);
   --portfolio-kg-teal: #245757;
   --portfolio-hero-heading: oklch(0.88 0 0);
+  --portfolio-phone-shell-border: oklch(0.22 0 0);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -164,6 +210,17 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.luca-app-speckle-texture {
+  background-image: var(--luca-app-wallpaper-tile);
+  background-repeat: repeat;
+  background-size: var(--luca-app-wallpaper-tile-size)
+    var(--luca-app-wallpaper-tile-size);
+}
+
+.luca-app-sandy-surface {
+  background-color: var(--luca-app-background);
 }
 
 .hero-portrait-glow {

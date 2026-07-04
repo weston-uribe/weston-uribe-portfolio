@@ -1,5 +1,5 @@
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
-import type { CaseStudyProseSection } from "@/lib/portfolio/case-studies/ukme-voc";
+import type { CaseStudyProseSection } from "@/lib/portfolio/case-studies/types";
 import { cn } from "@/lib/utils";
 
 type CaseStudyProseSectionProps = {

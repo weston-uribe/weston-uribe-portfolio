@@ -19,6 +19,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `page.tsx`            | `/`         | Weston Uribe portfolio landing page    |
 | `work/ukg/layout.tsx` | —           | UKMe VoC case study metadata         |
 | `work/ukg/page.tsx`   | `/work/ukg` | UKMe Voice of Customer case study (setup / before state) |
+| `work/luca/layout.tsx`| —           | Luca founder case study metadata     |
+| `work/luca/page.tsx`  | `/work/luca`| Luca wellness coaching platform case study |
 
 ## Layout Responsibilities
 
@@ -42,6 +44,10 @@ Section order: `PortfolioNav` → `HeroSection` → `LogoMarquee` → `AboutSect
 ## Case study page (`work/ukg/page.tsx`)
 
 Scroll-driven narrative for the UKMe Voice of Customer dashboard. Uses the **same** `PortfolioNav` and `PortfolioFooter` as the landing page — do not create route-specific nav or footer components. Section order: `PortfolioNav` → `<main>` (`CaseStudyHero` → `CaseStudyFramingNote` → `CaseStudyPhaseSection` 01 Context → `CaseStudyPhaseSection` 02 Research and discovery → `CaseStudyPhaseSection` 03 Design and implementation → `CaseStudyPrototypeSection` → Results prose → `CaseStudyPhaseSection` 04 Future direction with `CaseStudyComingSoonSection`) → `PortfolioFooter`. Copy lives in `lib/portfolio/case-studies/ukme-voc.ts`. Synthetic feedback data and analytics helpers live in sibling modules under `lib/portfolio/case-studies/`. Page metadata is exported from `work/ukg/layout.tsx`.
+
+## Case study page (`work/luca/page.tsx`)
+
+Founder and product strategy case study for Luca, an incorporated student wellness coaching startup (2020 to 2022). Uses the same portfolio chrome as other routes. Content lives in `lib/portfolio/case-studies/luca.ts`. Luca-specific section components live under `components/custom/portfolio/case-study/luca/`. The in-phone app prototype lives under `components/custom/portfolio/case-study/luca/app/` — use `LucaArtAsset` and the manifest in `luca-assets.ts`; do not hardcode image paths. Assets live in `public/images/luca/` (see `agents.md` there). Preserve the Pixel phone shell and launch animation unless the task is specifically about them. Do not change case study copy when working on the app prototype unless requested. The page composes 14 content sections into seven visual bands (Context, Pilot, Product, Marketplace, Shutdown, Lessons) plus hero, outcome snapshot, and an interactive prototype placeholder. Page metadata is exported from `work/luca/layout.tsx`.
 
 ## Shared portfolio chrome
 

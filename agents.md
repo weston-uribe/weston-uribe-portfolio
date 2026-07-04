@@ -58,7 +58,12 @@ styles/             → Global CSS
 
 public/
   logos/            → Official SVG logos for portfolio marquee (see agents.md)
-  agents.md         → Asset naming and swap instructions
+  images/
+    luca/           → Luca app prototype art library (see agents.md)
+      agents.md     → Asset naming, folders, manifest workflow
+
+docs/
+  portfolio/        → Case study art direction docs (e.g. luca-art-direction.md)
 
 agents.md           → This file (root orientation)
 ```

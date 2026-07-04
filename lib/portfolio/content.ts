@@ -157,10 +157,12 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "luca",
     contextLabel: "Luca",
-    title: "Wellness Coaching Platform for Students",
-    description: "One-on-one wellness coaching platform for students.",
-    tags: ["Product Design", "MVP"],
-    status: "coming-soon",
+    title: "Finding the Real Constraint in Student Wellness",
+    description:
+      "Founder case study: discovery, paid pilot, Bubble MVP, and marketplace partnerships.",
+    tags: ["Founder", "Product Strategy", "MVP"],
+    status: "active",
+    href: "/work/luca",
   },
   {
     id: "kinterra",

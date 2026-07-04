@@ -2,6 +2,10 @@
 
 Drop before/after screenshots and other case-study assets here.
 
+## Luca app prototype
+
+Asset library and agent rules: [`luca/agents.md`](luca/agents.md). Art direction: [`docs/portfolio/luca-art-direction.md`](../docs/portfolio/luca-art-direction.md).
+
 ## UKMe Voice of Customer dashboard
 
 - **Before state:** `ukme-voc-before-dashboard.png` (1024×576) — referenced at `/images/ukme-voc-before-dashboard.png`
