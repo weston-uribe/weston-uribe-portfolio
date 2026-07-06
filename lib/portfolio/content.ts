@@ -177,6 +177,16 @@ export const WORK_ITEMS: WorkItem[] = [
     previewImage: LUCA_WORK_CARD_IMAGE,
   },
   {
+    id: "harness",
+    contextLabel: "AI product systems",
+    title: "Agentic Product Development Harness",
+    description:
+      "Cursor-first workflow system for turning product issues into implementation plans, validation reports, and review-ready PRs.",
+    tags: ["Agentic AI", "Product Ops", "Cursor", "Evals"],
+    status: "active",
+    href: "https://github.com/weston-uribe/agentic-product-development-harness",
+  },
+  {
     id: "kinterra",
     contextLabel: "Kinterra",
     title: "Self-Concept-as-Infrastructure for AI Agents.",

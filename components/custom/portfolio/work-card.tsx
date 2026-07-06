@@ -143,8 +143,25 @@ const activeCardClasses = cn(
 
 const inactiveCardClasses = cn(cardShellClasses, "opacity-80");
 
+function isExternalHref(href: string): boolean {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
 export function WorkCard({ item }: WorkCardProps) {
   if (item.status === "active" && item.href) {
+    if (isExternalHref(item.href)) {
+      return (
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={activeCardClasses}
+        >
+          <WorkCardContent item={item} />
+        </a>
+      );
+    }
+
     return (
       <Link href={item.href} className={activeCardClasses}>
         <WorkCardContent item={item} />
