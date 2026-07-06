@@ -2,13 +2,13 @@
 
 ## Overview
 
-This repository powers [Weston Uribe's product portfolio](https://wedge-1.vercel.app): an active, hiring-manager-facing site for product strategy, design, and AI-assisted prototyping work.
+This repository powers [Weston Uribe's product portfolio](https://weston-uribe-portfolio.vercel.app): an active, hiring-manager-facing site for product strategy, design, and AI-assisted prototyping work.
 
-Wedge-1 is a modular Next.js application used as a living workspace for case studies, interactive product prototypes, and portfolio presentation. It is designed for rapid product experimentation with a consistent design system and structured content layer.
+This portfolio is a modular Next.js application used as a living workspace for case studies, interactive product prototypes, and portfolio presentation. It is designed for rapid product experimentation with a consistent design system and structured content layer.
 
 ## Live site
 
-**https://wedge-1.vercel.app**
+**https://weston-uribe-portfolio.vercel.app**
 
 The deployed site includes a portfolio landing page, selected work, about content, and interactive case study prototypes.
 
