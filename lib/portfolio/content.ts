@@ -209,6 +209,7 @@ export const CONTACT = {
     "Reach out for product design collaborations, strategy conversations, or new opportunities.",
   email: "westonuribe99@gmail.com",
   linkedInUrl: "https://www.linkedin.com/in/westonuribe",
+  githubUrl: "https://github.com/weston-uribe/weston-uribe-portfolio",
   location: "Orange County, California",
 } as const;
 
