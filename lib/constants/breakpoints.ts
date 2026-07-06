@@ -50,7 +50,7 @@ export const RESPONSIVE = {
     "relative h-[26rem] w-64 sm:h-[28rem] sm:w-72",
   workCardChip:
     "rounded-full px-2.5 py-0.5 text-base font-medium backdrop-blur-sm",
-  contactActionGrid: "grid gap-4 md:grid-cols-2 lg:grid-cols-3",
+  contactActionGrid: "grid gap-4 md:grid-cols-2",
   contactActionCard:
     "flex min-h-[7.5rem] flex-col gap-3 rounded-2xl bg-white/[0.03] p-5 ring-1 ring-white/[0.06]",
   contactActionHeader:
