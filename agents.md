@@ -1,8 +1,8 @@
-# Wedge-1 — Root Agent Guide
+# weston-uribe-portfolio — Root Agent Guide
 
 ## What This App Is
 
-Wedge-1 is a modular Next.js application designed for rapid product experimentation. It provides a production-grade scaffold that is self-describing and AI-navigable, so any agent or developer can orient themselves without external documentation.
+weston-uribe-portfolio is a modular Next.js application designed for rapid product experimentation. It provides a production-grade scaffold that is self-describing and AI-navigable, so any agent or developer can orient themselves without external documentation.
 
 ## Tech Stack
 
