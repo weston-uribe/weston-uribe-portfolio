@@ -21,24 +21,33 @@ export function PortfolioNav() {
           "flex h-full min-h-[var(--portfolio-nav-height)] items-center justify-between gap-4"
         )}
       >
-        <Link
-          href="/"
-          className={cn(
-            RESPONSIVE.uiText,
-            SPACING.elementGap,
-            "flex items-center font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
-          )}
-        >
-          <Image
-            src={WESTON_PROFILE.assetPath}
-            alt=""
-            width={36}
-            height={36}
-            className={cn(RESPONSIVE.navAvatar, RESPONSIVE.profileAvatarImage)}
-          />
-          <span>Hi</span>
-          {HERO.name}
-        </Link>
+        <div className={cn(SPACING.elementGap, "flex items-center")}>
+          <Link
+            href="/"
+            className={cn(
+              RESPONSIVE.uiText,
+              SPACING.elementGap,
+              "flex items-center font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80"
+            )}
+          >
+            <Image
+              src={WESTON_PROFILE.assetPath}
+              alt=""
+              width={36}
+              height={36}
+              className={cn(RESPONSIVE.navAvatar, RESPONSIVE.profileAvatarImage)}
+            />
+            {HERO.name}
+          </Link>
+          <span
+            className={cn(
+              RESPONSIVE.uiText,
+              "font-semibold tracking-tight text-foreground"
+            )}
+          >
+            Hi
+          </span>
+        </div>
         <nav aria-label="Primary">
           <ul className="flex items-center justify-end gap-6 sm:gap-8">
             {NAV_LINKS.map((link) => (
