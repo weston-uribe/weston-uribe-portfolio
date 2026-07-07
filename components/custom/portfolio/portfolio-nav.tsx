@@ -45,7 +45,7 @@ export function PortfolioNav() {
               "font-semibold tracking-tight text-foreground"
             )}
           >
-            Hi
+            Hi — Test 1
           </span>
         </div>
         <nav aria-label="Primary">
