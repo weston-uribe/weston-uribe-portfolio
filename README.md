@@ -83,4 +83,4 @@ Internal agent-oriented documentation lives in `agents.md` files throughout the 
 
 ---
 
-M8 agent revalidation smoke test
+M8 agent revalidation smoke test. Verified through the automatic watcher.
