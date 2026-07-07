@@ -36,6 +36,7 @@ export function PortfolioNav() {
             height={36}
             className={cn(RESPONSIVE.navAvatar, RESPONSIVE.profileAvatarImage)}
           />
+          <span>Hi</span>
           {HERO.name}
         </Link>
         <nav aria-label="Primary">
