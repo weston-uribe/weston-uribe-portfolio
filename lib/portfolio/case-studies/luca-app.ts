@@ -42,3 +42,8 @@ export const LUCA_APP_RESOURCES = {
 export const LUCA_APP_COMMUNITY = {
   title: "Community",
 } as const;
+
+export const LUCA_APP_PROFILE = {
+  title: "Profile",
+  avatarSectionTitle: "Update profile picture",
+} as const;
