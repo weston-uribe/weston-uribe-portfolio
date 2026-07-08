@@ -54,25 +54,32 @@ export function LucaAppProfileScreen({
           </LucaAppTextClearZone>
 
           <div className={RESPONSIVE.caseStudyLucaAppProfileAvatarSection}>
-            <button
-              type="button"
-              aria-label="Update profile photo"
-              className={cn(
-                RESPONSIVE.caseStudyLucaAppProfileAvatarButton,
-                RESPONSIVE.caseStudyPrototypeInteractive,
-              )}
-              onClick={() => {
-                fileInputRef.current?.click();
-              }}
-            >
-              <span className={RESPONSIVE.caseStudyLucaAppProfileAvatarWrap}>
-                <LucaAppProfileAvatarImage
-                  src={profileAvatarSrc}
-                  width={80}
-                  height={80}
-                />
-              </span>
-            </button>
+            <LucaAppTextClearZone inline>
+              <h2 className={RESPONSIVE.caseStudyLucaAppSectionTitle}>
+                {LUCA_APP_PROFILE.avatarSectionTitle}
+              </h2>
+            </LucaAppTextClearZone>
+            <div className="flex justify-center">
+              <button
+                type="button"
+                aria-label="Update profile photo"
+                className={cn(
+                  RESPONSIVE.caseStudyLucaAppProfileAvatarButton,
+                  RESPONSIVE.caseStudyPrototypeInteractive,
+                )}
+                onClick={() => {
+                  fileInputRef.current?.click();
+                }}
+              >
+                <span className={RESPONSIVE.caseStudyLucaAppProfileAvatarWrap}>
+                  <LucaAppProfileAvatarImage
+                    src={profileAvatarSrc}
+                    width={80}
+                    height={80}
+                  />
+                </span>
+              </button>
+            </div>
             <input
               ref={fileInputRef}
               type="file"

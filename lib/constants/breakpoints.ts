@@ -350,7 +350,7 @@ export const RESPONSIVE = {
   caseStudyLucaAppAvatar:
     "flex size-8 shrink-0 items-center justify-center rounded-full border border-luca-app-avatar-border bg-luca-app-control-surface text-xs font-semibold text-luca-app-accent",
   caseStudyLucaAppProfileAvatarSection:
-    "flex justify-center px-[var(--luca-app-rail-x)] pt-8",
+    "flex flex-col gap-3 px-[var(--luca-app-rail-x)] pt-8",
   caseStudyLucaAppProfileAvatarButton:
     "cursor-pointer border-0 bg-transparent p-0",
   caseStudyLucaAppProfileAvatarWrap:
