@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="Campus wellness directory artwork">
+  <defs>
+    <linearGradient id="campus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7f0ea"/>
+      <stop offset="100%" stop-color="#f2ebdf"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#campus)"/>
+  <rect x="36" y="92" width="248" height="72" rx="8" fill="#f7f2e8" stroke="#b8aa92" stroke-width="2"/>
+  <path d="M160 44 L248 92 L72 92 Z" fill="#89b5a4"/>
+  <rect x="148" y="72" width="24" height="36" fill="#f7f2e8"/>
+  <circle cx="160" cy="118" r="14" fill="#3d8b7a"/>
+  <path d="M160 108 V128 M150 118 H170" stroke="#f7f2e8" stroke-width="3" stroke-linecap="round"/>
+  <rect x="72" y="128" width="56" height="8" rx="4" fill="#d8ccb8"/>
+  <rect x="136" y="128" width="88" height="8" rx="4" fill="#d8ccb8"/>
+  <rect x="72" y="144" width="120" height="8" rx="4" fill="#d8ccb8"/>
+</svg>
