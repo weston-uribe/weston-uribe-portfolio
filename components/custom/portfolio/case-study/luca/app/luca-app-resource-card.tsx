@@ -6,32 +6,29 @@ import { cn } from "@/lib/utils";
 
 type LucaAppResourceCardProps = {
   resource: LucaAppResource;
-  onSelect: (resource: LucaAppResource) => void;
 };
 
-export function LucaAppResourceCard({
-  resource,
-  onSelect,
-}: LucaAppResourceCardProps) {
+export function LucaAppResourceCard({ resource }: LucaAppResourceCardProps) {
   return (
-    <button
-      type="button"
-      aria-label={`Open ${resource.title}`}
-      onClick={() => {
-        onSelect(resource);
-      }}
+    <article
+      aria-label={resource.title}
       className={cn(
         RESPONSIVE.caseStudyLucaAppResourceCard,
         RESPONSIVE.caseStudyPrototypeInteractive,
+        "select-none",
       )}
     >
-      <div className={cn(RESPONSIVE.caseStudyLucaAppResourceCardArt, "relative")}>
+      <div
+        className={cn(RESPONSIVE.caseStudyLucaAppResourceCardArt, "relative")}
+        aria-hidden="true"
+      >
         <Image
           src={resource.artworkSrc}
-          alt={resource.artworkAlt}
+          alt=""
           fill
           sizes="240px"
-          className="object-cover"
+          draggable={false}
+          className="pointer-events-none object-cover select-none"
         />
       </div>
       <div className={RESPONSIVE.caseStudyLucaAppResourceCardBody}>
@@ -42,6 +39,6 @@ export function LucaAppResourceCard({
           {resource.description}
         </p>
       </div>
-    </button>
+    </article>
   );
 }

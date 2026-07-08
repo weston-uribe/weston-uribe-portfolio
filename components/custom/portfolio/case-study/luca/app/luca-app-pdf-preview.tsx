@@ -1,10 +1,10 @@
 "use client";
 
-import { X } from "lucide-react";
-
 import { RESPONSIVE } from "@/lib/constants";
 import type { LucaAppResource } from "@/lib/portfolio/case-studies/luca-app-resources";
-import { cn } from "@/lib/utils";
+
+import { LucaAppBackButton } from "./luca-app-back-button";
+import { LucaAppTextClearZone } from "./luca-app-text-clear-zone";
 
 type LucaAppPdfPreviewProps = {
   resource: LucaAppResource;
@@ -14,27 +14,21 @@ type LucaAppPdfPreviewProps = {
 export function LucaAppPdfPreview({ resource, onClose }: LucaAppPdfPreviewProps) {
   return (
     <div
-      className={RESPONSIVE.caseStudyLucaAppPdfPreviewOverlay}
-      role="dialog"
-      aria-modal="true"
+      className={RESPONSIVE.caseStudyLucaAppPdfPreviewPage}
       aria-label={`${resource.title} preview`}
     >
+      <div className={RESPONSIVE.caseStudyLucaAppContentPaddingTight}>
+        <div className={RESPONSIVE.caseStudyLucaAppBackButtonAlign}>
+          <LucaAppTextClearZone inline>
+            <LucaAppBackButton onClick={onClose} />
+          </LucaAppTextClearZone>
+        </div>
+      </div>
+
       <div className={RESPONSIVE.caseStudyLucaAppPdfPreviewHeader}>
         <h2 className={RESPONSIVE.caseStudyLucaAppPdfPreviewTitle}>
           {resource.title}
         </h2>
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close PDF preview and return to Resources"
-          className={cn(
-            RESPONSIVE.caseStudyLucaAppPdfPreviewCloseButton,
-            RESPONSIVE.caseStudyPrototypeInteractive,
-          )}
-        >
-          <X className="size-3.5" aria-hidden="true" />
-          Close
-        </button>
       </div>
 
       <div className={RESPONSIVE.caseStudyLucaAppPdfPreviewFrame}>

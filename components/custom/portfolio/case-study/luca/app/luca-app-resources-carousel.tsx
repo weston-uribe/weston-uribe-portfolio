@@ -27,19 +27,19 @@ export function LucaAppResourcesCarousel({
     startX: 0,
     scrollLeft: 0,
     pointerId: -1,
+    clickedResourceId: null as string | null,
   });
-  const suppressClickRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const updateActiveIndex = useCallback(() => {
+  const getClosestIndex = useCallback(() => {
     const track = trackRef.current;
     if (!track) {
-      return;
+      return 0;
     }
 
     const slides = Array.from(track.children) as HTMLElement[];
     if (slides.length === 0) {
-      return;
+      return 0;
     }
 
     const trackLeft = track.getBoundingClientRect().left;
@@ -54,8 +54,25 @@ export function LucaAppResourcesCarousel({
       }
     });
 
-    setActiveIndex(closestIndex);
+    return closestIndex;
   }, []);
+
+  const updateActiveIndex = useCallback(() => {
+    setActiveIndex(getClosestIndex());
+  }, [getClosestIndex]);
+
+  const scrollToIndex = useCallback(
+    (index: number, behavior: ScrollBehavior = "smooth") => {
+      const track = trackRef.current;
+      const slide = track?.children[index] as HTMLElement | undefined;
+      slide?.scrollIntoView({
+        behavior,
+        block: "nearest",
+        inline: "start",
+      });
+    },
+    [],
+  );
 
   useEffect(() => {
     const track = trackRef.current;
@@ -79,14 +96,17 @@ export function LucaAppResourcesCarousel({
       return;
     }
 
+    const slide = (event.target as HTMLElement).closest("[data-resource-id]");
+    const clickedResourceId = slide?.getAttribute("data-resource-id") ?? null;
+
     dragStateRef.current = {
       isDragging: true,
       hasMoved: false,
       startX: event.clientX,
       scrollLeft: track.scrollLeft,
       pointerId: event.pointerId,
+      clickedResourceId,
     };
-    track.setPointerCapture(event.pointerId);
   };
 
   const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
@@ -102,7 +122,11 @@ export function LucaAppResourcesCarousel({
       return;
     }
 
-    dragState.hasMoved = true;
+    if (!dragState.hasMoved) {
+      dragState.hasMoved = true;
+      track.setPointerCapture(event.pointerId);
+    }
+
     track.scrollLeft = dragState.scrollLeft - deltaX;
   };
 
@@ -115,23 +139,24 @@ export function LucaAppResourcesCarousel({
     }
 
     if (dragState.hasMoved) {
-      suppressClickRef.current = true;
-      window.setTimeout(() => {
-        suppressClickRef.current = false;
-      }, 0);
-      updateActiveIndex();
+      scrollToIndex(getClosestIndex(), "smooth");
+    } else if (dragState.clickedResourceId) {
+      const resource = LUCA_APP_RESOURCE_ITEMS.find(
+        (item) => item.id === dragState.clickedResourceId,
+      );
+      if (resource) {
+        onResourceSelect(resource);
+      }
     }
 
     dragStateRef.current.isDragging = false;
-    track.releasePointerCapture(event.pointerId);
+    if (dragState.hasMoved && track.hasPointerCapture(event.pointerId)) {
+      track.releasePointerCapture(event.pointerId);
+    }
   };
 
-  const handleResourceSelect = (resource: LucaAppResource) => {
-    if (suppressClickRef.current) {
-      return;
-    }
-
-    onResourceSelect(resource);
+  const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
   };
 
   return (
@@ -146,16 +171,15 @@ export function LucaAppResourcesCarousel({
         onPointerMove={handlePointerMove}
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
+        onDragStart={handleDragStart}
       >
         {LUCA_APP_RESOURCE_ITEMS.map((resource) => (
           <div
             key={resource.id}
+            data-resource-id={resource.id}
             className={RESPONSIVE.caseStudyLucaAppResourcesCarouselSlide}
           >
-            <LucaAppResourceCard
-              resource={resource}
-              onSelect={handleResourceSelect}
-            />
+            <LucaAppResourceCard resource={resource} />
           </div>
         ))}
       </div>

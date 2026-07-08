@@ -37,20 +37,6 @@ export function LucaAppResourcesScreen({
       aria-label="Resources"
     >
       <div className={cn(RESPONSIVE.caseStudyLucaAppScrollRegion, "relative")}>
-        <div className={RESPONSIVE.caseStudyLucaAppDashboardHeader}>
-          <LucaAppTextClearZone inline>
-            <h1 className={RESPONSIVE.caseStudyLucaAppHeadline}>
-              {LUCA_APP_RESOURCES.title}
-            </h1>
-          </LucaAppTextClearZone>
-        </div>
-
-        <LucaAppResourcesCarousel
-          onResourceSelect={(resource) => {
-            setPreviewResource(resource);
-          }}
-        />
-
         {previewResource ? (
           <LucaAppPdfPreview
             resource={previewResource}
@@ -58,7 +44,23 @@ export function LucaAppResourcesScreen({
               setPreviewResource(null);
             }}
           />
-        ) : null}
+        ) : (
+          <>
+            <div className={RESPONSIVE.caseStudyLucaAppDashboardHeader}>
+              <LucaAppTextClearZone inline>
+                <h1 className={RESPONSIVE.caseStudyLucaAppHeadline}>
+                  {LUCA_APP_RESOURCES.title}
+                </h1>
+              </LucaAppTextClearZone>
+            </div>
+
+            <LucaAppResourcesCarousel
+              onResourceSelect={(resource) => {
+                setPreviewResource(resource);
+              }}
+            />
+          </>
+        )}
       </div>
 
       <LucaAppBottomNav
