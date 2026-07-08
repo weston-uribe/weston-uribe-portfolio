@@ -464,6 +464,14 @@ export const RESPONSIVE = {
     "text-sm font-semibold leading-snug text-luca-app-foreground",
   caseStudyLucaAppResourceCardDescription:
     "text-xs leading-relaxed text-luca-app-muted-foreground",
+  caseStudyLucaAppCommunityMemberCard:
+    "flex h-full w-full flex-col items-center gap-3 text-center",
+  caseStudyLucaAppCommunityMemberAvatar:
+    "size-24 shrink-0 overflow-hidden rounded-full",
+  caseStudyLucaAppCommunityMemberName:
+    "text-sm font-semibold leading-snug text-luca-app-foreground",
+  caseStudyLucaAppCommunityMemberRole:
+    "text-xs leading-relaxed text-luca-app-muted-foreground",
   caseStudyLucaAppPdfPreviewPage:
     "flex min-h-0 flex-1 flex-col",
   caseStudyLucaAppPdfPreviewHeader:

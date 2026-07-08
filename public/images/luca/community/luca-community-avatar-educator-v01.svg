@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Educator placeholder avatar">
+  <defs>
+    <linearGradient id="educator-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3ece1"/>
+      <stop offset="100%" stop-color="#e8d4b0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="80" fill="url(#educator-bg)"/>
+  <circle cx="80" cy="62" r="24" fill="#b8863d"/>
+  <path d="M36 132 C48 104 62 96 80 96 C98 96 112 104 124 132 Z" fill="#b8863d"/>
+</svg>
