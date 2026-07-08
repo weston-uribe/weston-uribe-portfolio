@@ -436,4 +436,38 @@ export const RESPONSIVE = {
   caseStudyLucaAppBottomNavItemInactive: "text-luca-app-foreground/80",
   caseStudyLucaAppFooterActionsWithNav:
     "mt-4 flex flex-col items-stretch gap-2 px-[var(--luca-app-rail-x)] pb-1 pt-2",
+  caseStudyLucaAppResourcesCarouselSection:
+    "flex flex-col gap-3 px-[var(--luca-app-rail-x)] pb-4 pt-6",
+  caseStudyLucaAppResourcesCarouselTrack:
+    "flex cursor-grab touch-pan-x snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain scroll-pl-0 [scrollbar-width:none] active:cursor-grabbing [&::-webkit-scrollbar]:hidden",
+  caseStudyLucaAppResourcesCarouselSlide:
+    "w-[78%] shrink-0 snap-start",
+  caseStudyLucaAppResourcesCarouselDots:
+    "flex items-center justify-center gap-2",
+  caseStudyLucaAppResourcesCarouselDot:
+    "size-2 rounded-full transition-colors",
+  caseStudyLucaAppResourcesCarouselDotActive: "bg-luca-app-accent",
+  caseStudyLucaAppResourcesCarouselDotInactive: "bg-luca-app-foreground/25",
+  caseStudyLucaAppResourceCard:
+    "flex h-full w-full flex-col overflow-hidden rounded-2xl border border-luca-app-control-border bg-luca-app-card text-left shadow-sm",
+  caseStudyLucaAppResourceCardArt:
+    "relative h-28 w-full shrink-0 overflow-hidden bg-luca-app-illustration-safe-bg",
+  caseStudyLucaAppResourceCardBody:
+    "flex flex-1 flex-col gap-1.5 p-3",
+  caseStudyLucaAppResourceCardTitle:
+    "text-sm font-semibold leading-snug text-luca-app-foreground",
+  caseStudyLucaAppResourceCardDescription:
+    "text-xs leading-relaxed text-luca-app-muted-foreground",
+  caseStudyLucaAppPdfPreviewOverlay:
+    "absolute inset-0 z-20 flex min-h-0 flex-col bg-luca-app-background",
+  caseStudyLucaAppPdfPreviewHeader:
+    "flex shrink-0 items-center justify-between gap-2 border-b border-luca-app-control-border px-[var(--luca-app-rail-x)] py-2",
+  caseStudyLucaAppPdfPreviewTitle:
+    "min-w-0 truncate text-sm font-semibold text-luca-app-foreground",
+  caseStudyLucaAppPdfPreviewCloseButton:
+    "inline-flex shrink-0 items-center gap-1 rounded-md border-0 bg-luca-app-control-surface px-2.5 py-1.5 text-xs font-medium text-luca-app-foreground hover:bg-luca-app-control-border/40",
+  caseStudyLucaAppPdfPreviewFrame:
+    "min-h-0 flex-1 bg-luca-app-surface p-[var(--luca-app-rail-x)]",
+  caseStudyLucaAppPdfPreviewDocument:
+    "size-full rounded-lg border border-luca-app-control-border bg-white",
 } as const;

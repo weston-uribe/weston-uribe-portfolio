@@ -1,11 +1,18 @@
+"use client";
+
+import { useState } from "react";
+
 import { RESPONSIVE } from "@/lib/constants";
 import { LUCA_APP_RESOURCES } from "@/lib/portfolio/case-studies/luca-app";
+import type { LucaAppResource } from "@/lib/portfolio/case-studies/luca-app-resources";
 import { cn } from "@/lib/utils";
 
 import {
   LucaAppBottomNav,
   type LucaAppBottomNavItem,
 } from "../luca-app-bottom-nav";
+import { LucaAppPdfPreview } from "../luca-app-pdf-preview";
+import { LucaAppResourcesCarousel } from "../luca-app-resources-carousel";
 import { LucaAppTextClearZone } from "../luca-app-text-clear-zone";
 
 type LucaAppResourcesScreenProps = {
@@ -17,6 +24,10 @@ export function LucaAppResourcesScreen({
   activeNavItem,
   onNavItemPress,
 }: LucaAppResourcesScreenProps) {
+  const [previewResource, setPreviewResource] = useState<LucaAppResource | null>(
+    null,
+  );
+
   return (
     <div
       className={cn(
@@ -25,7 +36,7 @@ export function LucaAppResourcesScreen({
       )}
       aria-label="Resources"
     >
-      <div className={RESPONSIVE.caseStudyLucaAppScrollRegion}>
+      <div className={cn(RESPONSIVE.caseStudyLucaAppScrollRegion, "relative")}>
         <div className={RESPONSIVE.caseStudyLucaAppDashboardHeader}>
           <LucaAppTextClearZone inline>
             <h1 className={RESPONSIVE.caseStudyLucaAppHeadline}>
@@ -33,6 +44,21 @@ export function LucaAppResourcesScreen({
             </h1>
           </LucaAppTextClearZone>
         </div>
+
+        <LucaAppResourcesCarousel
+          onResourceSelect={(resource) => {
+            setPreviewResource(resource);
+          }}
+        />
+
+        {previewResource ? (
+          <LucaAppPdfPreview
+            resource={previewResource}
+            onClose={() => {
+              setPreviewResource(null);
+            }}
+          />
+        ) : null}
       </div>
 
       <LucaAppBottomNav
