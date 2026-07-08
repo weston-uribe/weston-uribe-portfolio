@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useAnimation, useReducedMotion } from "motion/react";
 import { useCallback } from "react";
 
 import { RESPONSIVE } from "@/lib/constants";
-import { WESTON_PROFILE } from "@/lib/portfolio/content";
 import { cn } from "@/lib/utils";
 
 import { LucaAppBottomNavIcon } from "./luca-app-bottom-nav-icons";
+import { LucaAppProfileAvatarImage } from "./luca-app-profile-avatar-image";
+import { useLucaAppSession } from "./luca-app-session-context";
 
 export type LucaAppBottomNavItem =
   | "dashboard"
@@ -55,6 +55,7 @@ function LucaAppBottomNavItemButton({
   isActive,
   onItemPress,
 }: LucaAppBottomNavItemButtonProps) {
+  const { profileAvatarSrc } = useLucaAppSession();
   const shouldReduceMotion = useReducedMotion();
   const controls = useAnimation();
 
@@ -108,15 +109,11 @@ function LucaAppBottomNavItemButton({
                 isActive && RESPONSIVE.caseStudyLucaAppBottomNavAvatarActive,
               )}
             >
-              <Image
-                src={WESTON_PROFILE.assetPath}
-                alt=""
+              <LucaAppProfileAvatarImage
+                src={profileAvatarSrc}
                 width={18}
                 height={18}
-                className={cn(
-                  RESPONSIVE.caseStudyLucaAppBottomNavAvatarImage,
-                  RESPONSIVE.profileAvatarImage,
-                )}
+                imageClassName={RESPONSIVE.caseStudyLucaAppBottomNavAvatarImage}
               />
             </span>
           ) : (
