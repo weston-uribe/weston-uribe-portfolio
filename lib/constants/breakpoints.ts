@@ -458,6 +458,14 @@ export const RESPONSIVE = {
     "text-sm font-semibold leading-snug text-luca-app-foreground",
   caseStudyLucaAppResourceCardDescription:
     "text-xs leading-relaxed text-luca-app-muted-foreground",
+  caseStudyLucaAppCommunityMemberCard:
+    "flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-luca-app-control-border bg-luca-app-card px-4 py-6 text-center shadow-sm",
+  caseStudyLucaAppCommunityMemberAvatar:
+    "size-24 shrink-0 overflow-hidden rounded-full border-2 border-luca-app-avatar-border bg-luca-app-control-surface",
+  caseStudyLucaAppCommunityMemberName:
+    "text-sm font-semibold leading-snug text-luca-app-foreground",
+  caseStudyLucaAppCommunityMemberRole:
+    "text-xs leading-relaxed text-luca-app-muted-foreground",
   caseStudyLucaAppPdfPreviewPage:
     "flex min-h-0 flex-1 flex-col",
   caseStudyLucaAppPdfPreviewHeader:

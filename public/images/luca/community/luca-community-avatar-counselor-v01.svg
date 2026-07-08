@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Counselor placeholder avatar">
+  <defs>
+    <linearGradient id="counselor-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8eef5"/>
+      <stop offset="100%" stop-color="#c8d8ea"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="80" fill="url(#counselor-bg)"/>
+  <circle cx="80" cy="62" r="24" fill="#4a6f9c"/>
+  <path d="M36 132 C48 104 62 96 80 96 C98 96 112 104 124 132 Z" fill="#4a6f9c"/>
+</svg>

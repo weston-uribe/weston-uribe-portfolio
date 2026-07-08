@@ -7,6 +7,7 @@ import { Camera, Mic } from "lucide-react";
 import { LucaAppOnboardingWelcomeScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-onboarding-welcome-screen";
 import { LucaAppMatchScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-match-screen";
 import { LucaAppDashboardScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-dashboard-screen";
+import { LucaAppCommunityScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-community-screen";
 import { LucaAppResourcesScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-resources-screen";
 import { LucaAppAssessmentScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-assessment-screen";
 import { LucaAppWallpaper } from "@/components/custom/portfolio/case-study/luca/app/luca-app-wallpaper";
@@ -22,7 +23,8 @@ type LucaAppRoute =
   | "assessment"
   | "dashboard"
   | "match"
-  | "resources";
+  | "resources"
+  | "community";
 
 type FlightGeometry = {
   targetSize: number;
@@ -354,6 +356,8 @@ export function CaseStudyLucaPhonePrototype({
       setAppRoute("dashboard");
     } else if (item === "resources") {
       setAppRoute("resources");
+    } else if (item === "community") {
+      setAppRoute("community");
     }
   }, []);
 
@@ -427,6 +431,11 @@ export function CaseStudyLucaPhonePrototype({
                 <LucaAppMatchScreen onBack={handleBackToDashboard} />
               ) : appRoute === "resources" ? (
                 <LucaAppResourcesScreen
+                  activeNavItem={bottomNavActiveItem}
+                  onNavItemPress={handleNavItemPress}
+                />
+              ) : appRoute === "community" ? (
+                <LucaAppCommunityScreen
                   activeNavItem={bottomNavActiveItem}
                   onNavItemPress={handleNavItemPress}
                 />
