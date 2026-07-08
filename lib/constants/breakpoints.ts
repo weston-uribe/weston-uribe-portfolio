@@ -459,9 +459,9 @@ export const RESPONSIVE = {
   caseStudyLucaAppResourceCardDescription:
     "text-xs leading-relaxed text-luca-app-muted-foreground",
   caseStudyLucaAppCommunityMemberCard:
-    "flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-luca-app-control-border bg-luca-app-card px-4 py-6 text-center shadow-sm",
+    "flex h-full w-full flex-col items-center gap-3 text-center",
   caseStudyLucaAppCommunityMemberAvatar:
-    "size-24 shrink-0 overflow-hidden rounded-full border-2 border-luca-app-avatar-border bg-luca-app-control-surface",
+    "size-24 shrink-0 overflow-hidden rounded-full",
   caseStudyLucaAppCommunityMemberName:
     "text-sm font-semibold leading-snug text-luca-app-foreground",
   caseStudyLucaAppCommunityMemberRole:
