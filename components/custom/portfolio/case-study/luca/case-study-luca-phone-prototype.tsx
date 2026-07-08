@@ -7,6 +7,7 @@ import { Camera, Mic } from "lucide-react";
 import { LucaAppOnboardingWelcomeScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-onboarding-welcome-screen";
 import { LucaAppMatchScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-match-screen";
 import { LucaAppDashboardScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-dashboard-screen";
+import { LucaAppResourcesScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-resources-screen";
 import { LucaAppAssessmentScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-assessment-screen";
 import { LucaAppWallpaper } from "@/components/custom/portfolio/case-study/luca/app/luca-app-wallpaper";
 import { LucaArtAsset } from "@/components/custom/portfolio/case-study/luca/app/luca-art-asset";
@@ -16,7 +17,12 @@ import { RESPONSIVE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 type LucaPhoneScreen = "home" | "launching" | "splash" | "app";
-type LucaAppRoute = "onboarding" | "assessment" | "dashboard" | "match";
+type LucaAppRoute =
+  | "onboarding"
+  | "assessment"
+  | "dashboard"
+  | "match"
+  | "resources";
 
 type FlightGeometry = {
   targetSize: number;
@@ -346,6 +352,8 @@ export function CaseStudyLucaPhonePrototype({
 
     if (item === "dashboard") {
       setAppRoute("dashboard");
+    } else if (item === "resources") {
+      setAppRoute("resources");
     }
   }, []);
 
@@ -417,6 +425,11 @@ export function CaseStudyLucaPhonePrototype({
                 />
               ) : appRoute === "match" ? (
                 <LucaAppMatchScreen onBack={handleBackToDashboard} />
+              ) : appRoute === "resources" ? (
+                <LucaAppResourcesScreen
+                  activeNavItem={bottomNavActiveItem}
+                  onNavItemPress={handleNavItemPress}
+                />
               ) : (
                 <LucaAppDashboardScreen
                   assessmentCompleted={assessmentCompleted}

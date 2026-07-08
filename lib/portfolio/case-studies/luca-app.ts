@@ -34,3 +34,7 @@ export const LUCA_APP_DASHBOARD = {
 export const LUCA_APP_MATCH = {
   title: "Find your coach",
 } as const;
+
+export const LUCA_APP_RESOURCES = {
+  title: "Resources",
+} as const;
