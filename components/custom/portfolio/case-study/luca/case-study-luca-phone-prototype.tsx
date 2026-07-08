@@ -7,10 +7,13 @@ import { Camera, Mic } from "lucide-react";
 import { LucaAppOnboardingWelcomeScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-onboarding-welcome-screen";
 import { LucaAppMatchScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-match-screen";
 import { LucaAppDashboardScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-dashboard-screen";
+import { LucaAppCommunityScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-community-screen";
 import { LucaAppResourcesScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-resources-screen";
 import { LucaAppAssessmentScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-assessment-screen";
 import { LucaAppWallpaper } from "@/components/custom/portfolio/case-study/luca/app/luca-app-wallpaper";
 import { LucaArtAsset } from "@/components/custom/portfolio/case-study/luca/app/luca-art-asset";
+import { LucaAppProfileScreen } from "@/components/custom/portfolio/case-study/luca/app/screens/luca-app-profile-screen";
+import { LucaAppSessionProvider } from "@/components/custom/portfolio/case-study/luca/app/luca-app-session-context";
 import type { LucaAppBottomNavItem } from "@/components/custom/portfolio/case-study/luca/app/luca-app-bottom-nav";
 import { Button } from "@/components/ui/button";
 import { RESPONSIVE } from "@/lib/constants";
@@ -22,7 +25,9 @@ type LucaAppRoute =
   | "assessment"
   | "dashboard"
   | "match"
-  | "resources";
+  | "resources"
+  | "community"
+  | "profile";
 
 type FlightGeometry = {
   targetSize: number;
@@ -354,7 +359,16 @@ export function CaseStudyLucaPhonePrototype({
       setAppRoute("dashboard");
     } else if (item === "resources") {
       setAppRoute("resources");
+    } else if (item === "community") {
+      setAppRoute("community");
+    } else if (item === "profile") {
+      setAppRoute("profile");
     }
+  }, []);
+
+  const handleBackFromProfile = useCallback(() => {
+    setAppRoute("dashboard");
+    setBottomNavActiveItem("dashboard");
   }, []);
 
   const handleBackToDashboard = useCallback(() => {
@@ -400,48 +414,61 @@ export function CaseStudyLucaPhonePrototype({
         />
 
         {isApp ? (
-          <LucaAppWallpaper className="relative z-10">
-            <PhoneStatusBar variant="light" showNotification={false} />
+          <LucaAppSessionProvider>
+            <LucaAppWallpaper className="relative z-10">
+              <PhoneStatusBar variant="light" showNotification={false} />
 
-            <motion.div
-              key={`app-${launchKey}-${appRoute}`}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: APP_REVEAL_DURATION, ease: "easeOut" }}
-              className={RESPONSIVE.caseStudyPhoneAppContent}
-            >
-              {appRoute === "onboarding" ? (
-                <LucaAppOnboardingWelcomeScreen
-                  onStartAssessment={handleStartAssessment}
-                  activeNavItem={bottomNavActiveItem}
-                  onNavItemPress={handleNavItemPress}
-                />
-              ) : appRoute === "assessment" ? (
-                <LucaAppAssessmentScreen
-                  onBack={handleBackToOnboarding}
-                  onSubmit={handleCompleteAssessment}
-                  activeNavItem={bottomNavActiveItem}
-                  onNavItemPress={handleNavItemPress}
-                />
-              ) : appRoute === "match" ? (
-                <LucaAppMatchScreen onBack={handleBackToDashboard} />
-              ) : appRoute === "resources" ? (
-                <LucaAppResourcesScreen
-                  activeNavItem={bottomNavActiveItem}
-                  onNavItemPress={handleNavItemPress}
-                />
-              ) : (
-                <LucaAppDashboardScreen
-                  assessmentCompleted={assessmentCompleted}
-                  onStartAssessment={handleStartAssessment}
-                  activeNavItem={bottomNavActiveItem}
-                  onNavItemPress={handleNavItemPress}
-                />
-              )}
-            </motion.div>
+              <motion.div
+                key={`app-${launchKey}-${appRoute}`}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: APP_REVEAL_DURATION, ease: "easeOut" }}
+                className={RESPONSIVE.caseStudyPhoneAppContent}
+              >
+                {appRoute === "onboarding" ? (
+                  <LucaAppOnboardingWelcomeScreen
+                    onStartAssessment={handleStartAssessment}
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                ) : appRoute === "assessment" ? (
+                  <LucaAppAssessmentScreen
+                    onBack={handleBackToOnboarding}
+                    onSubmit={handleCompleteAssessment}
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                ) : appRoute === "match" ? (
+                  <LucaAppMatchScreen onBack={handleBackToDashboard} />
+                ) : appRoute === "resources" ? (
+                  <LucaAppResourcesScreen
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                ) : appRoute === "community" ? (
+                  <LucaAppCommunityScreen
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                ) : appRoute === "profile" ? (
+                  <LucaAppProfileScreen
+                    onBack={handleBackFromProfile}
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                ) : (
+                  <LucaAppDashboardScreen
+                    assessmentCompleted={assessmentCompleted}
+                    onStartAssessment={handleStartAssessment}
+                    activeNavItem={bottomNavActiveItem}
+                    onNavItemPress={handleNavItemPress}
+                  />
+                )}
+              </motion.div>
 
-            <PhoneNavBar light overlay onNavigateHome={handleNavigateHome} />
-          </LucaAppWallpaper>
+              <PhoneNavBar light overlay onNavigateHome={handleNavigateHome} />
+            </LucaAppWallpaper>
+          </LucaAppSessionProvider>
         ) : (
           <>
             <PhoneStatusBar variant="dark" showNotification />

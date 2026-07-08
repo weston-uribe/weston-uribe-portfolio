@@ -38,3 +38,12 @@ export const LUCA_APP_MATCH = {
 export const LUCA_APP_RESOURCES = {
   title: "Resources",
 } as const;
+
+export const LUCA_APP_COMMUNITY = {
+  title: "Community",
+} as const;
+
+export const LUCA_APP_PROFILE = {
+  title: "Profile",
+  avatarSectionTitle: "Update profile picture",
+} as const;

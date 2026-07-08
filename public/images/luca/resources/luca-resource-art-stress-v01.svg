@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="Stress management guide artwork">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8ebe8"/>
+      <stop offset="100%" stop-color="#f3ece1"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#sky)"/>
+  <circle cx="250" cy="48" r="28" fill="#f4d9a6" opacity="0.85"/>
+  <path d="M40 150 C80 120 120 170 160 140 S240 110 290 150 L290 200 L40 200 Z" fill="#8fbfae"/>
+  <path d="M70 150 C95 132 115 158 140 145 S185 128 210 148" fill="none" stroke="#5f9688" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="108" cy="118" r="18" fill="#e8f5f1" stroke="#3d8b7a" stroke-width="3"/>
+  <path d="M102 118 C102 112 114 112 114 118 C114 124 102 124 102 118 Z" fill="#3d8b7a"/>
+</svg>
