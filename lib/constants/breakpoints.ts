@@ -221,7 +221,7 @@ export const RESPONSIVE = {
   caseStudyPrototypeTableWrap:
     "min-w-0 overflow-x-auto rounded-xl ring-1 ring-white/[0.06] [scrollbar-color:rgba(255,255,255,0.18)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-track]:bg-white/[0.04]",
   caseStudyPrototypeDashboardHeader:
-    "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
+    "flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
   caseStudyPrototypeEmptyState:
     "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/[0.12] bg-white/[0.02] px-6 py-12 text-center",
   caseStudyPhonePrototypeWrap: "flex justify-center overflow-visible",
