@@ -44,10 +44,10 @@ export const RESPONSIVE = {
   horizontalScrollBleed: "-mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0",
   workCarouselViewport: "overflow-visible py-4",
   workTrack:
-    "flex flex-nowrap snap-x snap-mandatory gap-5 overflow-x-auto overflow-y-visible scroll-pl-1 scroll-pr-1 px-3 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-  workCardSlide: "shrink-0 snap-start p-2",
-  workCard:
-    "relative h-[26rem] w-64 sm:h-[28rem] sm:w-72",
+    "flex flex-nowrap snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scroll-px-[max(1rem,calc((100%-18rem)/2))] py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:scroll-px-[max(1.25rem,calc((100%-20rem)/2))] sm:gap-5",
+  workCardSlide:
+    "w-[min(18rem,calc(100%-3rem))] shrink-0 snap-center p-2 sm:w-[min(20rem,calc(100%-4rem))]",
+  workCard: "relative h-[26rem] w-full sm:h-[28rem]",
   workCardChip:
     "rounded-full px-2.5 py-0.5 text-base font-medium backdrop-blur-sm",
   contactActionGrid: "grid gap-4 md:grid-cols-2",
@@ -158,15 +158,15 @@ export const RESPONSIVE = {
   caseStudyPrototypeContentColumn:
     "relative flex min-h-0 min-w-0 flex-1 flex-col",
   caseStudyPrototypeHeader:
-    "border-b border-white/[0.08] px-4 py-4 sm:px-6 sm:py-5",
+    "flex items-center border-b border-white/[0.08] px-4 py-4 sm:min-h-[4.5rem] sm:px-6 sm:py-5",
   caseStudyPrototypeSidebar:
     "group/sidebar flex shrink-0 flex-col self-stretch border-white/[0.08] bg-card transition-[width] duration-200 ease-out border-r",
   caseStudyPrototypeSidebarBrand:
-    "flex shrink-0 items-center justify-center gap-2 py-2 lg:py-3",
+    "flex shrink-0 items-center justify-center gap-2 border-b border-white/[0.08] py-4 sm:min-h-[4.5rem] sm:py-5",
   caseStudyPrototypeSidebarBrandCollapsed:
     "px-2 lg:px-3",
   caseStudyPrototypeSidebarBrandExpanded:
-    "justify-between border-b border-white/[0.08] pl-3 pr-2 lg:pl-4 lg:pr-2",
+    "justify-between pl-3 pr-2 lg:pl-4 lg:pr-2",
   caseStudyPrototypeSidebarLogo:
     "size-7 shrink-0 sm:size-8",
   caseStudyPrototypeSidebarWordmark:
@@ -218,9 +218,10 @@ export const RESPONSIVE = {
   caseStudyPrototypeThemeRow:
     "flex items-center gap-3 text-sm",
   caseStudyPrototypeThemeBar: "h-2 rounded-full bg-chart-4/70",
-  caseStudyPrototypeTableWrap: "min-w-0 overflow-x-auto rounded-xl ring-1 ring-white/[0.06]",
+  caseStudyPrototypeTableWrap:
+    "min-w-0 overflow-x-auto rounded-xl ring-1 ring-white/[0.06] [scrollbar-color:rgba(255,255,255,0.18)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-track]:bg-white/[0.04]",
   caseStudyPrototypeDashboardHeader:
-    "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
+    "flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
   caseStudyPrototypeEmptyState:
     "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/[0.12] bg-white/[0.02] px-6 py-12 text-center",
   caseStudyPhonePrototypeWrap: "flex justify-center overflow-visible",
