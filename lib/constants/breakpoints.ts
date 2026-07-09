@@ -44,10 +44,10 @@ export const RESPONSIVE = {
   horizontalScrollBleed: "-mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0",
   workCarouselViewport: "overflow-visible py-4",
   workTrack:
-    "flex flex-nowrap snap-x snap-mandatory gap-5 overflow-x-auto overflow-y-visible scroll-pl-1 scroll-pr-1 px-3 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-  workCardSlide: "shrink-0 snap-start p-2",
-  workCard:
-    "relative h-[26rem] w-64 sm:h-[28rem] sm:w-72",
+    "flex flex-nowrap snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scroll-px-[max(1rem,calc((100%-18rem)/2))] py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:scroll-px-[max(1.25rem,calc((100%-20rem)/2))] sm:gap-5",
+  workCardSlide:
+    "w-[min(18rem,calc(100%-3rem))] shrink-0 snap-center p-2 sm:w-[min(20rem,calc(100%-4rem))]",
+  workCard: "relative h-[26rem] w-full sm:h-[28rem]",
   workCardChip:
     "rounded-full px-2.5 py-0.5 text-base font-medium backdrop-blur-sm",
   contactActionGrid: "grid gap-4 md:grid-cols-2",

@@ -14,7 +14,6 @@ type WorkCarouselProps = {
 };
 
 type CarouselState = {
-  activeIndex: number;
   activePage: number;
   pageCount: number;
 };
@@ -43,8 +42,7 @@ function getCarouselMetrics(track: HTMLDivElement): Pick<CarouselState, "pageCou
 
 export function WorkCarousel({ items }: WorkCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [{ activeIndex, activePage, pageCount }, setCarouselState] = useState<CarouselState>({
-    activeIndex: 0,
+  const [{ activePage, pageCount }, setCarouselState] = useState<CarouselState>({
     activePage: 0,
     pageCount: 1,
   });
@@ -61,22 +59,16 @@ export function WorkCarousel({ items }: WorkCarouselProps) {
     }
 
     const { pageCount: nextPageCount } = getCarouselMetrics(track);
-    const trackLeft = track.getBoundingClientRect().left;
-    let closestIndex = 0;
-    let closestDistance = Number.POSITIVE_INFINITY;
-
-    cards.forEach((card, index) => {
-      const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-
-    const nextActivePage = Math.min(closestIndex, Math.max(nextPageCount - 1, 0));
+    const step =
+      cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
+    const scrollIndex =
+      step > 0 ? Math.round(track.scrollLeft / step) : 0;
+    const nextActivePage = Math.min(
+      Math.max(0, scrollIndex),
+      Math.max(nextPageCount - 1, 0)
+    );
 
     setCarouselState({
-      activeIndex: closestIndex,
       activePage: nextActivePage,
       pageCount: nextPageCount,
     });
@@ -98,26 +90,28 @@ export function WorkCarousel({ items }: WorkCarouselProps) {
     };
   }, [updateCarouselState]);
 
-  const scrollToIndex = (index: number) => {
+  const scrollToPage = (pageIndex: number) => {
     const track = trackRef.current;
-    const card = track?.children[index] as HTMLElement | undefined;
-    card?.scrollIntoView({
+    const card = track?.children[pageIndex] as HTMLElement | undefined;
+    if (!track || !card) {
+      return;
+    }
+
+    const nextPage = Math.max(0, Math.min(pageCount - 1, pageIndex));
+
+    setCarouselState((prev) => ({
+      ...prev,
+      activePage: nextPage,
+    }));
+
+    track.scrollTo({
+      left: card.offsetLeft,
       behavior: "smooth",
-      block: "nearest",
-      inline: "start",
     });
   };
 
-  const scrollToPage = (pageIndex: number) => {
-    scrollToIndex(pageIndex);
-  };
-
   const scrollByStep = (direction: -1 | 1) => {
-    const nextIndex = Math.max(
-      0,
-      Math.min(items.length - 1, activeIndex + direction)
-    );
-    scrollToIndex(nextIndex);
+    scrollToPage(activePage + direction);
   };
 
   const canScrollPrev = activePage > 0;

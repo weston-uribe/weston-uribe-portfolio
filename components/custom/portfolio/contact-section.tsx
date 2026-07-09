@@ -43,11 +43,6 @@ const activeCardClasses = cn(
   "group",
 );
 
-const activeCardShellClasses = cn(
-  RESPONSIVE.contactActionCard,
-  "group transition-[background-color,box-shadow] duration-300 hover:bg-white/[0.045] hover:ring-white/[0.08]",
-);
-
 const disabledCardClasses = cn(
   RESPONSIVE.contactActionCard,
   RESPONSIVE.contactActionCardDisabled,
@@ -73,34 +68,31 @@ export function ContactSection() {
 
         <div className={cn(SPACING.stackGap, "flex flex-col")}>
           <div className={RESPONSIVE.contactActionGrid}>
-            <div className={activeCardShellClasses}>
-              <a
-                href={`mailto:${CONTACT.email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  RESPONSIVE.contactActionHeader,
-                  "rounded-sm focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:outline-none",
-                )}
-              >
+            <a
+              href={`mailto:${CONTACT.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={activeCardClasses}
+            >
+              <div className={RESPONSIVE.contactActionHeader}>
                 <span className={cn("font-medium text-foreground", RESPONSIVE.uiText)}>
                   Email
                 </span>
                 <Mail
                   aria-hidden="true"
-                  className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-white/70"
+                  className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-[#60A5FA]"
                 />
-              </a>
+              </div>
               <span
                 className={cn(
                   RESPONSIVE.contactActionSubtitle,
-                  "cursor-text break-all select-text",
+                  "break-all select-text",
                 )}
               >
                 {CONTACT.email}
               </span>
               <div aria-hidden="true" className="min-h-0 flex-1" />
-            </div>
+            </a>
 
             <a
               href={CONTACT.linkedInUrl}
@@ -128,7 +120,7 @@ export function ContactSection() {
                 <span className={cn("font-medium text-foreground", RESPONSIVE.uiText)}>
                   GitHub
                 </span>
-                <GitHubIcon className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-white/70" />
+                <GitHubIcon className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-white" />
               </div>
               <span className={RESPONSIVE.contactActionSubtitle}>View repository</span>
               <div aria-hidden="true" className="min-h-0 flex-1" />
@@ -146,7 +138,7 @@ export function ContactSection() {
                   </span>
                   <FileText
                     aria-hidden="true"
-                    className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-white/70"
+                    className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-portfolio-kg-teal"
                   />
                 </div>
                 <span className={RESPONSIVE.contactActionSubtitle}>Download PDF</span>
