@@ -178,13 +178,13 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     id: "harness",
-    contextLabel: "AI product systems",
-    title: "Agentic Product Development Harness",
+    contextLabel: "Product Development Harness",
+    title: "Open Source GitHub Repo",
     description:
-      "Cursor-first workflow system for turning product issues into implementation plans, validation reports, and review-ready PRs.",
-    tags: ["Agentic AI", "Product Ops", "Cursor", "Evals"],
+      "Cursor-first workflow that turns Linear issues into implementation plans, validation reports, and review-ready PRs.",
+    tags: ["Product Ops", "Evals"],
     status: "active",
-    href: "https://github.com/weston-uribe/agentic-product-development-harness",
+    href: "/work/harness",
   },
   {
     id: "kinterra",

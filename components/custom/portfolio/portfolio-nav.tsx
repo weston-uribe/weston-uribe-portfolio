@@ -39,14 +39,6 @@ export function PortfolioNav() {
             />
             {HERO.name}
           </Link>
-          <span
-            className={cn(
-              RESPONSIVE.uiText,
-              "font-semibold tracking-tight text-foreground"
-            )}
-          >
-            Hi — Test 1
-          </span>
         </div>
         <nav aria-label="Primary">
           <ul className="flex items-center justify-end gap-6 sm:gap-8">

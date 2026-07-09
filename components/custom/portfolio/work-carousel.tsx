@@ -104,7 +104,7 @@ export function WorkCarousel({ items }: WorkCarouselProps) {
     card?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
-      inline: "start",
+      inline: "center",
     });
   };
 
