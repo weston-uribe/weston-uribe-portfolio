@@ -14,8 +14,6 @@ const NAV_LINKS = [
 export function PortfolioNav() {
   return (
     <header className="sticky top-0 z-50 min-h-[var(--portfolio-nav-height)] border-b border-border/60 bg-background/80 backdrop-blur-md">
-      {/* TTK-1: temporary demo text — remove after demo */}
-      <p className="text-center text-sm text-foreground">Hello, World.</p>
       <div
         className={cn(
           LAYOUT.pageShell,
