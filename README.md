@@ -83,4 +83,6 @@ Internal agent-oriented documentation lives in `agents.md` files throughout the 
 
 ---
 
+Langfuse Milestone 1 dogfood ran successfully (temporary harness documentation).
+
 M8 agent revalidation smoke test. Verified through the automatic watcher.
