@@ -195,6 +195,14 @@
   animation: logo-marquee var(--logo-marquee-duration) linear infinite;
 }
 
+.logo-marquee-track img[src*="cambridge"] {
+  filter: brightness(0);
+}
+
+.dark .logo-marquee-track img[src*="cambridge"] {
+  filter: none;
+}
+
 .logo-marquee-track img {
   display: block;
   background: transparent;

@@ -42,7 +42,7 @@ export function CaseStudyBeforeScreenshot({
         <div className={RESPONSIVE.caseStudyScreenshotPlaceholder}>
           <ImageIcon
             aria-hidden="true"
-            className="size-10 text-white/25 sm:size-12"
+            className="size-10 text-muted-foreground/40 sm:size-12"
           />
           <p className={cn(RESPONSIVE.bodyText, "text-center text-foreground/70")}>
             {UKME_VOC_BEFORE_STATE.placeholderLabel}

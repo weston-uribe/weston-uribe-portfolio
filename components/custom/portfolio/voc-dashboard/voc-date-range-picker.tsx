@@ -230,7 +230,7 @@ export function VocDateRangePicker({
                 type="button"
                 className={cn(
                   RESPONSIVE.caseStudyPrototypeInteractive,
-                  "h-8 rounded-md text-sm transition-colors hover:bg-white/[0.06]",
+                  "h-8 rounded-md text-sm transition-colors hover:bg-muted/60",
                   (() => {
                     const highlight = getDayHighlightState(
                       isoDate,
@@ -270,7 +270,7 @@ export function VocDateRangePicker({
           )}
         </div>
 
-        <div className="mt-3 flex justify-end gap-2 border-t border-white/[0.08] pt-3">
+        <div className="mt-3 flex justify-end gap-2 border-t border-border pt-3">
           <Button
             type="button"
             variant="ghost"

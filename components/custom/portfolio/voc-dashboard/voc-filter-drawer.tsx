@@ -84,7 +84,7 @@ export function VocFilterDrawer({
         aria-label="Filters"
         className={RESPONSIVE.caseStudyPrototypeFilterPanel}
       >
-        <div className="flex items-start justify-between border-b border-white/[0.08] p-4">
+        <div className="flex items-start justify-between border-b border-border p-4">
           <div className="flex flex-col gap-1">
             <h3 className="text-base font-medium text-foreground">Filters</h3>
             <p className="text-sm text-muted-foreground">
@@ -235,7 +235,7 @@ export function VocFilterDrawer({
             />
           </div>
 
-          <div className="flex flex-col gap-2 border-t border-white/[0.08] pt-4">
+          <div className="flex flex-col gap-2 border-t border-border pt-4">
             <Button
               type="button"
               className={RESPONSIVE.caseStudyPrototypeInteractive}
