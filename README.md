@@ -87,4 +87,4 @@ Langfuse Milestone 1 dogfood ran successfully (temporary harness documentation).
 
 M8 agent revalidation smoke test. Verified through the automatic watcher.
 
-PDev Milestone 2 validates review and delivery outcome tracing.
+PDev Milestone 2 validates revision and merge outcome tracing.
