@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import { PortfolioScrollRestoration } from "@/components/custom/portfolio/portfolio-scroll-restoration";
+import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
 const roboto = Roboto({
@@ -22,10 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${roboto.variable}`}>
+    <html lang="en" className={roboto.variable} suppressHydrationWarning>
       <body className="overflow-x-clip antialiased">
-        <PortfolioScrollRestoration />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <PortfolioScrollRestoration />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

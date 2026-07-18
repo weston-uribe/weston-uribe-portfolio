@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ThemeToggle } from "@/components/custom/portfolio/theme-toggle";
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { HERO, WESTON_PROFILE } from "@/lib/portfolio/content";
 import { cn } from "@/lib/utils";
@@ -55,6 +56,9 @@ export function PortfolioNav() {
                 </Link>
               </li>
             ))}
+            <li>
+              <ThemeToggle />
+            </li>
           </ul>
         </nav>
       </div>
