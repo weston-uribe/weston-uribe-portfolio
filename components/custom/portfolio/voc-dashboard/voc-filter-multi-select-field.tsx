@@ -98,7 +98,7 @@ export function VocFilterMultiSelectField<T extends string>({
             role="listbox"
             aria-label={label}
             aria-multiselectable="true"
-            className="absolute top-full z-50 mt-1 flex max-h-44 w-full flex-col gap-1 overflow-y-auto rounded-lg border border-white/[0.1] bg-popover p-2 shadow-lg"
+            className="absolute top-full z-50 mt-1 flex max-h-44 w-full flex-col gap-1 overflow-y-auto rounded-lg border border-border bg-popover p-2 shadow-lg"
           >
             {options.map((option) => {
               const checked = selected.includes(option);
@@ -107,14 +107,14 @@ export function VocFilterMultiSelectField<T extends string>({
                 <label
                   key={option}
                   className={cn(
-                    "flex items-center gap-2 rounded-md px-2 py-1.5 hover:bg-white/[0.04]",
+                    "flex items-center gap-2 rounded-md px-2 py-1.5 hover:bg-muted/60",
                     RESPONSIVE.caseStudyPrototypeInteractive,
                   )}
                 >
                   <input
                     type="checkbox"
                     className={cn(
-                      "size-4 rounded border-white/20",
+                      "size-4 rounded border-border",
                       RESPONSIVE.caseStudyPrototypeInteractive,
                     )}
                     checked={checked}

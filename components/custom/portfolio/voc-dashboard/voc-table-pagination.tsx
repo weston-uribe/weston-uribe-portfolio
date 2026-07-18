@@ -25,7 +25,7 @@ export function VocTablePagination({
   return (
     <div
       className={cn(
-        "flex flex-col gap-3 border-t border-white/[0.06] pt-4 sm:flex-row sm:items-center sm:justify-between",
+        "flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between",
       )}
     >
       <p className="text-sm text-muted-foreground">
