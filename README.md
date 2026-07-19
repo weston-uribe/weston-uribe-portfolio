@@ -91,4 +91,4 @@ PDev Milestone 2 validates revision and merge outcome tracing.
 
 ## Chunk7 code-revision
 
-Synthetic Code Revision path for Chunk 7 Stage 8 via validation-run override.
+Synthetic Code Revision path for Chunk 7 Stage 8 via validation-run override only.
