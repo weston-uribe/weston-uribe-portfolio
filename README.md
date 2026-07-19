@@ -91,4 +91,4 @@ PDev Milestone 2 validates revision and merge outcome tracing.
 
 ## Chunk8 code-review
 
-CHUNK8_CODE_TOKEN_V1
+CHUNK8_CODE_TOKEN_V2
