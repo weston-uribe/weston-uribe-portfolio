@@ -7,6 +7,7 @@ export function CaseStudyHarnessHero() {
     <section className={cn(SPACING.heroSectionPaddingY)}>
       <div className={cn(LAYOUT.pageShell, SPACING.stackGap, "flex flex-col")}>
         <h1 className={RESPONSIVE.caseStudyHeroHeading}>{HARNESS_HERO.title}</h1>
+        <p>Hello World</p>
       </div>
     </section>
   );
