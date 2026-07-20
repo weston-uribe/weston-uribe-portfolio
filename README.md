@@ -80,3 +80,11 @@ Internal agent-oriented documentation lives in `agents.md` files throughout the 
 ## Status
 
 **Active and evolving.** This is a living portfolio repository. Case studies, prototypes, and site content are updated as work progresses. Some routes and prototypes are intentionally marked as works in progress.
+
+---
+
+Langfuse Milestone 1 dogfood ran successfully (temporary harness documentation).
+
+M8 agent revalidation smoke test. Verified through the automatic watcher.
+
+PDev Milestone 2 validates revision and merge outcome tracing.

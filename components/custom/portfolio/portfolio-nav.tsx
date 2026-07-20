@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ThemeToggle } from "@/components/custom/portfolio/theme-toggle";
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { HERO, WESTON_PROFILE } from "@/lib/portfolio/content";
 import { cn } from "@/lib/utils";
@@ -14,8 +15,6 @@ const NAV_LINKS = [
 export function PortfolioNav() {
   return (
     <header className="sticky top-0 z-50 min-h-[var(--portfolio-nav-height)] border-b border-border/60 bg-background/80 backdrop-blur-md">
-      {/* TTK-1: temporary demo text — remove after demo */}
-      <p className="text-center text-sm text-foreground">Hello, World.</p>
       <div
         className={cn(
           LAYOUT.pageShell,
@@ -57,6 +56,9 @@ export function PortfolioNav() {
                 </Link>
               </li>
             ))}
+            <li>
+              <ThemeToggle />
+            </li>
           </ul>
         </nav>
       </div>

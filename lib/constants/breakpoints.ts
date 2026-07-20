@@ -52,12 +52,12 @@ export const RESPONSIVE = {
     "rounded-full px-2.5 py-0.5 text-base font-medium backdrop-blur-sm",
   contactActionGrid: "grid gap-4 md:grid-cols-2",
   contactActionCard:
-    "flex min-h-[7.5rem] flex-col gap-3 rounded-2xl bg-white/[0.03] p-5 ring-1 ring-white/[0.06]",
+    "flex min-h-[7.5rem] flex-col gap-3 rounded-2xl bg-card p-5 ring-1 ring-border",
   contactActionHeader:
     "flex shrink-0 items-start justify-between gap-3",
   contactActionSubtitle: "shrink-0 text-base text-muted-foreground",
   contactActionCardActive:
-    "transition-[background-color,box-shadow] duration-300 hover:bg-white/[0.045] hover:ring-white/[0.08] focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:outline-none",
+    "transition-[background-color,box-shadow] duration-300 hover:bg-muted/60 hover:ring-border focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:outline-none",
   contactActionCardDisabled: "cursor-default opacity-60",
   contactLocationRow:
     "flex items-center gap-2 text-base text-muted-foreground",
@@ -90,7 +90,7 @@ export const RESPONSIVE = {
   caseStudyMetaRow: "text-sm text-muted-foreground sm:text-base",
   caseStudyMetaGrid: "grid gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-6",
   caseStudyMetaCard:
-    "rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+    "rounded-2xl border border-border bg-card p-4 ring-1 ring-border sm:p-5",
   caseStudyMetaLabel:
     "text-xs font-medium tracking-wide text-muted-foreground uppercase",
   caseStudyMetaValue: "mt-1.5 text-sm text-foreground/90 sm:text-base",
@@ -102,17 +102,17 @@ export const RESPONSIVE = {
     "rounded-full px-2.5 py-0.5 text-sm font-medium backdrop-blur-sm sm:text-base",
   caseStudyAnnotationGrid: "grid gap-4 md:grid-cols-2",
   caseStudyScreenshotFrame:
-    "overflow-hidden rounded-3xl bg-white/[0.03] ring-1 ring-white/[0.06]",
+    "overflow-hidden rounded-3xl bg-card ring-1 ring-border",
   caseStudyScreenshotShell: "mx-auto w-full max-w-4xl",
   caseStudyScreenshotImage: "block h-auto w-full object-contain object-top",
   caseStudyScreenshotPlaceholder:
-    "flex min-h-[16rem] flex-col items-center justify-center gap-3 bg-white/[0.02] p-8 sm:min-h-[20rem] md:min-h-[24rem]",
+    "flex min-h-[16rem] flex-col items-center justify-center gap-3 bg-muted/40 p-8 sm:min-h-[20rem] md:min-h-[24rem]",
   caseStudyAnnotationCard:
-    "rounded-2xl bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+    "rounded-2xl bg-card p-4 ring-1 ring-border sm:p-5",
   caseStudyInsightCard:
-    "rounded-3xl bg-gradient-to-br from-portfolio-kg-teal/10 via-white/[0.03] to-white/[0.02] p-6 ring-1 ring-portfolio-kg-teal/20 sm:p-8",
+    "rounded-3xl bg-gradient-to-br from-portfolio-kg-teal/10 via-card to-muted/30 p-6 ring-1 ring-portfolio-kg-teal/20 sm:p-8",
   caseStudyFramingCard:
-    "rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 ring-1 ring-white/[0.06] sm:p-6",
+    "rounded-2xl border border-border bg-card p-5 ring-1 ring-border sm:p-6",
   caseStudyFramingNote:
     "border-l-2 border-portfolio-kg-teal/25 pl-4 text-sm italic leading-relaxed text-muted-foreground sm:pl-5 sm:text-base",
   caseStudyInDepthTransition:
@@ -120,10 +120,10 @@ export const RESPONSIVE = {
   caseStudyInDepthSubtitle:
     "text-base leading-relaxed text-muted-foreground lg:text-lg",
   caseStudyAtAGlanceCard:
-    "rounded-3xl border border-white/[0.08] bg-gradient-to-br from-white/[0.04] via-white/[0.02] to-transparent p-6 ring-1 ring-white/[0.06] sm:p-8 md:p-10",
+    "rounded-3xl border border-border bg-gradient-to-br from-card via-muted/30 to-transparent p-6 ring-1 ring-border sm:p-8 md:p-10",
   caseStudyAtAGlanceStoryGrid: "grid gap-4 md:grid-cols-2 md:gap-5",
   caseStudyAtAGlanceStoryCard:
-    "flex flex-col gap-2 rounded-2xl bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+    "flex flex-col gap-2 rounded-2xl bg-card p-4 ring-1 ring-border sm:p-5",
   caseStudyAtAGlanceStoryTitle: "text-sm font-semibold text-foreground sm:text-base",
   caseStudyAtAGlanceCompareStack: "flex flex-col gap-8 sm:gap-10",
   caseStudyAtAGlanceCompareBlock: "flex flex-col gap-3",
@@ -131,38 +131,38 @@ export const RESPONSIVE = {
     "text-lg font-semibold tracking-tight text-portfolio-kg-teal sm:text-xl",
   caseStudyAtAGlanceBeforePreviewShell: "mx-auto w-full max-w-2xl",
   caseStudyPhaseBand:
-    "border-t border-white/[0.06] bg-white/[0.02] py-10 sm:py-12 md:py-14 lg:py-16",
+    "border-t border-border bg-muted/30 py-10 sm:py-12 md:py-14 lg:py-16",
   caseStudySectionSurfaceDark:
-    "border-t border-white/[0.06] bg-background py-10 sm:py-12 md:py-14 lg:py-16",
+    "border-t border-border bg-background py-10 sm:py-12 md:py-14 lg:py-16",
   caseStudySectionSurfaceMuted:
-    "border-t border-white/[0.06] bg-white/[0.02] py-10 sm:py-12 md:py-14 lg:py-16",
+    "border-t border-border bg-muted/30 py-10 sm:py-12 md:py-14 lg:py-16",
   caseStudyPhaseBandFuture:
-    "border-t border-dashed border-portfolio-kg-teal/25 bg-gradient-to-b from-portfolio-kg-teal/10 via-white/[0.02] to-transparent py-10 sm:py-12 md:py-14 lg:py-16",
+    "border-t border-dashed border-portfolio-kg-teal/25 bg-gradient-to-b from-portfolio-kg-teal/10 via-muted/30 to-transparent py-10 sm:py-12 md:py-14 lg:py-16",
   caseStudyPhaseHeader: "flex flex-col gap-1",
   caseStudyPhaseNumber:
     "text-xs font-semibold tracking-[0.2em] text-portfolio-kg-teal uppercase",
   caseStudyPhaseTitle: "text-lg font-medium text-foreground/90 sm:text-xl",
   caseStudyPhaseContent: "flex flex-col gap-8 sm:gap-10 md:gap-12",
   caseStudyComingSoonCard:
-    "rounded-3xl border border-dashed border-portfolio-kg-teal/30 bg-gradient-to-br from-portfolio-kg-teal/10 via-white/[0.03] to-white/[0.02] p-6 ring-1 ring-portfolio-kg-teal/15 sm:p-8",
+    "rounded-3xl border border-dashed border-portfolio-kg-teal/30 bg-gradient-to-br from-portfolio-kg-teal/10 via-card to-muted/30 p-6 ring-1 ring-portfolio-kg-teal/15 sm:p-8",
   caseStudyComingSoonBadge:
     "inline-flex w-fit rounded-full border border-portfolio-kg-teal/30 bg-portfolio-kg-teal/15 px-2.5 py-0.5 text-xs font-medium tracking-wide text-portfolio-kg-teal uppercase",
   caseStudyTransitionDivider:
-    "border-t border-dashed border-white/[0.12] pt-10 sm:pt-12",
+    "border-t border-dashed border-border pt-10 sm:pt-12",
   caseStudyNextTeaser:
-    "rounded-2xl border border-dashed border-white/[0.1] bg-white/[0.02] px-5 py-4 text-center sm:px-6 sm:py-5",
+    "rounded-2xl border border-dashed border-border bg-muted/40 px-5 py-4 text-center sm:px-6 sm:py-5",
   caseStudyPrototypeFrame:
-    "overflow-hidden rounded-3xl bg-card ring-1 ring-white/[0.08]",
+    "overflow-hidden rounded-3xl bg-card ring-1 ring-border",
   caseStudyPrototypeShell:
     "relative flex min-h-[32rem] min-w-0 overflow-hidden",
   caseStudyPrototypeContentColumn:
     "relative flex min-h-0 min-w-0 flex-1 flex-col",
   caseStudyPrototypeHeader:
-    "flex items-center border-b border-white/[0.08] px-4 py-4 sm:min-h-[4.5rem] sm:px-6 sm:py-5",
+    "flex items-center border-b border-border px-4 py-4 sm:min-h-[4.5rem] sm:px-6 sm:py-5",
   caseStudyPrototypeSidebar:
-    "group/sidebar flex shrink-0 flex-col self-stretch border-white/[0.08] bg-card transition-[width] duration-200 ease-out border-r",
+    "group/sidebar flex shrink-0 flex-col self-stretch border-border bg-card transition-[width] duration-200 ease-out border-r",
   caseStudyPrototypeSidebarBrand:
-    "flex shrink-0 items-center justify-center gap-2 border-b border-white/[0.08] py-4 sm:min-h-[4.5rem] sm:py-5",
+    "flex shrink-0 items-center justify-center gap-2 border-b border-border py-4 sm:min-h-[4.5rem] sm:py-5",
   caseStudyPrototypeSidebarBrandCollapsed:
     "px-2 lg:px-3",
   caseStudyPrototypeSidebarBrandExpanded:
@@ -172,7 +172,7 @@ export const RESPONSIVE = {
   caseStudyPrototypeSidebarWordmark:
     "text-base font-semibold text-portfolio-kg-teal sm:text-lg",
   caseStudyPrototypeSidebarToggle:
-    "shrink-0 text-muted-foreground hover:bg-white/[0.04] hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 aria-expanded:bg-transparent dark:hover:bg-muted/50",
+    "shrink-0 text-muted-foreground hover:bg-muted/60 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 aria-expanded:bg-transparent",
   caseStudyPrototypeSidebarExpanded: "w-full lg:w-48",
   caseStudyPrototypeSidebarExpandedWidth: "w-48",
   caseStudyPrototypeSidebarCollapsedWidth: "w-12",
@@ -191,7 +191,7 @@ export const RESPONSIVE = {
   caseStudyPrototypeSidebarItemActive:
     "bg-portfolio-kg-teal/15 text-portfolio-kg-teal ring-1 ring-portfolio-kg-teal/30",
   caseStudyPrototypeSidebarItemInactive:
-    "text-muted-foreground hover:bg-white/[0.04] hover:text-foreground",
+    "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
   caseStudyPrototypeInteractive: "cursor-pointer",
   caseStudyPrototypeSidebarLabelVisible: "truncate",
   caseStudyPrototypeMain:
@@ -199,14 +199,14 @@ export const RESPONSIVE = {
   caseStudyPrototypeFilterBackdrop:
     "absolute inset-0 z-30 bg-black/20 supports-backdrop-filter:backdrop-blur-[1px]",
   caseStudyPrototypeFilterPanel:
-    "absolute inset-y-0 right-0 z-40 flex w-[66vw] min-w-[12rem] max-w-md flex-col border-l border-white/[0.08] bg-card shadow-xl lg:w-full",
+    "absolute inset-y-0 right-0 z-40 flex w-[66vw] min-w-[12rem] max-w-md flex-col border-l border-border bg-card shadow-xl lg:w-full",
   caseStudyPrototypeFilterChipActive:
     "border border-portfolio-kg-teal/30 bg-portfolio-kg-teal/15 text-portfolio-kg-teal ring-0",
   caseStudyPrototypeFilterSelect:
-    "h-10 w-full rounded-lg border border-white/[0.1] bg-background py-2 pl-3 pr-3 text-sm text-foreground",
+    "h-10 w-full rounded-lg border border-border bg-background py-2 pl-3 pr-3 text-sm text-foreground",
   caseStudyPrototypePersonaGrid: "grid gap-4 md:grid-cols-2 lg:grid-cols-3",
   caseStudyPrototypePersonaCard:
-    "flex flex-col gap-3 rounded-2xl bg-white/[0.03] p-4 ring-1 ring-white/[0.06] sm:p-5",
+    "flex flex-col gap-3 rounded-2xl bg-card p-4 ring-1 ring-border sm:p-5",
   caseStudyPrototypeMetricsRow:
     "grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6",
   caseStudyPrototypeMetricItem: "flex flex-col gap-1",
@@ -219,11 +219,11 @@ export const RESPONSIVE = {
     "flex items-center gap-3 text-sm",
   caseStudyPrototypeThemeBar: "h-2 rounded-full bg-chart-4/70",
   caseStudyPrototypeTableWrap:
-    "min-w-0 overflow-x-auto rounded-xl ring-1 ring-white/[0.06] [scrollbar-color:rgba(255,255,255,0.18)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-track]:bg-white/[0.04]",
+    "min-w-0 overflow-x-auto rounded-xl ring-1 ring-border [scrollbar-color:color-mix(in_oklch,var(--foreground)_18%,transparent)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-foreground/20 [&::-webkit-scrollbar-track]:bg-muted/40",
   caseStudyPrototypeDashboardHeader:
     "flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
   caseStudyPrototypeEmptyState:
-    "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/[0.12] bg-white/[0.02] px-6 py-12 text-center",
+    "flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-border bg-muted/40 px-6 py-12 text-center",
   caseStudyPhonePrototypeWrap: "flex justify-center overflow-visible",
   caseStudyPhonePrototypeLaunchCtaWrap:
     "flex flex-col items-start gap-4 md:hidden",
@@ -261,10 +261,10 @@ export const RESPONSIVE = {
   caseStudyPhoneHomeContent:
     "flex min-h-0 flex-1 flex-col justify-end gap-6 pb-6",
   caseStudyPhoneAppBar:
-    "flex h-11 shrink-0 items-center gap-1 border-b border-white/[0.08] px-2",
+    "flex h-11 shrink-0 items-center gap-1 border-b border-border px-2",
   caseStudyPhoneDock: "flex shrink-0 flex-col gap-3 px-4",
   caseStudyPhoneGoogleSearch:
-    "flex h-10 items-center justify-between gap-3 rounded-full bg-white/[0.08] px-4 ring-1 ring-white/[0.06]",
+    "flex h-10 items-center justify-between gap-3 rounded-full bg-muted px-4 ring-1 ring-border",
   caseStudyPhoneGoogleSearchActions: "flex items-center gap-3",
   caseStudyPhoneNavBar:
     "relative z-20 flex h-6 shrink-0 items-center justify-center pb-1",

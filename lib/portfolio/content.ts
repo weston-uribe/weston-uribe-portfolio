@@ -192,7 +192,8 @@ export const WORK_ITEMS: WorkItem[] = [
     title: "Self-Concept-as-Infrastructure for AI Agents.",
     description: "AI memory and identity graph concept.",
     tags: ["AI Product", "Systems Design"],
-    status: "coming-soon",
+    status: "active",
+    href: "/work/kinterra",
   },
   {
     id: "nl-robotics",

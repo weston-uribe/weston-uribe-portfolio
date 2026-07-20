@@ -80,7 +80,7 @@ export function ContactSection() {
                 </span>
                 <Mail
                   aria-hidden="true"
-                  className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-[#60A5FA]"
+                  className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-[#60A5FA]"
                 />
               </div>
               <span
@@ -104,7 +104,7 @@ export function ContactSection() {
                 <span className={cn("font-medium text-foreground", RESPONSIVE.uiText)}>
                   LinkedIn
                 </span>
-                <LinkedInIcon className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-[#0A66C2]" />
+                <LinkedInIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-[#0A66C2]" />
               </div>
               <span className={RESPONSIVE.contactActionSubtitle}>View profile</span>
               <div aria-hidden="true" className="min-h-0 flex-1" />
@@ -120,7 +120,7 @@ export function ContactSection() {
                 <span className={cn("font-medium text-foreground", RESPONSIVE.uiText)}>
                   GitHub
                 </span>
-                <GitHubIcon className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-white" />
+                <GitHubIcon className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
               </div>
               <span className={RESPONSIVE.contactActionSubtitle}>View repository</span>
               <div aria-hidden="true" className="min-h-0 flex-1" />
@@ -138,7 +138,7 @@ export function ContactSection() {
                   </span>
                   <FileText
                     aria-hidden="true"
-                    className="size-5 shrink-0 text-white/45 transition-colors group-hover:text-portfolio-kg-teal"
+                    className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-portfolio-kg-teal"
                   />
                 </div>
                 <span className={RESPONSIVE.contactActionSubtitle}>Download PDF</span>
@@ -156,7 +156,7 @@ export function ContactSection() {
                   </span>
                   <FileText
                     aria-hidden="true"
-                    className="size-5 shrink-0 text-white/30"
+                    className="size-5 shrink-0 text-muted-foreground/60"
                   />
                 </div>
                 <span className={RESPONSIVE.contactActionSubtitle}>PDF coming soon</span>
@@ -166,7 +166,7 @@ export function ContactSection() {
           </div>
 
           <div className={RESPONSIVE.contactLocationRow}>
-            <MapPin aria-hidden="true" className="size-4 shrink-0 text-white/40" />
+            <MapPin aria-hidden="true" className="size-4 shrink-0 text-muted-foreground" />
             <span>{CONTACT.location}</span>
           </div>
         </div>
