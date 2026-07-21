@@ -208,7 +208,8 @@ export const WORK_ITEMS: WorkItem[] = [
     description:
       "Interface concept for teaching robots new tasks through natural language.",
     tags: ["AI UX", "Robotics"],
-    status: "coming-soon",
+    status: "active",
+    href: "/work/nl-robotics",
   },
   {
     id: "product-teardown",
