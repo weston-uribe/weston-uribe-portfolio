@@ -216,7 +216,8 @@ export const WORK_ITEMS: WorkItem[] = [
     title: "Product Teardown",
     description: "Redesign of a real-world product workflow.",
     tags: ["UX Audit", "Redesign"],
-    status: "coming-soon",
+    status: "active",
+    href: "/work/product-teardown",
   },
 ];
 
