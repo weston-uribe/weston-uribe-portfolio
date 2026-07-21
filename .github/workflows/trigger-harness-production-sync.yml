@@ -1,9 +1,9 @@
-<!-- p-dev-target-workflow-contract:v2
-contract_version: 2
-harness_dispatch_repo: weston-uribe/p-dev-harness-runner
-repo_config_id: weston-uribe-portfolio
-production_branch: main
--->
+# p-dev-target-workflow-contract:v3
+# generated-by: p-dev-harness
+# contract_version: 3
+# harness_dispatch_repo: weston-uribe/p-dev-harness-runner
+# repo_config_id: weston-uribe-portfolio
+# production_branch: main
 name: Trigger harness production sync
 
 on:
