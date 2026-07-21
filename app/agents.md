@@ -21,6 +21,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/ukg/page.tsx`   | `/work/ukg` | UKMe Voice of Customer case study (setup / before state) |
 | `work/luca/layout.tsx`| —           | Luca founder case study metadata     |
 | `work/luca/page.tsx`  | `/work/luca`| Luca wellness coaching platform case study |
+| `work/product-teardown/layout.tsx` | — | Undecided Product Teardown case study metadata |
+| `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
 
 ## Layout Responsibilities
 

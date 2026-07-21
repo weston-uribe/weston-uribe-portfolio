@@ -147,6 +147,11 @@ export const LUCA_WORK_CARD_IMAGE = {
   presentation: "plain",
 } as const;
 
+export const HARNESS_WORK_CARD_IMAGE = {
+  assetPath: "/images/harness-work-card.png",
+  alt: "Product Development Harness GUI workflow page showing agent pipeline stages",
+} as const;
+
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
@@ -179,12 +184,13 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "harness",
     contextLabel: "Product Development Harness",
-    title: "Open Source GitHub Repo",
+    title: "Multi-agent system built from scratch",
     description:
-      "Cursor-first workflow that turns Linear issues into implementation plans, validation reports, and review-ready PRs.",
+      "Agent skills and a Langfuse eval pipeline to validate AI changes across speed, quality, and cost.",
     tags: ["Product Ops", "Evals"],
     status: "active",
     href: "/work/harness",
+    previewImage: HARNESS_WORK_CARD_IMAGE,
   },
   {
     id: "kinterra",
@@ -202,7 +208,8 @@ export const WORK_ITEMS: WorkItem[] = [
     description:
       "Interface concept for teaching robots new tasks through natural language.",
     tags: ["AI UX", "Robotics"],
-    status: "coming-soon",
+    status: "active",
+    href: "/work/nl-robotics",
   },
   {
     id: "product-teardown",
@@ -210,7 +217,8 @@ export const WORK_ITEMS: WorkItem[] = [
     title: "Product Teardown",
     description: "Redesign of a real-world product workflow.",
     tags: ["UX Audit", "Redesign"],
-    status: "coming-soon",
+    status: "active",
+    href: "/work/product-teardown",
   },
 ];
 
