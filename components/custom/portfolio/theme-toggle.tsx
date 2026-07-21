@@ -23,7 +23,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       variant="ghost"
       size="icon-sm"
       className={cn(
-        "relative text-muted-foreground hover:text-foreground",
+        "relative cursor-pointer text-muted-foreground hover:text-foreground",
         className
       )}
       onClick={() => setTheme(isDark ? "light" : "dark")}
