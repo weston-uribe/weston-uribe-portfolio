@@ -27,6 +27,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
 | `work/kinterra/layout.tsx` | — | Kinterra case study metadata |
 | `work/kinterra/page.tsx` | `/work/kinterra` | Kinterra self-concept infrastructure case study |
+| `work/nl-robotics/layout.tsx` | — | Natural Language Robotics case study metadata |
+| `work/nl-robotics/page.tsx` | `/work/nl-robotics` | Natural Language Robotics multi-agent capability factory case study |
 
 ## Layout Responsibilities
 
@@ -62,6 +64,10 @@ AI product-management case study for the Product Development Harness — an open
 ## Case study page (`work/kinterra/page.tsx`)
 
 AI product and systems case study for Kinterra — a deployed self-concept infrastructure system for AI products. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/kinterra.ts`; the page is a declarative composition map only. Kinterra-specific presentation components live under `components/custom/portfolio/case-study/kinterra/`. Hero and placeholder use the original SVG tri-self visual (`case-study-kinterra-tri-self-visual`). Section order: `PortfolioNav` → `<main>` (`CaseStudyKinterraHero` → `CaseStudyKinterraAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Identity model, Delta Engine, Agent system, Outcomes and lessons) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. No public source or live-product links. Page metadata is exported from `work/kinterra/layout.tsx`.
+
+## Case study page (`work/nl-robotics/page.tsx`)
+
+Technical feasibility case study for Natural Language Robotics — a local multi-agent capability factory that produced validated SLAM navigation and pick-and-place behaviors in NVIDIA Isaac Sim. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/nl-robotics.ts`; the page is a declarative composition map only. NL-Robotics-specific presentation components live under `components/custom/portfolio/case-study/nl-robotics/`. Hero includes an accessible factory-loop visual. Demo sections render static SVG placeholders only — no `<video>` elements until source files are staged in `.local-media/nl-robotics/`. Section order: `PortfolioNav` → `<main>` (`CaseStudyNlRoboticsHero` → `CaseStudyNlRoboticsAtAGlance` → `CaseStudyNlRoboticsDemoPlaceholders` → three `CaseStudyPhaseSection` bands: Technical feasibility, Capability factory, Evaluation lessons → `CaseStudyNlRoboticsRelatedHarness`) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/nl-robotics/layout.tsx`.
 
 ## Shared portfolio chrome
 
