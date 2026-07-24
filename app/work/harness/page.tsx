@@ -11,7 +11,6 @@ import { CaseStudyHarnessInstallCallout } from "@/components/custom/portfolio/ca
 import { CaseStudyHarnessOperatorSteps } from "@/components/custom/portfolio/case-study/harness/case-study-harness-operator-steps";
 import { CaseStudyHarnessRequirementsGrid } from "@/components/custom/portfolio/case-study/harness/case-study-harness-requirements-grid";
 import { CaseStudyHarnessRoadmap } from "@/components/custom/portfolio/case-study/harness/case-study-harness-roadmap";
-import { CaseStudyHarnessWorkflowComparison } from "@/components/custom/portfolio/case-study/harness/case-study-harness-workflow-comparison";
 import { CaseStudyPhaseSection } from "@/components/custom/portfolio/case-study/case-study-phase-section";
 import { CaseStudyProseSection } from "@/components/custom/portfolio/case-study/case-study-prose-section";
 import { PortfolioFooter } from "@/components/custom/portfolio/portfolio-footer";
@@ -51,7 +50,6 @@ export default function HarnessWorkPage() {
             section={HARNESS_SECTIONS.productizingWorkflow}
             embedded
           />
-          <CaseStudyHarnessWorkflowComparison />
         </CaseStudyPhaseSection>
 
         <CaseStudyPhaseSection phase={HARNESS_PHASES.workflow} tone="muted">

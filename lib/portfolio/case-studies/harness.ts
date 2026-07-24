@@ -5,11 +5,6 @@ import type {
   CaseStudyProseSection,
 } from "./types";
 
-export type HarnessWorkflowStep = {
-  title: string;
-  body: string;
-};
-
 export type HarnessNumberedStep = {
   number: string;
   title: string;
@@ -154,9 +149,9 @@ export const HARNESS_SECTIONS = {
     id: "productizing-workflow",
     title: "Productizing the workflow I was already using",
     paragraphs: [
-      "Before the Harness, development was a repeated handoff loop: reason about the next feature in ChatGPT, paste a specification into Cursor, review Cursor's plan in ChatGPT, return corrections, run the build, paste the execution report back into ChatGPT, then test and repeat.",
-      "That process worked, but it required constant copy-pasting, waiting, and manual context transfer. My roadmap lived in a notepad, completed work had little durable history, and changes to models or skills were judged mostly by intuition.",
-      "The Harness turns that informal process into an explicit product workflow. The issue becomes the durable source of intent; specialized phases handle planning, implementation, review, revision, and merge; Linear and GitHub preserve the artifacts.",
+      "Before the Harness, I coordinated development by hand. I worked through product direction in ChatGPT, copied a specification into Cursor, brought Cursor's plan back for review, returned corrections, ran the implementation, then repeated the same loop with the execution report and any bugs I found while dogfooding.",
+      "The workflow produced working software, but I was the integration layer. I moved context between tools, waited on each intermediate step, tracked the roadmap in a notepad, and reconstructed delivery history after the fact.",
+      "The Harness turns that loop into a durable workflow centered on a Linear issue. The issue carries the requirements and acceptance criteria; specialized agents plan, implement, review, and repair the work; GitHub preserves the branch, pull request, checks, and artifacts; and a Vercel preview returns to Linear for a human decision. I still own product judgment, but the system carries the context and execution between meaningful gates.",
     ],
   },
   stayInLinear: {
@@ -264,96 +259,6 @@ export const HARNESS_REQUIREMENT_CARDS = [
     body: "The system needed an evaluation layer so changes to agents, skills, models, and workflows could eventually be judged with evidence.",
   },
 ] as const satisfies readonly CaseStudyInfoCard[];
-
-export const HARNESS_WORKFLOW_COMPARISON = {
-  title: "From manual handoffs to durable orchestration",
-  before: {
-    label: "Before: manual coordination",
-    supportingLine:
-      "The human manually moved context, watched every intermediate step, and reconstructed project history across tools.",
-    steps: [
-      {
-        title: "Define direction in ChatGPT",
-        body: "Work through the product problem, current system state, and next implementation slice.",
-      },
-      {
-        title: "Copy the specification into Cursor",
-        body: "Manually transfer the requirements into a separate development environment.",
-      },
-      {
-        title: "Bring the plan back for review",
-        body: "Copy Cursor's proposed plan into ChatGPT and check it against the intended behavior.",
-      },
-      {
-        title: "Return corrections to Cursor",
-        body: "Move the revised direction back into Cursor before implementation begins.",
-      },
-      {
-        title: "Run the implementation",
-        body: "Wait for Cursor to build, validate, and summarize the change.",
-      },
-      {
-        title: "Review the execution report",
-        body: "Copy the result back into ChatGPT to assess the repository state and determine what remains.",
-      },
-      {
-        title: "Test, debug, and repeat",
-        body: "Dogfood the result and continue the handoff loop until the feature behaves correctly.",
-      },
-      {
-        title: "Update a personal notepad",
-        body: "Remove the completed item from a manually maintained roadmap with little durable delivery history.",
-      },
-    ],
-  },
-  after: {
-    label: "After: durable orchestration",
-    supportingLine:
-      "The human still owns the decision, but the system carries the context and execution between meaningful gates.",
-    steps: [
-      {
-        title: "Define a structured Linear issue",
-        body: "Capture the problem, desired behavior, scope, constraints, and acceptance criteria in the backlog.",
-      },
-      {
-        title: "Start the workflow",
-        body: "Move the issue into the appropriate status to trigger the next automated phase.",
-      },
-      {
-        title: "Run specialized agents",
-        body: "Planning, implementation, review, and repair responsibilities execute with bounded context.",
-      },
-      {
-        title: "Preserve the delivery evidence",
-        body: "GitHub stores the branch, pull request, checks, commits, and durable run artifacts.",
-      },
-      {
-        title: "Return a deployed preview",
-        body: "The Vercel preview and implementation evidence are posted back to the Linear issue.",
-      },
-      {
-        title: "Apply a human gate",
-        body: "The product manager reviews the actual behavior and chooses revision, approval, or another explicit next step.",
-      },
-      {
-        title: "Keep the history in Linear",
-        body: "The issue retains the requirements, agent outputs, review feedback, links, and final delivery state.",
-      },
-    ],
-  },
-} as const satisfies {
-  title: string;
-  before: {
-    label: string;
-    supportingLine: string;
-    steps: readonly HarnessWorkflowStep[];
-  };
-  after: {
-    label: string;
-    supportingLine: string;
-    steps: readonly HarnessWorkflowStep[];
-  };
-};
 
 export const HARNESS_OPERATOR_GROUP_TITLE = "The operator workflow" as const;
 
