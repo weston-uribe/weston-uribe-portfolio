@@ -155,10 +155,21 @@ export const HARNESS_WORK_CARD_IMAGE = {
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
-    "Portfolio demos are intentionally built as static product prototypes. They focus on product thinking, UX flows, and interface design rather than live backends, production databases, or real customer data.",
+    "Interactive portfolio prototypes use synthetic data and may omit live backends. Published software projects are linked to their source and installable artifacts where available.",
 } as const;
 
 export const WORK_ITEMS: WorkItem[] = [
+  {
+    id: "harness",
+    contextLabel: "Product Development Harness",
+    title: "Human-gated multi-agent development",
+    description:
+      "Open-source workflow that turns Linear issues into reviewed, deployed software while building toward measurable quality, reliability, speed, and cost.",
+    tags: ["AI Product", "Evals"],
+    status: "active",
+    href: "/work/harness",
+    previewImage: HARNESS_WORK_CARD_IMAGE,
+  },
   {
     id: "ukg",
     contextLabel: "UKMe",
@@ -180,17 +191,6 @@ export const WORK_ITEMS: WorkItem[] = [
     status: "active",
     href: "/work/luca",
     previewImage: LUCA_WORK_CARD_IMAGE,
-  },
-  {
-    id: "harness",
-    contextLabel: "Product Development Harness",
-    title: "Multi-agent system built from scratch",
-    description:
-      "Agent skills and a Langfuse eval pipeline to validate AI changes across speed, quality, and cost.",
-    tags: ["Product Ops", "Evals"],
-    status: "active",
-    href: "/work/harness",
-    previewImage: HARNESS_WORK_CARD_IMAGE,
   },
   {
     id: "kinterra",

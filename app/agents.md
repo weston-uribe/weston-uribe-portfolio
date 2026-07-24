@@ -21,6 +21,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/ukg/page.tsx`   | `/work/ukg` | UKMe Voice of Customer case study (setup / before state) |
 | `work/luca/layout.tsx`| —           | Luca founder case study metadata     |
 | `work/luca/page.tsx`  | `/work/luca`| Luca wellness coaching platform case study |
+| `work/harness/layout.tsx` | —       | Product Development Harness case study metadata |
+| `work/harness/page.tsx` | `/work/harness` | Product Development Harness case study |
 | `work/product-teardown/layout.tsx` | — | Undecided Product Teardown case study metadata |
 | `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
 
@@ -50,6 +52,10 @@ Scroll-driven narrative for the UKMe Voice of Customer dashboard. Uses the **sam
 ## Case study page (`work/luca/page.tsx`)
 
 Founder and product strategy case study for Luca, an incorporated student wellness coaching startup (2020 to 2022). Uses the same portfolio chrome as other routes. Content lives in `lib/portfolio/case-studies/luca.ts`. Luca-specific section components live under `components/custom/portfolio/case-study/luca/`. The in-phone app prototype lives under `components/custom/portfolio/case-study/luca/app/` — use `LucaArtAsset` and the manifest in `luca-assets.ts`; do not hardcode image paths. Assets live in `public/images/luca/` (see `agents.md` there). Preserve the Pixel phone shell and launch animation unless the task is specifically about them. Do not change case study copy when working on the app prototype unless requested. The page composes 14 content sections into seven visual bands (Context, Pilot, Product, Marketplace, Shutdown, Lessons) plus hero, outcome snapshot, and an interactive prototype placeholder. Page metadata is exported from `work/luca/layout.tsx`.
+
+## Case study page (`work/harness/page.tsx`)
+
+AI product-management case study for the Product Development Harness — an open-source, human-gated multi-agent workflow for non-technical product managers. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/harness.ts`; the page is a declarative composition map only. Harness-specific presentation components live under `components/custom/portfolio/case-study/harness/`. Hero screenshot uses `public/images/harness-work-card.png`. Section order: `PortfolioNav` → `<main>` (`CaseStudyHarnessHero` → `CaseStudyHarnessAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Product-manager workflow, Multi-agent system, Evaluation pipeline, Current state and roadmap) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/harness/layout.tsx`.
 
 ## Shared portfolio chrome
 
