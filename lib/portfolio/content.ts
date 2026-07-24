@@ -13,6 +13,8 @@ export type WorkItem = {
     fit?: "cover" | "contain";
     /** Default: browser — window chrome above the image. Use plain for device screenshots. */
     presentation?: "browser" | "plain";
+    /** Default: contain → phone, cover → landscape */
+    frameAspect?: "landscape" | "diagram" | "phone";
   };
 };
 
@@ -157,6 +159,16 @@ export const KINTERRA_WORK_CARD_IMAGE = {
   alt: "Tri-self model showing perceived, ideal, and actual self connected to a central self-concept model.",
   fit: "contain",
   presentation: "plain",
+  frameAspect: "diagram",
+} as const;
+
+export const NL_ROBOTICS_WORK_CARD_IMAGE = {
+  assetPath:
+    "/images/nl-robotics/mission-004-slam-navigation-placeholder.svg",
+  alt: "Illustrated placeholder for the Mission 004 autonomous SLAM navigation demonstration.",
+  fit: "cover",
+  presentation: "plain",
+  frameAspect: "landscape",
 } as const;
 
 export const WORK_SECTION = {
@@ -215,10 +227,11 @@ export const WORK_ITEMS: WorkItem[] = [
     contextLabel: "Natural Language Robotics",
     title: "A Technical Feasibility Experiment",
     description:
-      "Interface concept for teaching robots new tasks through natural language.",
-    tags: ["AI UX", "Robotics"],
+      "A local multi-agent factory that turned high-level robotics objectives into validated SLAM navigation and pick-and-place behaviors in Isaac Sim.",
+    tags: ["Multi-agent systems", "Robotics"],
     status: "active",
     href: "/work/nl-robotics",
+    previewImage: NL_ROBOTICS_WORK_CARD_IMAGE,
   },
   {
     id: "product-teardown",

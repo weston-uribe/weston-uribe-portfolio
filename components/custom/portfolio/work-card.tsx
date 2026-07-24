@@ -13,6 +13,12 @@ type WorkCardPreviewProps = {
   image: NonNullable<WorkItem["previewImage"]>;
 };
 
+const PREVIEW_FRAME_ASPECT_CLASSES = {
+  landscape: "aspect-[2/1]",
+  diagram: "aspect-[10/9]",
+  phone: "aspect-[9/19.5]",
+} as const;
+
 const ACTIVE_CHIP_STYLE = "bg-chart-4/20 text-chart-4/90";
 const INACTIVE_CHIP_STYLE = "bg-muted text-muted-foreground";
 
@@ -20,6 +26,8 @@ function WorkCardPreview({ image }: WorkCardPreviewProps) {
   const fit = image.fit ?? "cover";
   const presentation = image.presentation ?? "browser";
   const isContain = fit === "contain";
+  const frameAspect =
+    image.frameAspect ?? (isContain ? "phone" : "landscape");
 
   return (
     <div className="relative my-3 flex min-h-0 w-full flex-1 flex-col items-center justify-center">
@@ -56,7 +64,7 @@ function WorkCardPreview({ image }: WorkCardPreviewProps) {
         <div
           className={cn(
             "relative w-full overflow-hidden",
-            isContain ? "aspect-[9/19.5]" : "aspect-[2/1]",
+            PREVIEW_FRAME_ASPECT_CLASSES[frameAspect],
           )}
         >
           <Image

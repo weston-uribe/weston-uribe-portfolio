@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-labelledby="mission-004-placeholder-title">
+  <title id="mission-004-placeholder-title">Mission 004 autonomous SLAM navigation demonstration placeholder</title>
+  <style>
+    .foreground { fill: #1a1a1a; }
+    .muted-foreground { fill: rgba(26, 26, 26, 0.65); }
+    .card { fill: #ffffff; }
+    .border { stroke: #e4e4e7; }
+    .muted-fill { fill: #f4f4f5; }
+    .chart-4 { fill: #4f46e5; stroke: #4f46e5; }
+    .chart-4-muted { fill: rgba(79, 70, 229, 0.15); stroke: rgba(79, 70, 229, 0.35); }
+    @media (prefers-color-scheme: dark) {
+      .foreground { fill: #fafafa; }
+      .muted-foreground { fill: rgba(250, 250, 250, 0.65); }
+      .card { fill: #18181b; }
+      .border { stroke: #3f3f46; }
+      .muted-fill { fill: #27272a; }
+      .chart-4 { fill: #818cf8; stroke: #818cf8; }
+      .chart-4-muted { fill: rgba(129, 140, 248, 0.15); stroke: rgba(129, 140, 248, 0.35); }
+    }
+  </style>
+
+  <rect width="800" height="400" class="card" />
+  <rect x="0.5" y="0.5" width="799" height="399" class="border" fill="none" stroke-width="1" />
+
+  <g aria-hidden="true">
+    <!-- Procedural maze walls -->
+    <rect x="80" y="80" width="640" height="16" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="80" y="80" width="16" height="240" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="704" y="80" width="16" height="240" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="80" y="304" width="640" height="16" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="200" y="80" width="16" height="120" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="320" y="160" width="160" height="16" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="480" y="160" width="16" height="100" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="360" y="240" width="136" height="16" class="muted-fill border" stroke-width="1" rx="2" />
+    <rect x="560" y="200" width="16" height="104" class="muted-fill border" stroke-width="1" rx="2" />
+
+    <!-- LiDAR scan arcs -->
+    <path d="M 180 220 A 80 80 0 0 1 260 180" class="chart-4-muted" fill="none" stroke-width="2" />
+    <path d="M 180 220 A 60 60 0 0 0 120 200" class="chart-4-muted" fill="none" stroke-width="2" />
+    <path d="M 180 220 A 90 90 0 0 1 240 280" class="chart-4-muted" fill="none" stroke-width="1.5" stroke-dasharray="4 4" />
+
+    <!-- TurtleBot3 marker -->
+    <circle cx="180" cy="220" r="18" class="chart-4-muted" stroke-width="2" />
+    <circle cx="180" cy="220" r="6" class="chart-4" />
+    <line x1="180" y1="220" x2="200" y2="205" class="chart-4" stroke-width="2.5" />
+
+    <!-- Goal marker -->
+    <rect x="600" y="120" width="28" height="28" rx="4" class="chart-4-muted" stroke-width="2" />
+    <text x="614" y="140" text-anchor="middle" class="chart-4" font-size="11" font-weight="700" font-family="system-ui, sans-serif">G</text>
+
+    <!-- Dock marker -->
+    <rect x="120" y="260" width="36" height="24" rx="4" class="muted-fill border" stroke-width="1.5" />
+    <text x="138" y="276" text-anchor="middle" class="muted-foreground" font-size="10" font-weight="600" font-family="system-ui, sans-serif">Dock</text>
+
+    <!-- Breadcrumb path -->
+    <path d="M 200 210 Q 280 180 360 170 T 580 130" fill="none" class="chart-4" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6" />
+  </g>
+
+  <text x="32" y="36" class="foreground" font-size="14" font-weight="700" font-family="system-ui, sans-serif">Mission 004</text>
+  <text x="32" y="58" class="muted-foreground" font-size="12" font-weight="500" font-family="system-ui, sans-serif">Autonomous SLAM navigation</text>
+
+  <rect x="560" y="20" width="208" height="28" rx="14" class="chart-4-muted" stroke-width="1" />
+  <text x="664" y="39" text-anchor="middle" class="chart-4" font-size="11" font-weight="600" font-family="system-ui, sans-serif">Demo video coming soon</text>
+</svg>
