@@ -195,9 +195,10 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "kinterra",
     contextLabel: "Kinterra",
-    title: "Self-Concept-as-Infrastructure for AI Agents.",
-    description: "AI memory and identity graph concept.",
-    tags: ["AI Product", "Systems Design"],
+    title: "Self-concept infrastructure for AI products",
+    description:
+      "A deployed AI system that turns conversations and imported data into an inspectable identity model and measurable alignment signals.",
+    tags: ["AI Product", "Semantic Systems"],
     status: "active",
     href: "/work/kinterra",
   },
