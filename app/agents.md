@@ -25,6 +25,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/harness/page.tsx` | `/work/harness` | Product Development Harness case study |
 | `work/product-teardown/layout.tsx` | — | Undecided Product Teardown case study metadata |
 | `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
+| `work/kinterra/layout.tsx` | — | Kinterra case study metadata |
+| `work/kinterra/page.tsx` | `/work/kinterra` | Kinterra self-concept infrastructure case study |
 
 ## Layout Responsibilities
 
@@ -56,6 +58,10 @@ Founder and product strategy case study for Luca, an incorporated student wellne
 ## Case study page (`work/harness/page.tsx`)
 
 AI product-management case study for the Product Development Harness — an open-source, human-gated multi-agent workflow for non-technical product managers. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/harness.ts`; the page is a declarative composition map only. Harness-specific presentation components live under `components/custom/portfolio/case-study/harness/`. Hero screenshot uses `public/images/harness-work-card.png`. Section order: `PortfolioNav` → `<main>` (`CaseStudyHarnessHero` → `CaseStudyHarnessAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Product-manager workflow, Multi-agent system, Evaluation pipeline, Current state and roadmap) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/harness/layout.tsx`.
+
+## Case study page (`work/kinterra/page.tsx`)
+
+AI product and systems case study for Kinterra — a deployed self-concept infrastructure system for AI products. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/kinterra.ts`; the page is a declarative composition map only. Kinterra-specific presentation components live under `components/custom/portfolio/case-study/kinterra/`. Hero and placeholder use the original SVG tri-self visual (`case-study-kinterra-tri-self-visual`). Section order: `PortfolioNav` → `<main>` (`CaseStudyKinterraHero` → `CaseStudyKinterraAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Identity model, Delta Engine, Agent system, Outcomes and lessons) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. No public source or live-product links. Page metadata is exported from `work/kinterra/layout.tsx`.
 
 ## Shared portfolio chrome
 

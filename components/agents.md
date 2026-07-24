@@ -47,6 +47,8 @@ Portfolio sections demonstrate the pattern: `LAYOUT.pageShell` for nav/hero alig
 
 **Harness case study** (`custom/portfolio/case-study/harness/`): narrative sections for the Product Development Harness case study — `case-study-harness-hero` (with client `case-study-harness-hero-actions` for external links), `case-study-harness-at-a-glance`, `case-study-harness-prototype-placeholder`, `case-study-harness-in-depth-transition`, phase visual grids (requirements, operator steps, agent roles, evaluation dimensions, capabilities, roadmap), `case-study-harness-install-callout`, and `case-study-harness-callout`. Copy from `lib/portfolio/case-studies/harness.ts` only.
 
+**Kinterra case study** (`custom/portfolio/case-study/kinterra/`): narrative sections for the Kinterra case study — `case-study-kinterra-hero`, `case-study-kinterra-tri-self-visual`, `case-study-kinterra-at-a-glance`, `case-study-kinterra-prototype-placeholder`, `case-study-kinterra-in-depth-transition`, phase visual grids (core questions, strategy evolution, model layers, identity pipeline, delta visual, measurement levels, agent capabilities, shipped capabilities, product lessons), and `case-study-kinterra-callout`. Copy from `lib/portfolio/case-studies/kinterra.ts` only. No Harness or Luca component imports.
+
 ### Shared nav and footer
 
 - **`portfolio-nav`** and **`portfolio-footer`** are the site-wide portfolio chrome. Every portfolio route (landing page, case studies, future work pages) must use these exact components — never duplicate or fork route-specific nav/footer variants.

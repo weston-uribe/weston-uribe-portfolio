@@ -152,6 +152,13 @@ export const HARNESS_WORK_CARD_IMAGE = {
   alt: "Product Development Harness GUI workflow page showing agent pipeline stages",
 } as const;
 
+export const KINTERRA_WORK_CARD_IMAGE = {
+  assetPath: "/images/kinterra/kinterra-tri-self.svg",
+  alt: "Tri-self model showing perceived, ideal, and actual self connected to a central self-concept model.",
+  fit: "contain",
+  presentation: "plain",
+} as const;
+
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
@@ -195,11 +202,13 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "kinterra",
     contextLabel: "Kinterra",
-    title: "Self-Concept-as-Infrastructure for AI Agents.",
-    description: "AI memory and identity graph concept.",
-    tags: ["AI Product", "Systems Design"],
+    title: "Self-concept infrastructure for AI products",
+    description:
+      "A deployed AI system that turns conversations and imported data into an inspectable identity model and measurable alignment signals.",
+    tags: ["AI Product", "Semantic Systems"],
     status: "active",
     href: "/work/kinterra",
+    previewImage: KINTERRA_WORK_CARD_IMAGE,
   },
   {
     id: "nl-robotics",
