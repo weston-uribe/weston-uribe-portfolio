@@ -45,6 +45,8 @@ Portfolio sections demonstrate the pattern: `LAYOUT.pageShell` for nav/hero alig
 
 **Luca case study** (`custom/portfolio/case-study/luca/`): narrative sections (`case-study-luca-hero`, `case-study-luca-outcomes`, etc.) and the interactive phone prototype (`case-study-luca-phone-prototype`). In-phone app UI lives in `luca/app/` — use manifest IDs from `luca-assets.ts` for raster art; copy from `luca-app.ts`. Wallpaper texture via `LucaAppWallpaper` + manifest `decor-paper-speckle-tile-v01`. Text over wallpaper uses `LucaAppTextClearZone` for speckle-free cream masks. Current app components: `luca-art-asset`, `luca-app-wallpaper`, `luca-app-text-clear-zone`, `luca-app-user-avatar`, `luca-app-primary-action`, `luca-app-onboarding-hero-art`, `luca-app-onboarding-welcome-screen`.
 
+**Harness case study** (`custom/portfolio/case-study/harness/`): narrative sections for the Product Development Harness case study — `case-study-harness-hero` (with client `case-study-harness-hero-actions` for external links), `case-study-harness-at-a-glance`, `case-study-harness-prototype-placeholder`, `case-study-harness-in-depth-transition`, phase visual grids (requirements, operator steps, agent roles, evaluation dimensions, capabilities, roadmap), `case-study-harness-install-callout`, and `case-study-harness-callout`. Copy from `lib/portfolio/case-studies/harness.ts` only.
+
 ### Shared nav and footer
 
 - **`portfolio-nav`** and **`portfolio-footer`** are the site-wide portfolio chrome. Every portfolio route (landing page, case studies, future work pages) must use these exact components — never duplicate or fork route-specific nav/footer variants.
