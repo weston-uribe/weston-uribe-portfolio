@@ -72,27 +72,38 @@ export const KINTERRA_HERO = {
     "I built a full-stack AI system that turns conversations and imported digital history into a living model of self-concept—then uses deterministic analytics to reveal the gap between who someone believes they are, who they want to become, and how they actually show up.",
 } as const;
 
+export const KINTERRA_TRI_SELF_ILLUSTRATION = {
+  assetPath: "/images/kinterra/kinterra-tri-self.svg",
+  assetWidth: 400,
+  assetHeight: 360,
+  alt: "Tri-self model showing perceived, ideal, and actual self connected to a central self-concept model.",
+} as const;
+
 export const KINTERRA_HERO_METADATA = [
   {
-    label: "Role",
-    values: ["Product strategy", "UX design", "AI system design"],
+    label: "Primary users",
+    values: [
+      "Individuals pursuing self-development",
+      "Coaches and coaching organizations",
+      "AI product teams",
+    ],
   },
   {
-    label: "Product",
-    values: ["Personal AI", "Self-concept infrastructure"],
+    label: "Domain",
+    values: ["Personal AI", "Coaching technology", "Identity infrastructure"],
   },
   {
-    label: "Timeline",
-    values: ["December 2025–April 2026"],
-  },
-  {
-    label: "Status",
-    values: ["Production deployed", "Currently paused"],
+    label: "Focus",
+    values: [
+      "Semantic identity modeling",
+      "Deterministic alignment analytics",
+      "Streaming agent tools",
+    ],
   },
 ] as const satisfies readonly KinterraHeroMetadataItem[];
 
 export const KINTERRA_AT_A_GLANCE = {
-  title: "At a glance",
+  title: "Project at a Glance",
   storyBlocks: [
     {
       id: "the-problem",
@@ -124,9 +135,9 @@ export const KINTERRA_PROTOTYPE_PLACEHOLDER = {
 } as const;
 
 export const KINTERRA_IN_DEPTH = {
-  eyebrow: "In depth",
-  title: "How Kinterra evolved",
-  body: "The most important story is not only the technical system. It is how real usage changed the product from a purpose-built identity chatbot into infrastructure that other AI applications could build on.",
+  title: "In-Depth Project Details",
+  subtitle:
+    "The full story behind the product strategy, identity model, deterministic analytics, streaming agent system, and lessons from taking Kinterra to production.",
 } as const;
 
 export const KINTERRA_PHASES = {

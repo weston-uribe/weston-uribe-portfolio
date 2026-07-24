@@ -152,6 +152,13 @@ export const HARNESS_WORK_CARD_IMAGE = {
   alt: "Product Development Harness GUI workflow page showing agent pipeline stages",
 } as const;
 
+export const KINTERRA_WORK_CARD_IMAGE = {
+  assetPath: "/images/kinterra/kinterra-tri-self.svg",
+  alt: "Tri-self model showing perceived, ideal, and actual self connected to a central self-concept model.",
+  fit: "contain",
+  presentation: "plain",
+} as const;
+
 export const WORK_SECTION = {
   subheadline: "Selected projects, experiments, and case studies.",
   disclaimer:
@@ -201,6 +208,7 @@ export const WORK_ITEMS: WorkItem[] = [
     tags: ["AI Product", "Semantic Systems"],
     status: "active",
     href: "/work/kinterra",
+    previewImage: KINTERRA_WORK_CARD_IMAGE,
   },
   {
     id: "nl-robotics",

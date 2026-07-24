@@ -16,3 +16,7 @@ Asset library and agent rules: [`luca/agents.md`](luca/agents.md). Art direction
 ## Product Development Harness
 
 - **Work card:** `harness-work-card.png` (1024×509) — GUI workflow page screenshot at `/images/harness-work-card.png`
+
+## Kinterra
+
+- **Tri-self diagram:** `kinterra/kinterra-tri-self.svg` (400×360) — shared tri-self model illustration at `/images/kinterra/kinterra-tri-self.svg`; used on the Kinterra work card and case-study hero

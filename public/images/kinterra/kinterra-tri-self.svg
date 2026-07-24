@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" width="400" height="360" role="img" aria-labelledby="kinterra-tri-self-title">
+  <title id="kinterra-tri-self-title">Tri-self model diagram showing perceived, ideal, and actual self around a central self-concept model</title>
+  <style>
+    .foreground { fill: #1a1a1a; }
+    .muted-fill { fill: #f4f4f5; }
+    .background-fill { fill: #ffffff; }
+    .border-stroke { stroke: #e4e4e7; }
+    .muted-chip { fill: rgba(244, 244, 245, 0.6); stroke: rgba(228, 228, 231, 0.6); }
+    .muted-text { fill: rgba(26, 26, 26, 0.7); }
+    @media (prefers-color-scheme: dark) {
+      .foreground { fill: #fafafa; }
+      .muted-fill { fill: #27272a; }
+      .background-fill { fill: #09090b; }
+      .border-stroke { stroke: #3f3f46; }
+      .muted-chip { fill: rgba(39, 39, 42, 0.6); stroke: rgba(63, 63, 70, 0.6); }
+      .muted-text { fill: rgba(250, 250, 250, 0.7); }
+    }
+  </style>
+
+  <g aria-hidden="true">
+    <line x1="200" y1="175" x2="200" y2="70" class="border-stroke" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    <line x1="200" y1="175" x2="90" y2="280" class="border-stroke" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    <line x1="200" y1="175" x2="310" y2="280" class="border-stroke" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+  </g>
+
+  <rect x="155" y="40" width="90" height="36" rx="8" class="muted-fill border-stroke" stroke-width="1"/>
+  <text x="200" y="63" text-anchor="middle" class="foreground" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Perceived</text>
+
+  <rect x="50" y="270" width="80" height="36" rx="8" class="muted-fill border-stroke" stroke-width="1"/>
+  <text x="90" y="293" text-anchor="middle" class="foreground" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Ideal</text>
+
+  <rect x="270" y="270" width="80" height="36" rx="8" class="muted-fill border-stroke" stroke-width="1"/>
+  <text x="310" y="293" text-anchor="middle" class="foreground" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Actual</text>
+
+  <circle cx="200" cy="175" r="52" class="background-fill border-stroke" stroke-width="2"/>
+  <text x="200" y="172" text-anchor="middle" class="foreground" font-size="12" font-weight="600" font-family="system-ui, sans-serif">Self-concept</text>
+
+  <g aria-hidden="true">
+    <rect x="28" y="120" width="64" height="20" rx="10" class="muted-chip" stroke-width="0.75"/>
+    <text x="60" y="134" text-anchor="middle" class="muted-text" font-size="9" font-family="system-ui, sans-serif">Work</text>
+
+    <rect x="268" y="120" width="104" height="20" rx="10" class="muted-chip" stroke-width="0.75"/>
+    <text x="320" y="134" text-anchor="middle" class="muted-text" font-size="9" font-family="system-ui, sans-serif">Relationships</text>
+
+    <rect x="12" y="200" width="56" height="20" rx="10" class="muted-chip" stroke-width="0.75"/>
+    <text x="40" y="214" text-anchor="middle" class="muted-text" font-size="9" font-family="system-ui, sans-serif">Family</text>
+
+    <rect x="248" y="200" width="104" height="20" rx="10" class="muted-chip" stroke-width="0.75"/>
+    <text x="300" y="214" text-anchor="middle" class="muted-text" font-size="9" font-family="system-ui, sans-serif">Personal growth</text>
+  </g>
+</svg>
