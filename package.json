@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "node scripts/run-tests.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -34,6 +35,8 @@
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.4",
     "tailwindcss": "^4",
-    "typescript": "^6"
+    "tsx": "^4.20.3",
+    "typescript": "^6",
+    "vitest": "^3.2.7"
   }
 }
