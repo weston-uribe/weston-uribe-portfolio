@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import { NL_ROBOTICS_DEMOS } from "@/lib/portfolio/case-studies/nl-robotics";
 import { cn } from "@/lib/utils";
 
-export function CaseStudyNlRoboticsDemoPlaceholders() {
+export function CaseStudyNlRoboticsDemos() {
   return (
     <section
       id="simulation-demonstrations"
@@ -28,19 +26,18 @@ export function CaseStudyNlRoboticsDemoPlaceholders() {
                 "flex flex-col overflow-hidden p-0",
               )}
             >
-              <div className="relative aspect-[2/1] w-full overflow-hidden bg-muted/30">
-                <Image
-                  src={demo.placeholderAssetPath}
-                  alt={demo.placeholderAlt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 896px"
-                  className="object-cover object-center"
-                />
+              <div className="relative aspect-video w-full overflow-hidden bg-muted/30">
+                <video
+                  className="h-full w-full object-cover object-center"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={demo.posterPath}
+                >
+                  <source src={demo.videoPath} type="video/mp4" />
+                </video>
               </div>
               <figcaption className={cn(SPACING.stackGap, "flex flex-col p-5")}>
-                <span className={RESPONSIVE.caseStudyComingSoonBadge}>
-                  {NL_ROBOTICS_DEMOS.comingSoonBadge}
-                </span>
                 <p className="text-sm font-medium text-muted-foreground">
                   {demo.eyebrow}
                 </p>

@@ -163,9 +163,8 @@ export const KINTERRA_WORK_CARD_IMAGE = {
 } as const;
 
 export const NL_ROBOTICS_WORK_CARD_IMAGE = {
-  assetPath:
-    "/images/nl-robotics/mission-004-slam-navigation-placeholder.svg",
-  alt: "Illustrated placeholder for the Mission 004 autonomous SLAM navigation demonstration.",
+  assetPath: "/images/nl-robotics/mission-004-slam-navigation-poster.jpg",
+  alt: "Mission 004 simulation showing a TurtleBot3 navigating a procedurally generated maze.",
   fit: "cover",
   presentation: "plain",
   frameAspect: "landscape",

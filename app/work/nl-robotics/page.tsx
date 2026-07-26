@@ -2,7 +2,7 @@ import { CaseStudyPhaseSection } from "@/components/custom/portfolio/case-study/
 import { CaseStudyProseSection } from "@/components/custom/portfolio/case-study/case-study-prose-section";
 import { CaseStudyNlRoboticsAtAGlance } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-at-a-glance";
 import { CaseStudyNlRoboticsCallout } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-callout";
-import { CaseStudyNlRoboticsDemoPlaceholders } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-demo-placeholders";
+import { CaseStudyNlRoboticsDemos } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-demos";
 import { CaseStudyNlRoboticsFactoryFlow } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-factory-flow";
 import { CaseStudyNlRoboticsHero } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-hero";
 import { CaseStudyNlRoboticsInDepthTransition } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-in-depth-transition";
@@ -26,7 +26,7 @@ export default function NlRoboticsWorkPage() {
       <main className={cn(SPACING.pageAnchorScrollBuffer)}>
         <CaseStudyNlRoboticsHero />
         <CaseStudyNlRoboticsAtAGlance />
-        <CaseStudyNlRoboticsDemoPlaceholders />
+        <CaseStudyNlRoboticsDemos />
 
         <CaseStudyPhaseSection
           phase={NL_ROBOTICS_PHASES.technicalFeasibility}
