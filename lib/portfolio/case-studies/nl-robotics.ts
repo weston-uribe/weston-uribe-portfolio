@@ -22,8 +22,9 @@ export type NlRoboticsDemo = {
   title: string;
   body: string;
   technologies: readonly string[];
-  placeholderAssetPath: string;
-  placeholderAlt: string;
+  videoPath: string;
+  posterPath: string;
+  posterAlt: string;
 };
 
 export type NlRoboticsComparisonCard = {
@@ -120,10 +121,9 @@ export const NL_ROBOTICS_AT_A_GLANCE = {
 export const NL_ROBOTICS_DEMOS = {
   title: "Simulation demonstrations",
   intro:
-    "Two validated missions anchor the technical story across autonomous navigation and manipulation. Demo videos will be added here after the source files are staged.",
+    "Two validated missions anchor the technical story across autonomous navigation and manipulation.",
   boundaryCallout:
     "These are simulation feasibility proofs. Mission 004 uses synthetic LiDAR and ground-truth odometry; Mission 007 uses a known cube position and scripted joint-space control. Neither video is a physical-robot or generalized autonomy claim.",
-  comingSoonBadge: "Demo video coming soon",
   demos: [
     {
       id: "mission004",
@@ -136,10 +136,11 @@ export const NL_ROBOTICS_DEMOS = {
         "Nav2",
         "SLAM Toolbox",
       ],
-      placeholderAssetPath:
-        "/images/nl-robotics/mission-004-slam-navigation-placeholder.svg",
-      placeholderAlt:
-        "Illustrated placeholder for the Mission 004 autonomous SLAM navigation demonstration.",
+      videoPath: "/videos/nl-robotics/mission-004-slam-navigation.mp4",
+      posterPath:
+        "/images/nl-robotics/mission-004-slam-navigation-poster.jpg",
+      posterAlt:
+        "Mission 004 simulation showing a TurtleBot3 navigating a procedurally generated maze.",
     },
     {
       id: "mission007",
@@ -152,26 +153,12 @@ export const NL_ROBOTICS_DEMOS = {
         "Joint-space control",
         "Mission validation",
       ],
-      placeholderAssetPath:
-        "/images/nl-robotics/mission-007-pick-and-place-placeholder.svg",
-      placeholderAlt:
-        "Illustrated placeholder for the Mission 007 mobile-manipulator pick-and-place demonstration.",
+      videoPath: "/videos/nl-robotics/mission-007-pick-and-place.mp4",
+      posterPath: "/images/nl-robotics/mission-007-pick-and-place-poster.jpg",
+      posterAlt:
+        "Mission 007 simulation showing a TurtleBot3 with an OpenMANIPULATOR-X arm performing pick-and-place on a cube.",
     },
   ] satisfies readonly [NlRoboticsDemo, NlRoboticsDemo],
-} as const;
-
-/**
- * Reserved future media paths for the deferred video-drop workflow.
- * Do NOT reference these in img, video, preload, or metadata markup.
- * Source files stage in `.local-media/nl-robotics/` before import.
- */
-export const NL_ROBOTICS_FUTURE_MEDIA_PATHS = {
-  mission004Video: "/videos/nl-robotics/mission-004-slam-navigation.mp4",
-  mission007Video: "/videos/nl-robotics/mission-007-pick-and-place.mp4",
-  mission004Poster:
-    "/images/nl-robotics/mission-004-slam-navigation-poster.jpg",
-  mission007Poster:
-    "/images/nl-robotics/mission-007-pick-and-place-poster.jpg",
 } as const;
 
 export const NL_ROBOTICS_IN_DEPTH = {
