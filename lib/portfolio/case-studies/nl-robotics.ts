@@ -324,9 +324,9 @@ export const NL_ROBOTICS_COMPARISON_CARDS = [
 
 export const NL_ROBOTICS_RELATED_HARNESS = {
   title: "The same systems question, applied elsewhere",
-  body: "Natural Language Robotics and the Product Development Harness are separate implementations. Both reflect my interest in how agents should plan, execute, evaluate their own work, and involve a human when local optimization stops serving the intended outcome.",
+  body: "Natural Language Robotics and Litharis are separate implementations. Both reflect my interest in how agents should plan, execute, evaluate their own work, and involve a human when local optimization stops serving the intended outcome.",
   supporting:
-    "The Harness applies that question to product development, with a user interface, human review, and evaluation infrastructure.",
-  linkLabel: "View the Product Development Harness",
+    "Litharis applies that question to product development: a hosted control layer, optional human gates, and an evaluation laboratory later.",
+  linkLabel: "View Litharis",
   href: "/work/harness",
 } as const;

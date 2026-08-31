@@ -8,6 +8,10 @@ import { HARNESS_HERO_ACTIONS } from "@/lib/portfolio/case-studies/harness";
 import { cn } from "@/lib/utils";
 
 export function CaseStudyHarnessHeroActions() {
+  if (HARNESS_HERO_ACTIONS.length === 0) {
+    return null;
+  }
+
   return (
     <div className={cn(RESPONSIVE.ctaRow, "mt-2")}>
       {HARNESS_HERO_ACTIONS.map((action) => (

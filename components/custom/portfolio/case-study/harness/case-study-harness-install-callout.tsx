@@ -16,14 +16,6 @@ export function CaseStudyHarnessInstallCallout() {
         {HARNESS_INSTALL_CALLOUT.title}
       </h3>
       <p className={RESPONSIVE.caseStudyProse}>{HARNESS_INSTALL_CALLOUT.body}</p>
-      <pre
-        className="overflow-x-auto rounded-xl border border-border bg-muted/40 p-4 text-sm leading-relaxed select-text"
-        aria-label="Install command"
-      >
-        <code className="font-mono text-foreground">
-          {HARNESS_INSTALL_CALLOUT.command}
-        </code>
-      </pre>
       <p className={RESPONSIVE.caseStudyProse}>
         {HARNESS_INSTALL_CALLOUT.supportingText}
       </p>

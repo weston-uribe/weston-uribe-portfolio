@@ -151,7 +151,7 @@ export const LUCA_WORK_CARD_IMAGE = {
 
 export const HARNESS_WORK_CARD_IMAGE = {
   assetPath: "/images/harness-work-card.png",
-  alt: "Product Development Harness GUI workflow page showing agent pipeline stages",
+  alt: "Litharis workflow interface showing stages of a durable product-development system",
 } as const;
 
 export const KINTERRA_WORK_CARD_IMAGE = {
@@ -179,10 +179,10 @@ export const WORK_SECTION = {
 export const WORK_ITEMS: WorkItem[] = [
   {
     id: "harness",
-    contextLabel: "Product Development Harness",
-    title: "Human-gated multi-agent development",
+    contextLabel: "Litharis",
+    title: "Cloud-hosted product development system",
     description:
-      "Open-source workflow that turns Linear issues into reviewed, deployed software while building toward measurable quality, reliability, speed, and cost.",
+      "A control layer around coding harnesses so a non-technical product manager can start from a PRD. Cursor is live. Codex is planned. Not shipped.",
     tags: ["AI Product", "Evals"],
     status: "active",
     href: "/work/harness",

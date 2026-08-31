@@ -8,19 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 
 function CapabilityItem({ item }: { item: HarnessCapabilityItem }) {
-  if (item.type === "text") {
-    return <span>{item.text}</span>;
-  }
-
-  return (
-    <span>
-      {item.prefix}
-      <code className="rounded bg-muted px-1 py-0.5 font-mono text-sm">
-        {item.packageName}
-      </code>
-      {item.suffix}
-    </span>
-  );
+  return <span>{item.text}</span>;
 }
 
 export function CaseStudyHarnessCapabilities() {

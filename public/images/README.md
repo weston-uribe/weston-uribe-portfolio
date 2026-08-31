@@ -13,9 +13,9 @@ Asset library and agent rules: [`luca/agents.md`](luca/agents.md). Art direction
 - Display is capped at `max-w-4xl` (~896px) so the image scales down slightly from native resolution for sharper text.
 - **Work card background:** `ukme-voc-work-card.png` (1024×509) — full-bleed background on the UKMe work card at `/images/ukme-voc-work-card.png`
 
-## Product Development Harness
+## Litharis
 
-- **Work card:** `harness-work-card.png` (1024×509) — GUI workflow page screenshot at `/images/harness-work-card.png`
+- **Work card:** `harness-work-card.png` (1024×509) — workflow screenshot at `/images/harness-work-card.png`
 
 ## Kinterra
 

@@ -21,8 +21,8 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/ukg/page.tsx`   | `/work/ukg` | UKMe Voice of Customer case study (setup / before state) |
 | `work/luca/layout.tsx`| —           | Luca founder case study metadata     |
 | `work/luca/page.tsx`  | `/work/luca`| Luca wellness coaching platform case study |
-| `work/harness/layout.tsx` | —       | Product Development Harness case study metadata |
-| `work/harness/page.tsx` | `/work/harness` | Product Development Harness case study |
+| `work/harness/layout.tsx` | —       | Litharis case study metadata |
+| `work/harness/page.tsx` | `/work/harness` | Litharis case study |
 | `work/product-teardown/layout.tsx` | — | Undecided Product Teardown case study metadata |
 | `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
 | `work/kinterra/layout.tsx` | — | Kinterra case study metadata |
@@ -59,7 +59,7 @@ Founder and product strategy case study for Luca, an incorporated student wellne
 
 ## Case study page (`work/harness/page.tsx`)
 
-AI product-management case study for the Product Development Harness — an open-source, human-gated multi-agent workflow for non-technical product managers. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/harness.ts`; the page is a declarative composition map only. Harness-specific presentation components live under `components/custom/portfolio/case-study/harness/`. Hero screenshot uses `public/images/harness-work-card.png`. Section order: `PortfolioNav` → `<main>` (`CaseStudyHarnessHero` → `CaseStudyHarnessAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Product-manager workflow, Multi-agent system, Evaluation pipeline, Current state and roadmap) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/harness/layout.tsx`.
+AI product-management case study for Litharis — a cloud-hosted product-development control layer for non-technical product managers. Cursor is the live coding harness. Codex is a planned adapter. Not shipped. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/harness.ts`; the page is a declarative composition map only. Harness-specific presentation components live under `components/custom/portfolio/case-study/harness/`. Hero screenshot uses `public/images/harness-work-card.png`. Section order: `PortfolioNav` → `<main>` (`CaseStudyHarnessHero` → `CaseStudyHarnessAtAGlance` with interactive walkthrough placeholder → six `CaseStudyPhaseSection` bands: Context, Product strategy, Product-manager workflow, Control plane, Evaluation laboratory, Current state and roadmap) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. No public source or install links. Page metadata is exported from `work/harness/layout.tsx`.
 
 ## Case study page (`work/kinterra/page.tsx`)
 

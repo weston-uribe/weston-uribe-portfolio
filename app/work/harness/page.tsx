@@ -54,7 +54,7 @@ export default function HarnessWorkPage() {
 
         <CaseStudyPhaseSection phase={HARNESS_PHASES.workflow} tone="muted">
           <CaseStudyProseSection
-            section={HARNESS_SECTIONS.stayInLinear}
+            section={HARNESS_SECTIONS.hideTheToolchain}
             embedded
           />
           <CaseStudyHarnessOperatorSteps />
@@ -71,7 +71,7 @@ export default function HarnessWorkPage() {
           />
           <CaseStudyHarnessAgentRoles />
           <CaseStudyProseSection
-            section={HARNESS_SECTIONS.openSourceLocalFirst}
+            section={HARNESS_SECTIONS.cloudHostedControlLayer}
             embedded
           />
           <CaseStudyHarnessInstallCallout />
