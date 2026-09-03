@@ -23,6 +23,7 @@ Asset library and agent rules: [`luca/agents.md`](luca/agents.md). Art direction
 
 ## Natural Language Robotics
 
+- **Hero illustration:** `nl-robotics/nl-robotics-hero-network-v01.jpg` (1024×576) — case-study hero on `/work/nl-robotics`
 - **Mission 004 video:** `../videos/nl-robotics/mission-004-slam-navigation.mp4` (1280×720, H.264) — autonomous SLAM navigation demo
 - **Mission 007 video:** `../videos/nl-robotics/mission-007-pick-and-place.mp4` (1280×720, H.264) — mobile-manipulator pick-and-place demo
 - **Mission 004 poster:** `nl-robotics/mission-004-slam-navigation-poster.jpg` — work card and video poster

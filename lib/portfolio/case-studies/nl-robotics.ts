@@ -63,6 +63,12 @@ export const NL_ROBOTICS_HERO = {
   title: "Natural Language Robotics",
   subtitle:
     "I built a local multi-agent development system that translated high-level robotics objectives into iterative planning, implementation, and validation cycles—then used it to deliver autonomous SLAM navigation and robotic pick-and-place behaviors in NVIDIA Isaac Sim.",
+  illustration: {
+    assetPath: "/images/nl-robotics/nl-robotics-hero-network-v01.jpg",
+    assetWidth: 1024,
+    assetHeight: 576,
+    alt: "Abstract visualization of networked robotic modules connected along a glowing path, representing coordinated multi-agent robotics.",
+  },
 } as const;
 
 export const NL_ROBOTICS_HERO_METADATA = [

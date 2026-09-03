@@ -23,8 +23,6 @@ This directory contains all routes, layouts, and pages managed by the Next.js Ap
 | `work/luca/page.tsx`  | `/work/luca`| Luca wellness coaching platform case study |
 | `work/harness/layout.tsx` | —       | Litharis case study metadata |
 | `work/harness/page.tsx` | `/work/harness` | Litharis case study |
-| `work/product-teardown/layout.tsx` | — | Undecided Product Teardown case study metadata |
-| `work/product-teardown/page.tsx` | `/work/product-teardown` | Undecided Product Teardown stub page (hero title only) |
 | `work/kinterra/layout.tsx` | — | Kinterra case study metadata |
 | `work/kinterra/page.tsx` | `/work/kinterra` | Kinterra self-concept infrastructure case study |
 | `work/nl-robotics/layout.tsx` | — | Natural Language Robotics case study metadata |
@@ -67,7 +65,7 @@ AI product and systems case study for Kinterra — a deployed self-concept infra
 
 ## Case study page (`work/nl-robotics/page.tsx`)
 
-Technical feasibility case study for Natural Language Robotics — a local multi-agent capability factory that produced validated SLAM navigation and pick-and-place behaviors in NVIDIA Isaac Sim. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/nl-robotics.ts`; the page is a declarative composition map only. NL-Robotics-specific presentation components live under `components/custom/portfolio/case-study/nl-robotics/`. Hero includes an accessible factory-loop visual. Demo sections render accessible native `<video>` figures with posters for Mission 004 and Mission 007. Section order: `PortfolioNav` → `<main>` (`CaseStudyNlRoboticsHero` → `CaseStudyNlRoboticsAtAGlance` → `CaseStudyNlRoboticsDemos` → three `CaseStudyPhaseSection` bands: Technical feasibility, Capability factory, Evaluation lessons → `CaseStudyNlRoboticsRelatedHarness`) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/nl-robotics/layout.tsx`.
+Technical feasibility case study for Natural Language Robotics — a local multi-agent capability factory that produced validated SLAM navigation and pick-and-place behaviors in NVIDIA Isaac Sim. Uses the same portfolio chrome as other routes. All narrative copy lives in `lib/portfolio/case-studies/nl-robotics.ts`; the page is a declarative composition map only. NL-Robotics-specific presentation components live under `components/custom/portfolio/case-study/nl-robotics/`. Hero illustration is `public/images/nl-robotics/nl-robotics-hero-network-v01.jpg`. Demo sections render accessible native `<video>` figures with posters for Mission 004 and Mission 007. Section order: `PortfolioNav` → `<main>` (`CaseStudyNlRoboticsHero` → `CaseStudyNlRoboticsAtAGlance` → `CaseStudyNlRoboticsDemos` → three `CaseStudyPhaseSection` bands: Technical feasibility, Capability factory, Evaluation lessons → `CaseStudyNlRoboticsRelatedHarness`) → `PortfolioFooter`. Phase 01 includes the in-depth transition as `lead`. Page metadata is exported from `work/nl-robotics/layout.tsx`.
 
 ## Shared portfolio chrome
 

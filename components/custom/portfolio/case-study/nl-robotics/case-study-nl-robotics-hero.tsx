@@ -1,4 +1,3 @@
-import { CaseStudyNlRoboticsFactoryVisual } from "@/components/custom/portfolio/case-study/nl-robotics/case-study-nl-robotics-factory-visual";
 import { LAYOUT, RESPONSIVE, SPACING } from "@/lib/constants";
 import {
   NL_ROBOTICS_HERO,
@@ -7,6 +6,8 @@ import {
 import { cn } from "@/lib/utils";
 
 export function CaseStudyNlRoboticsHero() {
+  const { illustration } = NL_ROBOTICS_HERO;
+
   return (
     <section className={cn(SPACING.heroSectionPaddingY)}>
       <div className={cn(LAYOUT.pageShell, SPACING.stackGap, "flex flex-col")}>
@@ -23,7 +24,18 @@ export function CaseStudyNlRoboticsHero() {
           </div>
 
           <div className={RESPONSIVE.caseStudyHeroIllustrationColumn}>
-            <CaseStudyNlRoboticsFactoryVisual />
+            <div className={RESPONSIVE.caseStudyHeroIllustrationShell}>
+              {/* eslint-disable-next-line @next/next/no-img-element -- hero illustration asset */}
+              <img
+                src={illustration.assetPath}
+                alt={illustration.alt}
+                width={illustration.assetWidth}
+                height={illustration.assetHeight}
+                decoding="async"
+                fetchPriority="high"
+                className={RESPONSIVE.caseStudyHeroIllustrationImage}
+              />
+            </div>
           </div>
         </div>
 

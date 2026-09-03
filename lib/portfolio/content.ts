@@ -189,6 +189,17 @@ export const WORK_ITEMS: WorkItem[] = [
     previewImage: HARNESS_WORK_CARD_IMAGE,
   },
   {
+    id: "nl-robotics",
+    contextLabel: "Natural Language Robotics",
+    title: "A Technical Feasibility Experiment",
+    description:
+      "A local multi-agent factory that turned high-level robotics objectives into validated SLAM navigation and pick-and-place behaviors in Isaac Sim.",
+    tags: ["Multi-agent systems", "Robotics"],
+    status: "active",
+    href: "/work/nl-robotics",
+    previewImage: NL_ROBOTICS_WORK_CARD_IMAGE,
+  },
+  {
     id: "ukg",
     contextLabel: "UKMe",
     title: "AI-Powered Voice of Customer Dashboard",
@@ -220,26 +231,6 @@ export const WORK_ITEMS: WorkItem[] = [
     status: "active",
     href: "/work/kinterra",
     previewImage: KINTERRA_WORK_CARD_IMAGE,
-  },
-  {
-    id: "nl-robotics",
-    contextLabel: "Natural Language Robotics",
-    title: "A Technical Feasibility Experiment",
-    description:
-      "A local multi-agent factory that turned high-level robotics objectives into validated SLAM navigation and pick-and-place behaviors in Isaac Sim.",
-    tags: ["Multi-agent systems", "Robotics"],
-    status: "active",
-    href: "/work/nl-robotics",
-    previewImage: NL_ROBOTICS_WORK_CARD_IMAGE,
-  },
-  {
-    id: "product-teardown",
-    contextLabel: "Undecided",
-    title: "Product Teardown",
-    description: "Redesign of a real-world product workflow.",
-    tags: ["UX Audit", "Redesign"],
-    status: "active",
-    href: "/work/product-teardown",
   },
 ];
 
