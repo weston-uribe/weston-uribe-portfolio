@@ -42,7 +42,7 @@ export const HARNESS_HERO = {
   },
 } as const;
 
-export const HARNESS_HERO_ACTIONS = [] as const satisfies readonly HarnessHeroAction[];
+export const HARNESS_HERO_ACTIONS: readonly HarnessHeroAction[] = [];
 
 export const HARNESS_HERO_METADATA = [
   {
