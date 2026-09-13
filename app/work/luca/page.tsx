@@ -81,6 +81,7 @@ export default function LucaWorkPage() {
           rendersOverlay={false}
         />
       </main>
+      <p>Hello World</p>
       <PortfolioFooter />
     </>
   );
