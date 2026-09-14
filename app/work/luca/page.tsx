@@ -80,9 +80,9 @@ export default function LucaWorkPage() {
           sectionId="interactive-prototype-end"
           rendersOverlay={false}
         />
-        Hello World
       </main>
       <PortfolioFooter />
+      Hello World
     </>
   );
 }
