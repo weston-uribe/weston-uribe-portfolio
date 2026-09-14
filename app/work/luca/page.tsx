@@ -82,7 +82,6 @@ export default function LucaWorkPage() {
         />
       </main>
       <PortfolioFooter />
-      Hello World
     </>
   );
 }
