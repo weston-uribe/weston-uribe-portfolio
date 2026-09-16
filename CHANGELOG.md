@@ -2,6 +2,12 @@
 
 All notable changes to this repository are documented in this file.
 
+## Unreleased
+
+### PDev harness
+
+- Hello World Issue 3: small harness verification change on `/work/luca`
+
 ## [0.1.0] — 2026-07-06
 
 ### Public portfolio launch
