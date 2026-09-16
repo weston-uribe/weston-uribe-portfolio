@@ -82,7 +82,11 @@ export default function LucaWorkPage() {
         />
       </main>
       <PortfolioFooter />
-      Hello World
+      <div className="flex w-full justify-between">
+        <span>Hello World</span>
+        <span>Here I am</span>
+        <span>Hello World</span>
+      </div>
     </>
   );
 }
