@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 export default function LucaWorkPage() {
   return (
     <>
+      <span className="fixed left-0 top-0 z-50 text-red-500">L</span>
       <PortfolioNav />
       <main className={cn(SPACING.pageAnchorScrollBuffer)}>
         <CaseStudyLucaHero />
